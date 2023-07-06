@@ -1,0 +1,139 @@
+/****************************** fonts *****************************/
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("/DungGeunMo.bff77598.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/****************************** root *****************************/
+/****************************** mix_in *****************************/
+/****************************** default_settings *****************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+/****************************** control_class *****************************/
+.key_up {
+  color: yellow;
+}
+
+.none_on {
+  display: none !important;
+}
+
+.block_on {
+  display: block !important;
+}
+
+/****************************** intro_page *****************************/
+.intro_page_design {
+  position: relative;
+  overflow: hidden;
+  font-family: "DungGeunMo";
+}
+.intro_page_design .intro_container {
+  position: absolute;
+  width: 1180px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.intro_page_design .intro_container .title_ment {
+  position: relative;
+  display: inline-block;
+  margin-top: 300px;
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+}
+.intro_page_design .intro_container .title_ment .text {
+  display: inline-block;
+  margin-right: 10px;
+}
+.intro_page_design .intro_container .title_ment .text:nth-child(8), .intro_page_design .intro_container .title_ment .text:nth-child(10), .intro_page_design .intro_container .title_ment .text:nth-child(12) {
+  margin-right: 40px;
+}
+.intro_page_design .intro_container .title_ment .tiping_bar {
+  position: absolute;
+  display: inline-block;
+  top: 6px;
+  right: -10px;
+  width: 15px;
+  height: 90%;
+  background-color: white;
+  animation: tiping 1s both infinite;
+}
+.intro_page_design .intro_container .start_ment_design {
+  position: absolute;
+  display: none;
+  left: 50%;
+  bottom: -210px;
+  transform: translateX(-50%);
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  z-index: 9999;
+  animation: start_color_ani 1s 0.2s both infinite;
+}
+.intro_page_design .intro_mountain {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -85px;
+  z-index: 100;
+}
+.intro_page_design .intro_bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  animation: intro_ani_bgi 2s both;
+}
+@keyframes tiping {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes start_color_ani {
+  50% {
+    color: rgb(255, 197, 37);
+  }
+}
+@keyframes intro_ani_bgi {
+  100% {
+    top: -350px;
+  }
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=/page.28cb60f2.css.map */

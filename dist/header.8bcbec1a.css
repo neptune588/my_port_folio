@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("/DungGeunMo.bff77598.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+div {
+  font-family: "DungGeunMo";
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=/header.8bcbec1a.css.map */

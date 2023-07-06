@@ -1,0 +1,65 @@
+/****************************** fonts *****************************/
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("/DungGeunMo.bff77598.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/****************************** root *****************************/
+/****************************** mix_in *****************************/
+/****************************** default_settings *****************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+/****************************** control_class *****************************/
+.key_up {
+  color: yellow;
+}
+
+.none_on {
+  display: none !important;
+}
+
+.block_on {
+  display: block !important;
+}
+
+/****************************** arrow_controller *****************************/
+#arrow_controller {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 95px;
+  height: 300px;
+  background-color: white;
+  border-radius: 40px;
+  z-index: 9999;
+}
+
+/*# sourceMappingURL=/controller.23897484.css.map */

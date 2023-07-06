@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "posthtml": "^0.16.6",
+    "sass": "^1.63.6"
+  },
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "main": "page.html",
+  "scripts": {
+    "dev": "parcel page.html",
+    "build": "parcel build page.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4"
+  }
+}

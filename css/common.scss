@@ -1,0 +1,62 @@
+/****************************** fonts *****************************/
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('../fonts/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/****************************** root *****************************/
+$dot_font_dungGeunMo : 'DungGeunMo';
+
+
+/****************************** mix_in *****************************/
+@mixin title_size {
+    font-size: 80px;
+    font-weight: 700;
+}
+@mixin box_array {
+    width: 1180px;
+    margin: 0 auto;
+}
+@mixin item_size($width, $heigth) {
+    width: $width;
+    height: $heigth;
+}
+
+/****************************** default_settings *****************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    font-size: 10px;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, li {
+    list-style: none;
+}
+h2 {
+    font-weight: normal;
+}
+
+
+/****************************** control_class *****************************/
+.key_up {
+    color: yellow;
+}
+.none_on {
+    display: none !important;
+}
+.block_on {
+    display: block !important;
+}

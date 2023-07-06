@@ -1,0 +1,14 @@
+@import './common.scss';
+
+/****************************** arrow_controller *****************************/
+#arrow_controller {
+    position: fixed;
+    top: 50%; right: 50px;
+    transform: translateY(-50%);
+    display: inline-block;
+    
+    @include item_size(95px, 300px);
+    background-color: white;
+    border-radius: 40px;
+    z-index: 9999;
+}
