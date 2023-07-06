@@ -50,13 +50,13 @@ h2 {
 }
 
 
-/****************************** control_class *****************************/
-.key_up {
-    color: yellow;
-}
+/****************************** common_control_class *****************************/
 .none_on {
     display: none !important;
 }
 .block_on {
     display: block !important;
+}
+.opacity_on {
+    opacity: 1 !important;
 }

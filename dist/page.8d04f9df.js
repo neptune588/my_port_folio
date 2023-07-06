@@ -118,27 +118,67 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/page.js":[function(require,module,exports) {
+/************** intro_ani ***************/
 var introSection = document.getElementById('intro_page');
 var introInner = document.querySelector('.intro_container');
+var titleMentArea = document.querySelector('.title_ment_area');
 var titleMent = document.querySelector('.title_ment');
 var tipingBar = document.querySelector('.tiping_bar');
-var titleMentArr = ['W', 'E', 'L', 'C', 'O', 'M', 'E', 'T', 'O', 'M', 'Y', 'P', 'O', 'R', 'T', 'F', 'O', 'L', 'I', 'O'];
+var titleMentArr = ['W', 'E', 'L', 'C', 'O', 'M', 'E ', 'T', 'O ', 'M', 'Y ', 'P', 'O', 'R', 'T', 'F', 'O', 'L', 'I', 'O'];
 var startMent = document.getElementById('start_ment');
+var tipMent = document.getElementById('tips');
+var controller = document.getElementById('arrow_controller');
+var tipMentDelay = parseInt(window.getComputedStyle(tipMent).getPropertyValue('transition-duration'), 10);
 var cnt = 0;
+var repeatTime = 150;
 setTimeout(function () {
   var tiping = setInterval(function () {
     //console.log(cnt);
 
-    titleMent.innerHTML += "<span class=\"text\">".concat(titleMentArr[cnt], "</span>");
+    titleMent.textContent += titleMentArr[cnt];
     cnt++;
     if (cnt >= titleMentArr.length) {
       clearInterval(tiping);
+      addClass(tipingBar, 'tiping_ani');
     }
-  }, 150);
+  }, repeatTime);
 }, 1250);
 setTimeout(function () {
   addClass(startMent, 'block_on');
-}, 1350 + 150 * titleMentArr.length);
+}, 1350 + repeatTime * titleMentArr.length);
+setTimeout(function () {
+  addClass(tipMent, 'width_600');
+}, 1400 + repeatTime * titleMentArr.length);
+setTimeout(function () {
+  addClass(controller, 'opacity_on');
+}, 1400 + repeatTime * titleMentArr.length);
+
+/************** scroll_event ***************/
+var controlBtn = document.querySelectorAll('.arrow_btn');
+var topBtn = document.getElementById('top_arrow');
+var bottomBtn = document.getElementById('bottom_arrow');
+
+/* let topState = false;
+let bottomState = false; */
+
+controlBtn.forEach(function () {
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowUp') {
+      addClass(topBtn, 'color_yellow');
+    }
+    if (e.key === 'ArrowDown') {
+      addClass(bottomBtn, 'color_yellow');
+    }
+  });
+  window.addEventListener('keyup', function (e) {
+    if (e.key === 'ArrowUp') {
+      removeClass(topBtn, 'color_yellow');
+    }
+    if (e.key === 'ArrowDown') {
+      removeClass(bottomBtn, 'color_yellow');
+    }
+  });
+});
 function addClass(el, className) {
   el.classList.add(className);
 }
@@ -184,7 +224,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59162" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51051" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

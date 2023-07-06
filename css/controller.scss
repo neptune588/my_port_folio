@@ -1,14 +1,46 @@
 @import './common.scss';
 
+/****************************** cotnrol_class *****************************/
+.color_yellow {
+    color: rgb(214, 184, 48);
+}
+
 /****************************** arrow_controller *****************************/
 #arrow_controller {
-    position: fixed;
-    top: 50%; right: 50px;
+    display: none;
+    position: absolute;
+    top: 50%; right: -60px;
     transform: translateY(-50%);
-    display: inline-block;
-    
-    @include item_size(95px, 300px);
+    @include item_size(65px, 150px);
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
     background-color: white;
     border-radius: 40px;
     z-index: 9999;
+    >div {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: black;
+        font-size: 5rem;
+    }
+    .top_arrow_design {
+        display: none;
+        top: 20px;
+    }
+    .bottom_arrow_design {
+        bottom: 20px;
+        animation: arrow_ani 2s both infinite;
+    }
+
+    @keyframes arrow_ani {
+        0% {
+            bottom: 0;
+        }
+        50% {
+            bottom: 10px;
+        }
+        100% {
+            bottom: 0;
+        }
+    }
 }
