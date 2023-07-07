@@ -1,12 +1,76 @@
+/****************************** fonts *****************************/
 @font-face {
   font-family: "DungGeunMo";
   src: url("/DungGeunMo.bff77598.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-div {
+/****************************** root *****************************/
+/****************************** mix_in *****************************/
+/****************************** default_settings *****************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+/****************************** common_control_class *****************************/
+.none_on {
+  display: none !important;
+}
+
+.block_on {
+  display: block !important;
+}
+
+.opacity_on {
+  opacity: 1 !important;
+}
+
+.header_ex_design {
+  display: none;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: black;
+  z-index: 999999;
   font-family: "DungGeunMo";
-  font-size: 40px;
+}
+.header_ex_design .header_design {
+  width: 1180px;
+  margin: 0 auto;
+}
+.header_ex_design .header_design .nav_area_design {
+  display: flex;
+  justify-content: space-between;
+}
+.header_ex_design .header_design .nav_area_design li a {
+  padding: 15px 0;
+  display: block;
+  color: white;
+  font-size: 3.4rem;
 }
 
 /*# sourceMappingURL=/header.8bcbec1a.css.map */

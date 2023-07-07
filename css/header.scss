@@ -1,11 +1,26 @@
-@font-face {
-    font-family: 'DungGeunMo';
-    src: url('../fonts/DungGeunMo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import './common.scss';
 
-div {
-    font-family: 'DungGeunMo';
-    font-size: 40px;
+.header_ex_design {
+    display: none;
+    position: fixed;
+    width: 100%;
+    left:0; top: 0;
+    background-color: black;
+    z-index: 999999;
+    font-family: $dot_font_dungGeunMo;
+    .header_design {
+        @include box_array;
+        .nav_area_design {
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+                    padding: 15px 0;
+                    display: block;
+                    color: white;
+                    font-size: 3.4rem;
+                }
+            }
+        }
+    }
 }

@@ -57,32 +57,45 @@ h2 {
   width: 600px !important;
 }
 
-/****************************** intro_page *****************************/
-.intro_page_design {
-  position: relative;
-  overflow: hidden;
-  font-family: "DungGeunMo";
+.container_overflow {
+  height: 100vh !important;
+  overflow: hidden !important;
 }
-.intro_page_design .intro_container {
+
+/****************************** intro_page *****************************/
+.section_wrpper_design {
+  height: 400vh;
+  overflow: hidden;
+}
+.section_wrpper_design .section_container {
   position: absolute;
-  cursor: pointer;
   user-select: none;
   width: 1180px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
+}
+.section_wrpper_design .intro_page_design {
+  position: relative;
+  overflow: hidden;
+  font-family: "DungGeunMo";
+}
+.section_wrpper_design .intro_page_design .intro_container {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
   text-align: center;
 }
-.intro_page_design .intro_container .title_ment_area {
+.section_wrpper_design .intro_page_design .intro_container .title_ment_area {
   position: relative;
   display: inline-block;
-  margin-top: 300px;
+  margin-top: 350px;
   font-size: 80px;
   font-weight: 700;
   color: white;
 }
-.intro_page_design .intro_container .title_ment_area .tiping_bar {
+.section_wrpper_design .intro_page_design .intro_container .title_ment_area .tiping_bar {
   position: absolute;
   display: inline-block;
   top: 6px;
@@ -91,7 +104,7 @@ h2 {
   height: 90%;
   background-color: white;
 }
-.intro_page_design .intro_container .start_ment_design {
+.section_wrpper_design .intro_page_design .intro_container .start_ment_design {
   display: none;
   opacity: 0;
   margin-top: 30px;
@@ -100,35 +113,34 @@ h2 {
   z-index: 9999;
   animation: start_color_ani 1s 0.2s both infinite;
 }
-.intro_page_design .intro_container .tip_ment_design {
+.section_wrpper_design .intro_page_design .intro_container .tip_ment_design {
   overflow: hidden;
   width: 0;
-  margin: 0 auto;
+  margin: 240px auto 0;
   transition: all 4s;
-  margin-top: 200px;
   text-align: center;
 }
-.intro_page_design .intro_container .tip_ment_design .width_ment {
+.section_wrpper_design .intro_page_design .intro_container .tip_ment_design .width_ment {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   font-size: 3rem;
   color: white;
 }
-.intro_page_design .intro_mountain {
+.section_wrpper_design .intro_page_design .intro_mountain {
   position: absolute;
   width: 100%;
   left: 0;
   bottom: -85px;
   z-index: 100;
 }
-.intro_page_design .intro_bg {
+.section_wrpper_design .intro_page_design .intro_bg {
   position: absolute;
   top: 0;
   width: 100%;
   animation: intro_ani_bgi 2s both;
 }
-.intro_page_design .tiping_ani {
+.section_wrpper_design .intro_page_design .tiping_ani {
   animation: tiping 1s step-end infinite;
 }
 @keyframes tiping {
@@ -150,10 +162,79 @@ h2 {
     top: -250px;
   }
 }
-
-.page {
+.section_wrpper_design .profile_page_design {
+  background-color: #582e46;
+}
+.section_wrpper_design .profile_page_design .profile_container {
+  width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_title {
+  margin-top: 150px;
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_box {
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-around;
+  font-family: "DungGeunMo";
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_box .profile_left .profile_img {
+  width: 380px;
+  height: 380px;
+  margin: 0 auto 30px;
+  background-color: #fff;
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_box .profile_left .ment_box_design {
+  width: 490px;
+  height: 80px;
+  padding: 20px 35px;
+  background-color: black;
+  border-radius: 40px;
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_box .profile_left .ment_box_design .ment {
+  font-size: 2rem;
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_box .profile_left .crowl_gif {
+  margin: -80px auto 0;
+  width: 260px;
+  transform: rotate(0deg);
+}
+.section_wrpper_design .profile_page_design .section01_bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.section_wrpper_design .page {
+  position: relative;
   width: 100vw;
   height: 100vh;
+}
+.section_wrpper_design .sub_title {
+  display: inline-block;
+  font-family: "DungGeunMo";
+  font-size: 4.6rem;
+  border-bottom: 4px solid white;
+}
+.section_wrpper_design .info_area {
+  width: 380px;
+  margin-bottom: 40px;
+}
+.section_wrpper_design .info_area .info {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 1px black;
+}
+.section_wrpper_design .info_area p {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.section_wrpper_design .info_area p:last-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=/page.28cb60f2.css.map */

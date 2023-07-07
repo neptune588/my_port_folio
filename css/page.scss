@@ -7,97 +7,176 @@
 .width_600 {
     width: 600px !important;
 }
-
+.container_overflow {
+    height: 100vh !important;
+    overflow: hidden !important;
+}
 
 /****************************** intro_page *****************************/
-.intro_page_design {
-    position: relative;
+.section_wrpper_design {
+    height: 400vh;
     overflow: hidden;
-    font-family: $dot_font_dungGeunMo;
-    .intro_container {
+    .section_container {
         position: absolute; 
-        cursor: pointer;
         user-select: none;
         width: 1180px;
         top:0; left: 50%;
         transform: translateX(-50%);
         z-index: 9999;
-        text-align: center;
-        .title_ment_area {
-            position: relative;
-            display: inline-block;
-            margin-top: 300px;
-            @include title_size;
-            color: white;
-            .tiping_bar {
-                position: absolute;
-                display: inline-block;
-                top: 6px; right: -25px;
-                width: 15px; height: 90%;
-                background-color: white;
-            }
-        }
-        .start_ment_design {
-            display: none;
-            opacity: 0;
-            margin-top: 30px;
-            font-size: 5rem;
-            color: white;
-            z-index: 9999;
-            animation: start_color_ani 1s 0.2s both infinite;
-        }
-        .tip_ment_design {
-            overflow: hidden;
-            width: 0;
-            margin: 0 auto;
-            transition: all 4s;
-            margin-top: 200px;
+    }
+    .intro_page_design {
+        position: relative;
+        overflow: hidden;
+        font-family: $dot_font_dungGeunMo;
+        .intro_container {
+            position: absolute; 
+            cursor: pointer;
+            user-select: none;
             text-align: center;
-            .width_ment {
+            .title_ment_area {
+                position: relative;
                 display: inline-block;
-                overflow: hidden;
-                white-space: nowrap;
-                font-size: 3rem;
+                margin-top: 350px;
+                @include title_size;
                 color: white;
+                .tiping_bar {
+                    position: absolute;
+                    display: inline-block;
+                    top: 6px; right: -25px;
+                    width: 15px; height: 90%;
+                    background-color: white;
+                }
+            }
+            .start_ment_design {
+                display: none;
+                opacity: 0;
+                margin-top: 30px;
+                font-size: 5rem;
+                color: white;
+                z-index: 9999;
+                animation: start_color_ani 1s 0.2s both infinite;
+            }
+            .tip_ment_design {
+                overflow: hidden;
+                width: 0;
+                margin: 240px auto 0;
+                transition: all 4s;
+                text-align: center;
+                .width_ment {
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    font-size: 3rem;
+                    color: white;
+                }
+            }
+        }
+        .intro_mountain {
+            position: absolute;
+            width: 100%;
+            left: 0; bottom: -85px;
+            z-index: 100;
+        }
+        .intro_bg {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            animation: intro_ani_bgi 2s both;
+        }
+        .tiping_ani {
+            animation: tiping 1s step-end infinite;
+        }
+        @keyframes tiping {
+            50% {
+                opacity: 0;
+            }
+        }
+        @keyframes start_color_ani {
+            0% {
+                opacity: 0;
+            }
+    
+            50% {
+                opacity: 1;
+                color: rgb(255, 197, 37);
+            }
+        }
+        @keyframes intro_ani_bgi {
+            100% {
+                top: -250px;
             }
         }
     }
-    .intro_mountain {
-        position: absolute;
-        width: 100%;
-        left: 0; bottom: -85px;
-        z-index: 100;
-    }
-    .intro_bg {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        animation: intro_ani_bgi 2s both;
-    }
-    .tiping_ani {
-        animation: tiping 1s step-end infinite;
-    }
-    @keyframes tiping {
-        50% {
-            opacity: 0;
-        }
-    }
-    @keyframes start_color_ani {
-        0% {
-            opacity: 0;
+    .profile_page_design {
+        .profile_container{
+            @include box_array;
+            text-align: center;
+            color: white;
+            .profile_title {
+                margin-top: 150px;
+            }
+            .profile_box {
+                display: flex;
+                margin-top: 60px;
+                justify-content: space-around;
+                font-family: $dot_font_dungGeunMo;
+                .profile_left {
+                    .profile_img {
+                        @include item_size(380px, 380px);
+                        margin: 0 auto 30px;
+                        background-color: #fff;
+                    }
+                    .ment_box_design {
+                        @include item_size(490px, 80px);
+                        padding: 20px 35px;
+                        background-color: black;
+                        border-radius: 40px;
+                        .ment {
+                            font-size: 2rem;
+                        }
+                    }
+                    .crowl_gif {
+                        margin: -80px auto 0;
+                        width: 260px;
+                        transform: rotate(0deg);
+                    }
+                }
+            }
         }
 
-        50% {
-            opacity: 1;
-            color: rgb(255, 197, 37);
+        .section01_bg {
+            position: absolute;
+            width: 100%;
+            left:0; bottom: 0;
+            z-index: 10;
+        }
+        background-color: #582e46;
+    }
+    .page {
+        position: relative;
+        @include item_size(100vw, 100vh);
+    }
+    .sub_title {
+        display: inline-block;
+        font-family: $dot_font_dungGeunMo;
+        font-size: 4.6rem;
+        border-bottom: 4px solid white;
+    }
+    .info_area{
+        width: 380px;
+        margin-bottom: 40px;
+        .info {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 1px black;
+        }
+        p {
+            text-align: left;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
-    @keyframes intro_ani_bgi {
-        100% {
-            top: -250px;
-        }
-    }
-}
-.page {
-    @include item_size(100vw, 100vh);
 }
