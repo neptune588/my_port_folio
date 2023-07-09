@@ -1,10 +1,19 @@
 @import './common.scss';
 
+/****************************** cotnrol_class *****************************/
+.tab_active {
+    a {
+        color: white !important;
+    }
+}
+
+
+/****************************** header_ex *****************************/
 .header_ex_design {
     display: none;
     position: fixed;
     width: 100%;
-    left:0; top: 0;
+    left: 0; top: 0;
     background-color: black;
     z-index: 999999;
     font-family: $dot_font_dungGeunMo;
@@ -15,9 +24,9 @@
             justify-content: space-between;
             li {
                 a {
-                    padding: 15px 0;
+                    color: gray;
+                    padding: 10px 0;
                     display: block;
-                    color: white;
                     font-size: 3.4rem;
                 }
             }

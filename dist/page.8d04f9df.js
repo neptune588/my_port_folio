@@ -11232,7 +11232,6 @@ var define;
 var _jquery = _interopRequireDefault(require("jquery"));
 require("jquery-mousewheel");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var aniComplete = false;
 /************** all ***************/
 window.addEventListener('keydown', function (e) {
   if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
@@ -11248,20 +11247,20 @@ window.addEventListener('keyup', function (e) {
 /************** intro_ani ***************/
 var titleMent = document.querySelector('.title_ment');
 var tipingBar = document.querySelector('.tiping_bar');
-var titleMentArr = ['W', 'E', 'L', 'C', 'O', 'M', 'E ', 'T', 'O ', 'M', 'Y ', 'P', 'O', 'R', 'T', 'F', 'O', 'L', 'I', 'O'];
+var titleMentStr = "WELCOME TO MY PORTFOLIO";
 var startMent = document.getElementById('start_ment');
 var tipMent = document.getElementById('tips');
-var controller = document.getElementById('arrow_controller');
 var tipMentDelay = parseInt(window.getComputedStyle(tipMent).getPropertyValue('transition-duration'), 10);
+var aniComplete = false;
 var cnt = 0;
 var repeatTime = 150;
 setTimeout(function () {
   var tiping = setInterval(function () {
     //console.log(cnt);
 
-    titleMent.textContent += titleMentArr[cnt];
+    titleMent.textContent += titleMentStr[cnt];
     cnt++;
-    if (cnt >= titleMentArr.length) {
+    if (cnt >= titleMentStr.length) {
       clearInterval(tiping);
       classAdd(tipingBar, 'tiping_ani');
     }
@@ -11269,14 +11268,14 @@ setTimeout(function () {
 }, 1250);
 setTimeout(function () {
   classAdd(startMent, 'block_on');
-}, 1350 + repeatTime * titleMentArr.length);
+}, 1350 + repeatTime * titleMentStr.length);
 setTimeout(function () {
   classAdd(tipMent, 'width_600');
-}, 1400 + repeatTime * titleMentArr.length);
+}, 1400 + repeatTime * titleMentStr.length);
 setTimeout(function () {
   aniComplete = true;
   pageScrollEvent();
-}, 1500 + tipMentDelay * 100 + repeatTime * titleMentArr.length);
+}, 1500 + tipMentDelay * 100 + repeatTime * titleMentStr.length);
 
 /************** jquery ***************/
 function pageScrollEvent() {
@@ -11284,52 +11283,77 @@ function pageScrollEvent() {
     if (aniComplete) {
       (0, _jquery.default)('#section_wrapper').removeClass('container_overflow');
       (0, _jquery.default)('#header_ex').addClass('block_on');
-      wheelTotalEvent();
+      (0, _jquery.default)('#progress_bar').addClass('block_on');
+      wheelEvent();
+      navigatorEvent();
     }
   });
 }
+var pages = (0, _jquery.default)('#section_wrapper .page');
+var navigator = (0, _jquery.default)('#navgation_area > li');
 var profileMentAni = false;
-function wheelTotalEvent() {
-  var pages = (0, _jquery.default)('#section_wrapper .page');
-  pages.on('wheel', function (e) {
-    var delta = e.originalEvent.deltaY;
-    //console.log(e.originalEvent.deltaY);
+function wheelEvent() {
+  var scrollEv;
+  clearTimeout(scrollEv);
+  scrollEv = setTimeout(function () {
+    pages.on('wheel', function (e) {
+      var delta = e.originalEvent.deltaY;
+      //console.log(e.originalEvent.deltaY);
 
+      var nowIndex = (0, _jquery.default)(this).index();
+      var pageLength = pages.length;
+      var prev = 0;
+      var next = 0;
+      if (delta < 0 && nowIndex > 0) {
+        (0, _jquery.default)('#progress_bar .gage').css({
+          width: (nowIndex - 1) * 25 + '%'
+        });
+        navigator.removeClass('tab_active');
+        navigator.eq(nowIndex - 1).addClass('tab_active');
+        prev = (0, _jquery.default)(this).prev().offset().top;
+        (0, _jquery.default)('html, body').stop().animate({
+          scrollTop: prev
+        }, 600);
+      } else if (delta > 0 && nowIndex < pageLength - 1) {
+        navigator.removeClass('tab_active');
+        navigator.eq(nowIndex + 1).addClass('tab_active');
+        (0, _jquery.default)('#progress_bar .gage').css({
+          width: (nowIndex + 1) * 25 + '%'
+        });
+        next = (0, _jquery.default)(this).next().offset().top;
+        (0, _jquery.default)('html, body').stop().animate({
+          scrollTop: next
+        }, 600);
+      }
+      if (nowIndex === 0 && !profileMentAni) {
+        profileMentAni = true;
+        var mentCnt = 0;
+        var prevCnt = 0;
+        var profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
+        var mentTiping = setInterval(function () {
+          (0, _jquery.default)('#ment_box .ment').append(profileMent[mentCnt]);
+          mentCnt++;
+          prevCnt = mentCnt;
+          if (mentCnt >= profileMent.length) {
+            clearInterval(mentTiping);
+          }
+        }, 150);
+      }
+    });
+  }, 100);
+}
+function navigatorEvent() {
+  navigator.on('click', function () {
     var nowIndex = (0, _jquery.default)(this).index();
-    var pageLength = pages.length;
-
-    //console.log(delta);
-
-    var prev = 0;
-    var next = 0;
-    if (delta < 0 && nowIndex > 0) {
-      //console.log(delta, nowIndex);
-      prev = (0, _jquery.default)(this).prev().offset().top;
-      //console.log(prev);
-      (0, _jquery.default)('html, body').stop().animate({
-        scrollTop: prev
-      }, 600);
-    } else if (delta > 0 && nowIndex < pageLength - 1) {
-      //console.log(delta, nowIndex);
-      next = (0, _jquery.default)(this).next().offset().top;
-      (0, _jquery.default)('html, body').stop().animate({
-        scrollTop: next
-      }, 600);
-    } else {
-      return;
-    }
-    if (nowIndex === 0 && !profileMentAni) {
-      var mentCnt = 0;
-      var profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
-      var mentTiping = setInterval(function () {
-        (0, _jquery.default)('#ment_box .ment').append(profileMent[mentCnt]);
-        mentCnt++;
-        if (mentCnt >= profileMent.length) {
-          clearInterval(mentTiping);
-          profileMentAni = true;
-        }
-      }, 150);
-    }
+    var moveOffset = pages.eq(nowIndex).offset().top;
+    navigator.removeClass('tab_active');
+    navigator.eq(nowIndex).addClass('tab_active');
+    (0, _jquery.default)('#progress_bar .gage').css({
+      width: nowIndex * 25 + '%'
+    });
+    (0, _jquery.default)('html, body').stop().animate({
+      scrollTop: moveOffset
+    }, 600);
   });
 }
 
@@ -11350,30 +11374,6 @@ function classRemoveMulti(el, classArr) {
     return el.classList.remove(className);
   });
 }
-
-/* const controlBtn = document.querySelectorAll('.arrow_btn');
-const topBtn = document.getElementById('top_arrow');
-const bottomBtn = document.getElementById('bottom_arrow'); */
-
-/* let topState = false;
-let bottomState = false; */
-
-/* controlBtn.forEach(() => {
-    window.addEventListener('keydown', (e) => {
-        if(e.key === 'ArrowUp') {
-            addClass(topBtn,'color_yellow');
-        } else if(e.key === 'ArrowDown') {
-            addClass(bottomBtn,'color_yellow');
-        }
-    })
-    window.addEventListener('keyup', (e) => {
-        if(e.key === 'ArrowUp') {
-            removeClass(topBtn,'color_yellow');
-        } else if(e.key === 'ArrowDown') {
-            removeClass(bottomBtn,'color_yellow');
-        }
-    })
-}) */
 },{"jquery":"node_modules/jquery/dist/jquery.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -11399,7 +11399,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54283" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51704" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -49,10 +49,6 @@ h2 {
 }
 
 /****************************** cotnrol_class *****************************/
-.key_up {
-  color: yellow;
-}
-
 .width_600 {
   width: 600px !important;
 }
@@ -64,33 +60,38 @@ h2 {
 
 /****************************** intro_page *****************************/
 .section_wrpper_design {
-  height: 400vh;
+  width: 100%;
+  height: 500vh;
   overflow: hidden;
+}
+.section_wrpper_design::-webkit-scrollbar {
+  width: 20px;
+  background-color: black;
+}
+.section_wrpper_design::-webkit-scrollbar-thumb {
+  background-color: black;
 }
 .section_wrpper_design .section_container {
   position: absolute;
+  color: white;
   user-select: none;
   width: 1180px;
-  top: 0;
+  top: 10%;
   left: 50%;
+  text-align: center;
   transform: translateX(-50%);
-  z-index: 9999;
-}
-.section_wrpper_design .intro_page_design {
-  position: relative;
-  overflow: hidden;
-  font-family: "DungGeunMo";
+  z-index: 100;
 }
 .section_wrpper_design .intro_page_design .intro_container {
   position: absolute;
-  cursor: pointer;
+  top: 35%;
   user-select: none;
   text-align: center;
+  z-index: 9999;
 }
 .section_wrpper_design .intro_page_design .intro_container .title_ment_area {
   position: relative;
   display: inline-block;
-  margin-top: 350px;
   font-size: 80px;
   font-weight: 700;
   color: white;
@@ -110,15 +111,17 @@ h2 {
   margin-top: 30px;
   font-size: 5rem;
   color: white;
-  z-index: 9999;
+  z-index: 100;
   animation: start_color_ani 1s 0.2s both infinite;
 }
 .section_wrpper_design .intro_page_design .intro_container .tip_ment_design {
+  position: absolute;
   overflow: hidden;
   width: 0;
-  margin: 240px auto 0;
+  left: 50%;
+  bottom: -230px;
+  transform: translateX(-50%);
   transition: all 4s;
-  text-align: center;
 }
 .section_wrpper_design .intro_page_design .intro_container .tip_ment_design .width_ment {
   display: inline-block;
@@ -159,31 +162,20 @@ h2 {
 }
 @keyframes intro_ani_bgi {
   100% {
-    top: -250px;
+    top: -35%;
+    /* top: -250px; */
   }
-}
-.section_wrpper_design .profile_page_design {
-  background-color: #582e46;
-}
-.section_wrpper_design .profile_page_design .profile_container {
-  width: 1180px;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-}
-.section_wrpper_design .profile_page_design .profile_container .profile_title {
-  margin-top: 150px;
 }
 .section_wrpper_design .profile_page_design .profile_container .profile_box {
   display: flex;
-  margin-top: 60px;
+  margin-top: 40px;
   justify-content: space-around;
   font-family: "DungGeunMo";
 }
 .section_wrpper_design .profile_page_design .profile_container .profile_box .profile_left .profile_img {
   width: 380px;
   height: 380px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   background-color: #fff;
 }
 .section_wrpper_design .profile_page_design .profile_container .profile_box .profile_left .ment_box_design {
@@ -197,8 +189,8 @@ h2 {
   font-size: 2rem;
 }
 .section_wrpper_design .profile_page_design .profile_container .profile_box .profile_left .crowl_gif {
-  margin: -80px auto 0;
-  width: 260px;
+  margin: -65px auto 0;
+  width: 200px;
   transform: rotate(0deg);
 }
 .section_wrpper_design .profile_page_design .section01_bg {
@@ -210,6 +202,9 @@ h2 {
 }
 .section_wrpper_design .page {
   position: relative;
+  overflow: hidden;
+  font-family: "DungGeunMo";
+  background-color: #582e46;
   width: 100vw;
   height: 100vh;
 }
