@@ -48,35 +48,26 @@ h2 {
   opacity: 1 !important;
 }
 
-/****************************** cotnrol_class *****************************/
-.tab_active a {
-  color: white !important;
-}
-
-/****************************** header_ex *****************************/
-.header_ex_design {
-  display: none;
+/****************************** progress_bar *****************************/
+.progress_bar_design {
   position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-color: black;
-  z-index: 999999;
-  font-family: "DungGeunMo";
-}
-.header_ex_design .header_design {
+  display: none;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
   width: 1180px;
-  margin: 0 auto;
+  height: 10px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 2px 3px 4px 0;
+  z-index: 9999;
 }
-.header_ex_design .header_design .nav_area_design {
-  display: flex;
-  justify-content: space-between;
-}
-.header_ex_design .header_design .nav_area_design li a {
-  display: block;
-  color: gray;
-  padding: 10px 0;
-  font-size: 2.4rem;
+.progress_bar_design .gage {
+  transition: all 0.4s;
+  width: 0%;
+  height: 10px;
+  border-radius: 15px;
+  background-color: rgb(172, 35, 35);
 }
 
-/*# sourceMappingURL=/header.8bcbec1a.css.map */
+/*# sourceMappingURL=/progress_bar.449a24a4.css.map */

@@ -11226,13 +11226,94 @@ var define;
 
 }));
 
+},{}],"js/data.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.data = void 0;
+var data = {
+  skill: {
+    frontend: [{
+      name: "HTML5",
+      type: "FRONTEND",
+      ment: ["시멘틱 태그를 작성하여 웹 페이지의 구조를 잡고 용도를 명확하게 표현 가능.", "폼 태그를 이용하여 로그인, 회원가입 기능 작성 가능."],
+      src: []
+    }, {
+      name: "CSS3",
+      type: "FRONTEND",
+      ment: ["KEYFRAME을 이용하여 애니메이션 효과 구현 가능.", "HTML 태그 스타일링 및 미디어 쿼리를 이용한 반응형 사이트 구현 가능."],
+      src: []
+    }, {
+      name: "JAVASCRIPT",
+      type: "FRONTEND",
+      ment: ["ES6문법을 사용하여 웹사이트 제작 가능.", "JS로 이벤트 제작/제어 및 DOM을 제어하여 다양한 동적 기능 부여 가능.", "JS기반 라이브러리 및 플러그인 사용 가능."],
+      src: []
+    }, {
+      name: "JQUERY",
+      type: "FRONTEND",
+      ment: ["JQUERY를 사용하여 이벤트 제작/제어 가능.", "JQUERY의 플러그인을 사용하여 스크롤 및 애니메이션 제작 가능."],
+      src: []
+    }, {
+      name: "SASS/SCSS",
+      type: "FRONTEND",
+      ment: ["CSS전처리기인 SCSS를 활용하여 CSS문법을 보다 가독성 있게 작성 가능.", "SCSS에서 제공하는 기본적인 함수 문법 사용 가능."],
+      src: []
+    }, {
+      name: "REACT",
+      type: "FRONTEND",
+      ment: ["컴포넌트를 작성하여 UI/UX 제작 가능.", "HOOKS을 이용하여 다양한 상태 관리 가능. (함수형 컴포넌트 작성 가능)", "STYLED COMPOMENTS 사용 가능", "ROUTER를 사용하여 SPA 제작 취지와 맞게 한 페이지 내에서 여러 페이지 연결 가능.", "REDUX TOOL KIT을 이용하여 전역 상태 관리 가능."],
+      src: []
+    }, {
+      name: "BOOTSTRAP(REACT)",
+      type: "FRONTEND",
+      ment: ["RECAT와 연계 하여 레이아웃 작성 가능."],
+      src: []
+    }, {
+      name: "PARCEL BUNDLER",
+      type: "FRONTEND",
+      ment: ["PARCEL BUNDLER를 이용하여 모듈들을 번들, 정적 파일로 변환 가능.", "BUNDLER환경에서 사이트 배포 (GITHUB) 가능."],
+      src: []
+    }],
+    tools: [{
+      name: "FIGMA",
+      type: "TOOLS",
+      ment: ["FIMGA를 이용하여 프로토타입/시안 작성 가능.", "FIMGA를 이용하여 레이아웃 작성 가능."],
+      src: []
+    }, {
+      name: "ADOBE XD",
+      type: "TOOLS",
+      ment: ["ADOBE XD를 이용하여 프로토타입/시안 작성 가능.", "ADOBE XD를 이용하여 레이아웃 작성 가능."],
+      src: []
+    }, {
+      name: "PHOTOSHOP",
+      type: "TOOLS",
+      ment: ["PHOTOSHOP을 이용하여 사진/GIF 편집 및 제작 가능."],
+      src: []
+    }],
+    vesioncontrol: [{
+      name: "GIT",
+      type: "VESIONCONTROL",
+      ment: ["형상관리도구(버전관리도구)인 GIT을 이용하여 GITHUB와 연동 가능.", "GIT의 각종 명령어 사용 가능. GIT BRANCHE 사용 가능."],
+      src: []
+    }, {
+      name: "GITHUB",
+      type: "VESIONCONTROL",
+      ment: ["GITHUB 레퍼지토리 작성하여 로컬 레퍼지토리와 연결 가능.", "GITHUB를 이용하여 사이트 DEPLOY(배포) 가능."],
+      src: []
+    }]
+  },
+  project: {}
+};
+exports.data = data;
 },{}],"js/page.js":[function(require,module,exports) {
 "use strict";
 
 var _jquery = _interopRequireDefault(require("jquery"));
 require("jquery-mousewheel");
+var _data = require("./data.js");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var aniComplete = false;
 /************** all ***************/
 window.addEventListener('keydown', function (e) {
   if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
@@ -11248,20 +11329,20 @@ window.addEventListener('keyup', function (e) {
 /************** intro_ani ***************/
 var titleMent = document.querySelector('.title_ment');
 var tipingBar = document.querySelector('.tiping_bar');
-var titleMentArr = ['W', 'E', 'L', 'C', 'O', 'M', 'E ', 'T', 'O ', 'M', 'Y ', 'P', 'O', 'R', 'T', 'F', 'O', 'L', 'I', 'O'];
+var titleMentStr = "WELCOME TO MY PORTFOLIO";
 var startMent = document.getElementById('start_ment');
 var tipMent = document.getElementById('tips');
-var controller = document.getElementById('arrow_controller');
 var tipMentDelay = parseInt(window.getComputedStyle(tipMent).getPropertyValue('transition-duration'), 10);
+var aniComplete = false;
 var cnt = 0;
 var repeatTime = 150;
 setTimeout(function () {
   var tiping = setInterval(function () {
     //console.log(cnt);
 
-    titleMent.textContent += titleMentArr[cnt];
+    titleMent.textContent += titleMentStr[cnt];
     cnt++;
-    if (cnt >= titleMentArr.length) {
+    if (cnt >= titleMentStr.length) {
       clearInterval(tiping);
       classAdd(tipingBar, 'tiping_ani');
     }
@@ -11269,14 +11350,14 @@ setTimeout(function () {
 }, 1250);
 setTimeout(function () {
   classAdd(startMent, 'block_on');
-}, 1350 + repeatTime * titleMentArr.length);
+}, 1350 + repeatTime * titleMentStr.length);
 setTimeout(function () {
   classAdd(tipMent, 'width_600');
-}, 1400 + repeatTime * titleMentArr.length);
+}, 1400 + repeatTime * titleMentStr.length);
 setTimeout(function () {
   aniComplete = true;
   pageScrollEvent();
-}, 1500 + tipMentDelay * 100 + repeatTime * titleMentArr.length);
+}, 1500 + tipMentDelay * 100 + repeatTime * titleMentStr.length);
 
 /************** jquery ***************/
 function pageScrollEvent() {
@@ -11284,52 +11365,77 @@ function pageScrollEvent() {
     if (aniComplete) {
       (0, _jquery.default)('#section_wrapper').removeClass('container_overflow');
       (0, _jquery.default)('#header_ex').addClass('block_on');
-      wheelTotalEvent();
+      (0, _jquery.default)('#progress_bar').addClass('block_on');
+      wheelEvent();
+      navigatorEvent();
     }
   });
 }
+var pages = (0, _jquery.default)('#section_wrapper .page');
+var navigator = (0, _jquery.default)('#navgation_area > li');
 var profileMentAni = false;
-function wheelTotalEvent() {
-  var pages = (0, _jquery.default)('#section_wrapper .page');
-  pages.on('wheel', function (e) {
-    var delta = e.originalEvent.deltaY;
-    //console.log(e.originalEvent.deltaY);
+function wheelEvent() {
+  var scrollEv;
+  clearTimeout(scrollEv);
+  scrollEv = setTimeout(function () {
+    pages.on('wheel', function (e) {
+      var delta = e.originalEvent.deltaY;
+      //console.log(e.originalEvent.deltaY);
 
+      var nowIndex = (0, _jquery.default)(this).index();
+      var pageLength = pages.length;
+      var prev = 0;
+      var next = 0;
+      if (delta < 0 && nowIndex > 0) {
+        (0, _jquery.default)('#progress_bar .gage').css({
+          width: (nowIndex - 1) * 25 + '%'
+        });
+        navigator.removeClass('tab_active');
+        navigator.eq(nowIndex - 1).addClass('tab_active');
+        prev = (0, _jquery.default)(this).prev().offset().top;
+        (0, _jquery.default)('html, body').stop().animate({
+          scrollTop: prev
+        }, 600);
+      } else if (delta > 0 && nowIndex < pageLength - 1) {
+        navigator.removeClass('tab_active');
+        navigator.eq(nowIndex + 1).addClass('tab_active');
+        (0, _jquery.default)('#progress_bar .gage').css({
+          width: (nowIndex + 1) * 25 + '%'
+        });
+        next = (0, _jquery.default)(this).next().offset().top;
+        (0, _jquery.default)('html, body').stop().animate({
+          scrollTop: next
+        }, 600);
+      }
+      if (nowIndex === 0 && !profileMentAni) {
+        profileMentAni = true;
+        var mentCnt = 0;
+        var prevCnt = 0;
+        var profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
+        var mentTiping = setInterval(function () {
+          (0, _jquery.default)('#ment_box .ment').append(profileMent[mentCnt]);
+          mentCnt++;
+          prevCnt = mentCnt;
+          if (mentCnt >= profileMent.length) {
+            clearInterval(mentTiping);
+          }
+        }, 150);
+      }
+    });
+  }, 100);
+}
+function navigatorEvent() {
+  navigator.on('click', function () {
     var nowIndex = (0, _jquery.default)(this).index();
-    var pageLength = pages.length;
-
-    //console.log(delta);
-
-    var prev = 0;
-    var next = 0;
-    if (delta < 0 && nowIndex > 0) {
-      //console.log(delta, nowIndex);
-      prev = (0, _jquery.default)(this).prev().offset().top;
-      //console.log(prev);
-      (0, _jquery.default)('html, body').stop().animate({
-        scrollTop: prev
-      }, 600);
-    } else if (delta > 0 && nowIndex < pageLength - 1) {
-      //console.log(delta, nowIndex);
-      next = (0, _jquery.default)(this).next().offset().top;
-      (0, _jquery.default)('html, body').stop().animate({
-        scrollTop: next
-      }, 600);
-    } else {
-      return;
-    }
-    if (nowIndex === 0 && !profileMentAni) {
-      var mentCnt = 0;
-      var profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
-      var mentTiping = setInterval(function () {
-        (0, _jquery.default)('#ment_box .ment').append(profileMent[mentCnt]);
-        mentCnt++;
-        if (mentCnt >= profileMent.length) {
-          clearInterval(mentTiping);
-          profileMentAni = true;
-        }
-      }, 150);
-    }
+    var moveOffset = pages.eq(nowIndex).offset().top;
+    navigator.removeClass('tab_active');
+    navigator.eq(nowIndex).addClass('tab_active');
+    (0, _jquery.default)('#progress_bar .gage').css({
+      width: nowIndex * 25 + '%'
+    });
+    (0, _jquery.default)('html, body').stop().animate({
+      scrollTop: moveOffset
+    }, 600);
   });
 }
 
@@ -11350,31 +11456,7 @@ function classRemoveMulti(el, classArr) {
     return el.classList.remove(className);
   });
 }
-
-/* const controlBtn = document.querySelectorAll('.arrow_btn');
-const topBtn = document.getElementById('top_arrow');
-const bottomBtn = document.getElementById('bottom_arrow'); */
-
-/* let topState = false;
-let bottomState = false; */
-
-/* controlBtn.forEach(() => {
-    window.addEventListener('keydown', (e) => {
-        if(e.key === 'ArrowUp') {
-            addClass(topBtn,'color_yellow');
-        } else if(e.key === 'ArrowDown') {
-            addClass(bottomBtn,'color_yellow');
-        }
-    })
-    window.addEventListener('keyup', (e) => {
-        if(e.key === 'ArrowUp') {
-            removeClass(topBtn,'color_yellow');
-        } else if(e.key === 'ArrowDown') {
-            removeClass(bottomBtn,'color_yellow');
-        }
-    })
-}) */
-},{"jquery":"node_modules/jquery/dist/jquery.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"jquery":"node_modules/jquery/dist/jquery.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js","./data.js":"js/data.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11399,7 +11481,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54283" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55493" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
