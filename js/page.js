@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import 'jquery-mousewheel';
 
+import {data} from './data.js';
 /************** all ***************/
 window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {

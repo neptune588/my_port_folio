@@ -64,27 +64,17 @@ h2 {
   height: 500vh;
   overflow: hidden;
 }
-.section_wrpper_design::-webkit-scrollbar {
-  width: 20px;
-  background-color: black;
-}
-.section_wrpper_design::-webkit-scrollbar-thumb {
-  background-color: black;
-}
 .section_wrpper_design .section_container {
-  position: absolute;
+  position: relative;
   color: white;
-  user-select: none;
   width: 1180px;
-  top: 10%;
-  left: 50%;
+  margin: 0 auto;
+  user-select: none;
   text-align: center;
-  transform: translateX(-50%);
   z-index: 100;
 }
 .section_wrpper_design .intro_page_design .intro_container {
-  position: absolute;
-  top: 35%;
+  margin-top: 20%;
   user-select: none;
   text-align: center;
   z-index: 9999;
@@ -94,7 +84,6 @@ h2 {
   display: inline-block;
   font-size: 80px;
   font-weight: 700;
-  color: white;
 }
 .section_wrpper_design .intro_page_design .intro_container .title_ment_area .tiping_bar {
   position: absolute;
@@ -110,8 +99,6 @@ h2 {
   opacity: 0;
   margin-top: 30px;
   font-size: 5rem;
-  color: white;
-  z-index: 100;
   animation: start_color_ani 1s 0.2s both infinite;
 }
 .section_wrpper_design .intro_page_design .intro_container .tip_ment_design {
@@ -128,7 +115,6 @@ h2 {
   overflow: hidden;
   white-space: nowrap;
   font-size: 3rem;
-  color: white;
 }
 .section_wrpper_design .intro_page_design .intro_mountain {
   position: absolute;
@@ -166,6 +152,9 @@ h2 {
     /* top: -250px; */
   }
 }
+.section_wrpper_design .profile_page_design .profile_container {
+  margin-top: 5%;
+}
 .section_wrpper_design .profile_page_design .profile_container .profile_box {
   display: flex;
   margin-top: 40px;
@@ -199,6 +188,25 @@ h2 {
   left: 0;
   bottom: 0;
   z-index: 10;
+}
+.section_wrpper_design .skill_page_design .skill_container {
+  margin-top: 5%;
+}
+.section_wrpper_design .skill_page_design .skill_container li {
+  display: flex;
+  justify-content: space-between;
+}
+.section_wrpper_design .skill_page_design .skill_container li .skill_list {
+  padding: 15px 0;
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 1px 7px 0px black;
+}
+.section_wrpper_design .skill_page_design .skill_container li .skill_list img {
+  width: 60px;
+  height: 60px;
 }
 .section_wrpper_design .page {
   position: relative;

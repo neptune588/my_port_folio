@@ -73,10 +73,10 @@ h2 {
   justify-content: space-between;
 }
 .header_ex_design .header_design .nav_area_design li a {
+  display: block;
   color: gray;
   padding: 10px 0;
-  display: block;
-  font-size: 3.4rem;
+  font-size: 2.4rem;
 }
 
 /*# sourceMappingURL=/header.8bcbec1a.css.map */
