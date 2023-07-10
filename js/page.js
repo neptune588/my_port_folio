@@ -70,58 +70,71 @@ const hoverMentBox = document.getElementById('hover_ment_box');
 const hoverMentTitle = document.getElementById('ment_box_name');
 const hoverMent = document.getElementById('ment_box_ment');
 
-const {frontend, tools, vesionControl} = data.skill;
+const {skill} = data;
 
 
-/* 1. list를 호버할때마다 text콘텐츠 및 innerhtml로 변경됨 
-2. array를 기반으로 뽑아내야하는데, array 종류는 3개가 있음
-3. 정리하자면 list를 호버한 시점에서 array 종류가 특정되게 코드를 짜야 함.
-4. list가 생성된 이후 -> 쿼리셀렉터올 -> 호버이벤트 -> 밸류값으로 뽑아오자. */
+/* hover chnage event
+1. 함수로 타입 전달해서 각 li에 해당 타입과 일치하는 리스트 뽑기 
+2. skill_list에 핸들러 등록, 자식요소이므로 enter/leave로 등록
+3. 해당 skill_list의 index를 전달, 전체 배열에서 해당 index와 일치하는 데이터 출력 */
 
 skillCreate();
 function skillCreate() {
     let totalList = ``;
 
     totalList = `
-        <h2 class="title title_front_end">FRONTEND</h2>
+        <h2 class="title title_front_end">
+            FRONTEND
+            <i class="fas fa-angle-down"></i>
+        </h2>
         <li id="front_end_list">
-            ${listCreate(frontend)}
+            ${listCreate(skill, 'frontEnd')}
         </li>
-        <h2 class="title title_tools">TOOLS</h2>
+        <h2 class="title title_tools">
+            TOOLS
+            <i class="fas fa-angle-down"></i>
+        </h2>
         <li id="tools_list">
-            ${listCreate(tools)}
+            ${listCreate(skill, 'tools')}
         </li>
-        <h2 class="title title_vesion_control">VESION CONTROL</h2>
+        <h2 class="title title_vesion_control">
+            VESION CONTROL
+            <i class="fas fa-angle-down"></i>
+        </h2>
         <li id="vesion_control_list">
-            ${listCreate(vesionControl)}
+            ${listCreate(skill, 'vesionControl')}
         </li>
     `
     skillListArea.innerHTML = totalList;
 
     const skillLists = document.querySelectorAll('.skill_list');
 
-    for(let i = 0; i < skillLists.length; i++) {
-        console.log(skillLists[i]);
-    }
-/*     skillLists.forEach((list, index) => {
-        list.addEventListener('mouseover', () => {
-            console.log(skillLists[index].value);
+    skillLists.forEach((list, index) => {
+        list.addEventListener('mouseenter', (e) => {
+            
+            mentCreate(skill, index);
+
             classAdd(hoverMentBox, 'opacity_on');
+
+            hoverMentTitle.style.color = `${skill[index].color[0]}`;
+            hoverMentTitle.style.borderBottom = `1px solid ${skill[index].color[0]}`;
         });
-        list.addEventListener('mouseout', () => {
+        list.addEventListener('mouseleave', () => {
             classRemove(hoverMentBox, 'opacity_on');
         });
-    }) */
+    })
 }
 
-function listCreate(arr) {
+function listCreate(arr, type) {
+    const changeArr = arr.filter(object => object.type === type);
+
     let list = ``;
     let receive = ``;
 
-    for(let i = 0; i < arr.length; i++) {
+    for(let i = 0; i < changeArr.length; i++) {
         list = `
-            <div class="skill_list" value="${arr[i].type}">
-                <img src=${arr[i].src}/ alt=${arr[i].type}_list_img_${i}>
+            <div class="skill_list" data-type="${changeArr[i].type}">
+                <img src=${changeArr[i].src}/ alt=${changeArr[i].type}_list_img_${i}>
             </div>
         `
         receive += list;
@@ -130,14 +143,35 @@ function listCreate(arr) {
     return receive;
 }
 
-/* function mentCreate(nowIndex) {
-    hoverMent.textContent = ``;
-    hoverMent.innerHTML = ``;
+function mentCreate(arr, index) {
+    let totalText = ``;
+    let receive = ``;
 
-    hoverMentTitle.textContent = 
-    hoverMent.innerHTML = 
-} */
+    hoverMentTitle.textContent = arr[index].name; 
+    arr[index].ment.forEach((str) => {
+        totalText = `${str} <br/>`
+        receive += totalText;
+    })
 
+    hoverMent.innerHTML = receive;
+}
+
+/************** contact_page ***************/
+const dotArea = document.querySelector('.copy_right > .dot_area');
+const dotStr = "...";
+
+let dotCnt = 0;
+let dotRepeat = setInterval(() => {
+    dotArea.textContent += dotStr[dotCnt];
+
+    dotCnt++;
+
+    if(dotCnt > dotStr.length) {
+        dotArea.textContent = "";
+        dotCnt = 0;
+    }
+
+}, 700)
 
 /************** jquery ***************/
 function pageScrollEvent() {
@@ -213,7 +247,6 @@ function wheelEvent() {
                     
                     mentCnt++;
                     
-                    prevCnt = mentCnt;
                     if(mentCnt >= profileMent.length) {
                         clearInterval(mentTiping);
                     }

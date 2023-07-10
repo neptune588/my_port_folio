@@ -152,9 +152,12 @@ h2 {
 }
 @keyframes intro_ani_bgi {
   100% {
-    top: -35%;
+    top: -25%;
     /* top: -250px; */
   }
+}
+.section_wrpper_design .profile_page_design {
+  background-color: #5f4a6b !important;
 }
 .section_wrpper_design .profile_page_design .profile_container {
   margin-top: 5%;
@@ -186,51 +189,53 @@ h2 {
   width: 200px;
   transform: rotate(0deg);
 }
-.section_wrpper_design .profile_page_design .section01_bg {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
-}
 .section_wrpper_design .skill_page_design .skill_container {
   margin-top: 5%;
 }
 .section_wrpper_design .skill_page_design .skill_container .skill_list_area_design .title {
   text-align: left;
-  margin: 2% 0;
-  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+}
+.section_wrpper_design .skill_page_design .skill_container .skill_list_area_design .title i {
+  transform: translate(-5px);
+  font-size: 1.6rem;
 }
 .section_wrpper_design .skill_page_design .skill_container .skill_list_area_design li {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .section_wrpper_design .skill_page_design .skill_container .skill_list_area_design li:last-child {
   margin-bottom: 0;
 }
 .section_wrpper_design .skill_page_design .skill_container .skill_list_area_design li .skill_list {
-  padding: 15px 0;
-  width: 100px;
-  height: 100px;
+  padding: 10px 0;
+  width: 80px;
+  height: 80px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0px 1px 7px 0px black;
   margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 .section_wrpper_design .skill_page_design .skill_container .skill_list_area_design li .skill_list:last-child {
   margin-right: 0;
 }
+.section_wrpper_design .skill_page_design .skill_container .skill_list_area_design li .skill_list:hover {
+  box-shadow: 0px 1px 9px 3px black;
+}
 .section_wrpper_design .skill_page_design .skill_container .skill_list_area_design li .skill_list img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
 }
 .section_wrpper_design .skill_page_design .skill_container .hover_ment_box_design {
   position: relative;
   opacity: 0;
   width: 980px;
-  height: 160px;
-  margin: 2% auto 0;
-  padding: 15px 30px;
+  height: 140px;
+  margin: 15px auto 0;
+  padding: 10px 30px;
   border: 1px solid white;
   text-align: left;
   background-color: black;
@@ -240,11 +245,11 @@ h2 {
   display: inline-block;
   color: skyblue;
   font-size: 2.4rem;
-  padding-bottom: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border-bottom: 2px solid skyblue;
 }
 .section_wrpper_design .skill_page_design .skill_container .hover_ment_box_design .ment_design {
+  line-height: 20px;
   font-size: 1.6rem;
 }
 .section_wrpper_design .skill_page_design .skill_container .hover_ment_box_design .sans_gif {
@@ -253,13 +258,130 @@ h2 {
   bottom: 10px;
 }
 .section_wrpper_design .skill_page_design .skill_container .hover_ment_box_design .sans_gif img {
-  width: 95px;
-  height: 125px;
+  width: 85px;
+  height: 115px;
   object-fit: cover;
 }
 .section_wrpper_design .skill_page_design .skill_container .tip_ment {
-  margin-top: 20px;
+  margin-top: 15px;
+  font-size: 2.4rem;
+}
+.section_wrpper_design .contact_page_design .contact_container {
+  margin-top: 5%;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box {
+  display: flex;
+  margin-top: 30px;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_left {
+  position: relative;
+  width: 380px;
+  height: 60vh;
+  border: 5px solid white;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-right: 20px;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_left .ment01 {
+  margin-top: 25%;
+  font-size: 3.2rem;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_left .ment02 {
+  margin-top: 5%;
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_left .thank_you_gif {
+  position: absolute;
+  top: 5%;
+  left: 15px;
+  width: 80px;
+  height: 100px;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_left .thank_you_gif img {
+  object-fit: cover;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right {
+  width: 780px;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 5px solid white;
+  border-radius: 5px;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right .title_contact {
+  margin: 5% 35% 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
   font-size: 3rem;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right .tell {
+  margin-top: 5%;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right p {
+  font-family: Arial, sans-serif;
+  font-size: 2.6rem;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right .archive {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right .archive li {
+  margin-right: 40px;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right .archive li:hover a {
+  box-shadow: 0px 0px 15px 0px red;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right .archive li:last-child {
+  margin-right: 0;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right .archive li a {
+  display: block;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+.section_wrpper_design .contact_page_design .contact_container .contact_box .contact_right .archive li a img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.section_wrpper_design .contact_page_design .contact_container .copy_right {
+  margin-top: 20px;
+  padding: 10px 0;
+  font-size: 2rem;
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 5px;
+}
+.section_wrpper_design .contact_page_design .contact_container .copy_right span {
+  color: #979797;
+}
+.section_wrpper_design .contact_page_design .contact_container .copy_right .dot_area {
+  color: white;
+  margin-left: -5px;
+}
+.section_wrpper_design .contact_page_design .section_bg .cover {
+  position: absolute;
+  z-index: 90;
+}
+.section_wrpper_design .contact_page_design .section_bg .top_cover {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+.section_wrpper_design .contact_page_design .section_bg .left_cover {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
 }
 .section_wrpper_design .page {
   position: relative;
@@ -291,6 +413,13 @@ h2 {
 }
 .section_wrpper_design .info_area p:last-child {
   margin-bottom: 0;
+}
+.section_wrpper_design .section_bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=/page.28cb60f2.css.map */

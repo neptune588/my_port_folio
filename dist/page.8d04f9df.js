@@ -11234,90 +11234,85 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.data = void 0;
 var data = {
-  skill: {
-    frontend: [{
-      name: "HTML5",
-      type: "frontend",
-      ment: ["시멘틱 태그를 작성하여 웹 페이지의 구조를 잡고 용도를 명확하게 표현 가능.", "폼 태그를 이용하여 로그인, 회원가입 기능 작성 가능."],
-      src: ["./images/html.png"],
-      color: ["orange"]
-    }, {
-      name: "CSS3",
-      type: "frontend",
-      ment: ["KEYFRAME을 이용하여 애니메이션 효과 구현 가능.", "HTML 태그 스타일링 및 미디어 쿼리를 이용한 반응형 사이트 구현 가능."],
-      src: ["./images/css.png"],
-      color: ["skyblue"]
-    }, {
-      name: "JAVASCRIPT",
-      type: "frontend",
-      ment: ["ES6문법을 사용하여 웹사이트 제작 가능.", "JS로 이벤트 제작/제어 및 DOM을 제어하여 다양한 동적 기능 부여 가능.", "JS기반 라이브러리 및 플러그인 사용 가능."],
-      src: ["./images/js.png"],
-      color: ["yellow"]
-    }, {
-      name: "JQUERY",
-      type: "frontend",
-      ment: ["JQUERY를 사용하여 이벤트 제작/제어 가능.", "JQUERY의 플러그인을 사용하여 스크롤 및 애니메이션 제작 가능."],
-      src: ["./images/html.png"],
-      color: ["skyblue"]
-    }, {
-      name: "SASS/SCSS",
-      type: "frontend",
-      ment: ["CSS전처리기인 SCSS를 활용하여 CSS문법을 보다 가독성 있게 작성 가능.", "SCSS에서 제공하는 기본적인 함수 문법 사용 가능."],
-      src: ["./images/sass.png"],
-      color: ["pink"]
-    }, {
-      name: "REACT",
-      type: "frontend",
-      ment: ["컴포넌트를 작성하여 UI/UX 제작 가능.", "HOOKS을 이용하여 다양한 상태 관리 가능. (함수형 컴포넌트 작성 가능)", "STYLED COMPOMENTS 사용 가능", "ROUTER를 사용하여 SPA 제작 취지와 맞게 한 페이지 내에서 여러 페이지 연결 가능.", "REDUX TOOL KIT을 이용하여 전역 상태 관리 가능."],
-      src: ["./images/react.png"],
-      color: ["skyblue"]
-    }, {
-      name: "BOOTSTRAP(REACT)",
-      type: "frontend",
-      ment: ["RECAT와 연계 하여 레이아웃 작성 가능."],
-      src: ["./images/bootstrap.png"],
-      color: ["purple"]
-    }, {
-      name: "PARCEL BUNDLER",
-      type: "frontend",
-      ment: ["PARCEL BUNDLER를 이용하여 모듈들을 번들, 정적 파일로 변환 가능.", "BUNDLER환경에서 사이트 배포 (GITHUB) 가능."],
-      src: ["./images/parcel_bundler.png"],
-      color: ["brown"]
-    }],
-    tools: [{
-      name: "FIGMA",
-      type: "tools",
-      ment: ["FIMGA를 이용하여 프로토타입/시안 작성 가능.", "FIMGA를 이용하여 레이아웃 작성 가능."],
-      src: ["./images/figma.png"],
-      color: ["purple"]
-    }, {
-      name: "ADOBE XD",
-      type: "tools",
-      ment: ["ADOBE XD를 이용하여 프로토타입/시안 작성 가능.", "ADOBE XD를 이용하여 레이아웃 작성 가능."],
-      src: ["./images/adobe_xd.png"],
-      color: ["purple"]
-    }, {
-      name: "PHOTOSHOP",
-      type: "tools",
-      ment: ["PHOTOSHOP을 이용하여 사진/GIF 편집 및 제작 가능."],
-      src: ["./images/ps.png"],
-      color: ["skyblue"]
-    }],
-    vesionControl: [{
-      name: "GIT",
-      type: "vesionControl",
-      ment: ["형상관리도구(버전관리도구)인 GIT을 이용하여 GITHUB와 연동 가능.", "GIT의 각종 명령어 사용 가능. GIT BRANCHE 사용 가능."],
-      src: ["./images/git.png"],
-      color: ["orange"]
-    }, {
-      name: "GITHUB",
-      type: "vesionControl",
-      ment: ["GITHUB 레퍼지토리 작성하여 로컬 레퍼지토리와 연결 가능.", "GITHUB를 이용하여 사이트 DEPLOY(배포) 가능."],
-      src: ["./images/github.png"],
-      color: ["white"]
-    }]
-  },
-  project: {}
+  skill: [{
+    name: "HTML5",
+    type: "frontEnd",
+    ment: ["시멘틱 태그를 작성하여 웹 페이지의 구조를 잡고 용도를 명확하게 표현 가능.", "폼 태그를 이용하여 로그인, 회원가입 기능 작성 가능."],
+    src: ["./images/html.png"],
+    color: ["orange"]
+  }, {
+    name: "CSS3",
+    type: "frontEnd",
+    ment: ["KEYFRAME을 이용하여 애니메이션 효과 구현 가능.", "HTML 태그 스타일링 및 미디어 쿼리를 이용한 반응형 사이트 구현 가능."],
+    src: ["./images/css.png"],
+    color: ["skyblue"]
+  }, {
+    name: "JAVASCRIPT",
+    type: "frontEnd",
+    ment: ["ES6문법을 사용하여 웹사이트 제작 가능.", "JS로 이벤트 제작/제어 및 DOM을 제어하여 다양한 동적 기능 부여 가능.", "JS기반 라이브러리 및 플러그인 사용 가능."],
+    src: ["./images/js.png"],
+    color: ["yellow"]
+  }, {
+    name: "JQUERY",
+    type: "frontEnd",
+    ment: ["JQUERY를 사용하여 이벤트 제작/제어 가능.", "JQUERY의 플러그인을 사용하여 스크롤 및 애니메이션 제작 가능."],
+    src: ["./images/jquery.png"],
+    color: ["skyblue"]
+  }, {
+    name: "SASS/SCSS",
+    type: "frontEnd",
+    ment: ["CSS전처리기인 SCSS를 활용하여 CSS문법을 보다 가독성 있게 작성 가능.", "SCSS에서 제공하는 기본적인 함수 문법 사용 가능."],
+    src: ["./images/sass.png"],
+    color: ["pink"]
+  }, {
+    name: "REACT",
+    type: "frontEnd",
+    ment: ["HOOKS을 이용하여 다양한 상태 관리 가능. (함수형 컴포넌트 작성 가능)", "STYLED COMPOMENTS 사용 가능", "ROUTER를 사용하여 SPA 제작 취지와 맞게 한 페이지 내에서 여러 페이지 연결 가능.", "REDUX TOOL KIT을 이용하여 전역 상태 관리 가능."],
+    src: ["./images/react.png"],
+    color: ["skyblue"]
+  }, {
+    name: "BOOTSTRAP(REACT)",
+    type: "frontEnd",
+    ment: ["REACT와 연계 하여 레이아웃 작성 가능."],
+    src: ["./images/bootstrap.png"],
+    color: ["purple"]
+  }, {
+    name: "PARCEL BUNDLER",
+    type: "frontEnd",
+    ment: ["PARCEL BUNDLER를 이용하여 모듈들을 번들, 정적 파일로 변환 가능.", "BUNDLER환경에서 사이트 배포 (GITHUB) 가능."],
+    src: ["./images/parcel_bundler.png"],
+    color: ["burlywood"]
+  }, {
+    name: "FIGMA",
+    type: "tools",
+    ment: ["FIGMA를 이용하여 프로토타입/시안 작성 가능.", "FIGMA를 이용하여 레이아웃 작성 가능."],
+    src: ["./images/figma.png"],
+    color: ["purple"]
+  }, {
+    name: "ADOBE XD",
+    type: "tools",
+    ment: ["ADOBE XD를 이용하여 프로토타입/시안 작성 가능.", "ADOBE XD를 이용하여 레이아웃 작성 가능."],
+    src: ["./images/adobe_xd.png"],
+    color: ["purple"]
+  }, {
+    name: "PHOTOSHOP",
+    type: "tools",
+    ment: ["PHOTOSHOP을 이용하여 사진/GIF 편집 및 제작 가능."],
+    src: ["./images/ps.png"],
+    color: ["skyblue"]
+  }, {
+    name: "GIT",
+    type: "vesionControl",
+    ment: ["형상관리도구(버전관리도구)인 GIT을 이용하여 GITHUB와 연동 가능.", "GIT의 각종 명령어 사용 가능. GIT BRANCHE 사용 가능."],
+    src: ["./images/git.png"],
+    color: ["orange"]
+  }, {
+    name: "GITHUB",
+    type: "vesionControl",
+    ment: ["GITHUB 레퍼지토리 작성하여 로컬 레퍼지토리와 연결 가능.", "GITHUB를 이용하여 사이트 DEPLOY(배포) 가능."],
+    src: ["./images/github.png"],
+    color: ["white"]
+  }]
 };
 exports.data = data;
 },{}],"js/page.js":[function(require,module,exports) {
@@ -11377,53 +11372,66 @@ var skillListArea = document.getElementById('skill_list_area');
 var hoverMentBox = document.getElementById('hover_ment_box');
 var hoverMentTitle = document.getElementById('ment_box_name');
 var hoverMent = document.getElementById('ment_box_ment');
-var _data$skill = _data.data.skill,
-  frontend = _data$skill.frontend,
-  tools = _data$skill.tools,
-  vesionControl = _data$skill.vesionControl;
+var skill = _data.data.skill;
 
-/* 1. list를 호버할때마다 text콘텐츠 및 innerhtml로 변경됨 
-2. array를 기반으로 뽑아내야하는데, array 종류는 3개가 있음
-3. 정리하자면 list를 호버한 시점에서 array 종류가 특정되게 코드를 짜야 함.
-4. list가 생성된 이후 -> 쿼리셀렉터올 -> 호버이벤트 -> 밸류값으로 뽑아오자. */
+/* hover chnage event
+1. 함수로 타입 전달해서 각 li에 해당 타입과 일치하는 리스트 뽑기 
+2. skill_list에 핸들러 등록, 자식요소이므로 enter/leave로 등록
+3. 해당 skill_list의 index를 전달, 전체 배열에서 해당 index와 일치하는 데이터 출력 */
 
 skillCreate();
 function skillCreate() {
   var totalList = "";
-  totalList = "\n        <h2 class=\"title title_front_end\">FRONTEND</h2>\n        <li id=\"front_end_list\">\n            ".concat(listCreate(frontend), "\n        </li>\n        <h2 class=\"title title_tools\">TOOLS</h2>\n        <li id=\"tools_list\">\n            ").concat(listCreate(tools), "\n        </li>\n        <h2 class=\"title title_vesion_control\">VESION CONTROL</h2>\n        <li id=\"vesion_control_list\">\n            ").concat(listCreate(vesionControl), "\n        </li>\n    ");
+  totalList = "\n        <h2 class=\"title title_front_end\">\n            FRONTEND\n            <i class=\"fas fa-angle-down\"></i>\n        </h2>\n        <li id=\"front_end_list\">\n            ".concat(listCreate(skill, 'frontEnd'), "\n        </li>\n        <h2 class=\"title title_tools\">\n            TOOLS\n            <i class=\"fas fa-angle-down\"></i>\n        </h2>\n        <li id=\"tools_list\">\n            ").concat(listCreate(skill, 'tools'), "\n        </li>\n        <h2 class=\"title title_vesion_control\">\n            VESION CONTROL\n            <i class=\"fas fa-angle-down\"></i>\n        </h2>\n        <li id=\"vesion_control_list\">\n            ").concat(listCreate(skill, 'vesionControl'), "\n        </li>\n    ");
   skillListArea.innerHTML = totalList;
   var skillLists = document.querySelectorAll('.skill_list');
-  for (var i = 0; i < skillLists.length; i++) {
-    console.log(skillLists[i]);
-  }
-  /*     skillLists.forEach((list, index) => {
-          list.addEventListener('mouseover', () => {
-              console.log(skillLists[index].value);
-              classAdd(hoverMentBox, 'opacity_on');
-          });
-          list.addEventListener('mouseout', () => {
-              classRemove(hoverMentBox, 'opacity_on');
-          });
-      }) */
+  skillLists.forEach(function (list, index) {
+    list.addEventListener('mouseenter', function (e) {
+      mentCreate(skill, index);
+      classAdd(hoverMentBox, 'opacity_on');
+      hoverMentTitle.style.color = "".concat(skill[index].color[0]);
+      hoverMentTitle.style.borderBottom = "1px solid ".concat(skill[index].color[0]);
+    });
+    list.addEventListener('mouseleave', function () {
+      classRemove(hoverMentBox, 'opacity_on');
+    });
+  });
 }
-
-function listCreate(arr) {
+function listCreate(arr, type) {
+  var changeArr = arr.filter(function (object) {
+    return object.type === type;
+  });
   var list = "";
   var receive = "";
-  for (var i = 0; i < arr.length; i++) {
-    list = "\n            <div class=\"skill_list\" value=\"".concat(arr[i].type, "\">\n                <img src=").concat(arr[i].src, "/ alt=").concat(arr[i].type, "_list_img_").concat(i, ">\n            </div>\n        ");
+  for (var i = 0; i < changeArr.length; i++) {
+    list = "\n            <div class=\"skill_list\" data-type=\"".concat(changeArr[i].type, "\">\n                <img src=").concat(changeArr[i].src, "/ alt=").concat(changeArr[i].type, "_list_img_").concat(i, ">\n            </div>\n        ");
     receive += list;
   }
   return receive;
 }
+function mentCreate(arr, index) {
+  var totalText = "";
+  var receive = "";
+  hoverMentTitle.textContent = arr[index].name;
+  arr[index].ment.forEach(function (str) {
+    totalText = "".concat(str, " <br/>");
+    receive += totalText;
+  });
+  hoverMent.innerHTML = receive;
+}
 
-/* function mentCreate(nowIndex) {
-    hoverMent.textContent = ``;
-    hoverMent.innerHTML = ``;
-
-    hoverMentTitle.textContent = 
-    hoverMent.innerHTML = 
-} */
+/************** contact_page ***************/
+var dotArea = document.querySelector('.copy_right > .dot_area');
+var dotStr = "...";
+var dotCnt = 0;
+var dotRepeat = setInterval(function () {
+  dotArea.textContent += dotStr[dotCnt];
+  dotCnt++;
+  if (dotCnt > dotStr.length) {
+    dotArea.textContent = "";
+    dotCnt = 0;
+  }
+}, 700);
 
 /************** jquery ***************/
 function pageScrollEvent() {
@@ -11480,7 +11488,6 @@ function wheelEvent() {
         var mentTiping = setInterval(function () {
           (0, _jquery.default)('#ment_box .ment').append(profileMent[mentCnt]);
           mentCnt++;
-          prevCnt = mentCnt;
           if (mentCnt >= profileMent.length) {
             clearInterval(mentTiping);
           }
@@ -11546,7 +11553,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65162" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53752" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
