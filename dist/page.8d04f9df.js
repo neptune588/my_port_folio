@@ -11237,71 +11237,84 @@ var data = {
   skill: {
     frontend: [{
       name: "HTML5",
-      type: "FRONTEND",
+      type: "frontend",
       ment: ["시멘틱 태그를 작성하여 웹 페이지의 구조를 잡고 용도를 명확하게 표현 가능.", "폼 태그를 이용하여 로그인, 회원가입 기능 작성 가능."],
-      src: []
+      src: ["./images/html.png"],
+      color: ["orange"]
     }, {
       name: "CSS3",
-      type: "FRONTEND",
+      type: "frontend",
       ment: ["KEYFRAME을 이용하여 애니메이션 효과 구현 가능.", "HTML 태그 스타일링 및 미디어 쿼리를 이용한 반응형 사이트 구현 가능."],
-      src: []
+      src: ["./images/css.png"],
+      color: ["skyblue"]
     }, {
       name: "JAVASCRIPT",
-      type: "FRONTEND",
+      type: "frontend",
       ment: ["ES6문법을 사용하여 웹사이트 제작 가능.", "JS로 이벤트 제작/제어 및 DOM을 제어하여 다양한 동적 기능 부여 가능.", "JS기반 라이브러리 및 플러그인 사용 가능."],
-      src: []
+      src: ["./images/js.png"],
+      color: ["yellow"]
     }, {
       name: "JQUERY",
-      type: "FRONTEND",
+      type: "frontend",
       ment: ["JQUERY를 사용하여 이벤트 제작/제어 가능.", "JQUERY의 플러그인을 사용하여 스크롤 및 애니메이션 제작 가능."],
-      src: []
+      src: ["./images/html.png"],
+      color: ["skyblue"]
     }, {
       name: "SASS/SCSS",
-      type: "FRONTEND",
+      type: "frontend",
       ment: ["CSS전처리기인 SCSS를 활용하여 CSS문법을 보다 가독성 있게 작성 가능.", "SCSS에서 제공하는 기본적인 함수 문법 사용 가능."],
-      src: []
+      src: ["./images/sass.png"],
+      color: ["pink"]
     }, {
       name: "REACT",
-      type: "FRONTEND",
+      type: "frontend",
       ment: ["컴포넌트를 작성하여 UI/UX 제작 가능.", "HOOKS을 이용하여 다양한 상태 관리 가능. (함수형 컴포넌트 작성 가능)", "STYLED COMPOMENTS 사용 가능", "ROUTER를 사용하여 SPA 제작 취지와 맞게 한 페이지 내에서 여러 페이지 연결 가능.", "REDUX TOOL KIT을 이용하여 전역 상태 관리 가능."],
-      src: []
+      src: ["./images/react.png"],
+      color: ["skyblue"]
     }, {
       name: "BOOTSTRAP(REACT)",
-      type: "FRONTEND",
+      type: "frontend",
       ment: ["RECAT와 연계 하여 레이아웃 작성 가능."],
-      src: []
+      src: ["./images/bootstrap.png"],
+      color: ["purple"]
     }, {
       name: "PARCEL BUNDLER",
-      type: "FRONTEND",
+      type: "frontend",
       ment: ["PARCEL BUNDLER를 이용하여 모듈들을 번들, 정적 파일로 변환 가능.", "BUNDLER환경에서 사이트 배포 (GITHUB) 가능."],
-      src: []
+      src: ["./images/parcel_bundler.png"],
+      color: ["brown"]
     }],
     tools: [{
       name: "FIGMA",
-      type: "TOOLS",
+      type: "tools",
       ment: ["FIMGA를 이용하여 프로토타입/시안 작성 가능.", "FIMGA를 이용하여 레이아웃 작성 가능."],
-      src: []
+      src: ["./images/figma.png"],
+      color: ["purple"]
     }, {
       name: "ADOBE XD",
-      type: "TOOLS",
+      type: "tools",
       ment: ["ADOBE XD를 이용하여 프로토타입/시안 작성 가능.", "ADOBE XD를 이용하여 레이아웃 작성 가능."],
-      src: []
+      src: ["./images/adobe_xd.png"],
+      color: ["purple"]
     }, {
       name: "PHOTOSHOP",
-      type: "TOOLS",
+      type: "tools",
       ment: ["PHOTOSHOP을 이용하여 사진/GIF 편집 및 제작 가능."],
-      src: []
+      src: ["./images/ps.png"],
+      color: ["skyblue"]
     }],
-    vesioncontrol: [{
+    vesionControl: [{
       name: "GIT",
-      type: "VESIONCONTROL",
+      type: "vesionControl",
       ment: ["형상관리도구(버전관리도구)인 GIT을 이용하여 GITHUB와 연동 가능.", "GIT의 각종 명령어 사용 가능. GIT BRANCHE 사용 가능."],
-      src: []
+      src: ["./images/git.png"],
+      color: ["orange"]
     }, {
       name: "GITHUB",
-      type: "VESIONCONTROL",
+      type: "vesionControl",
       ment: ["GITHUB 레퍼지토리 작성하여 로컬 레퍼지토리와 연결 가능.", "GITHUB를 이용하여 사이트 DEPLOY(배포) 가능."],
-      src: []
+      src: ["./images/github.png"],
+      color: ["white"]
     }]
   },
   project: {}
@@ -11359,6 +11372,59 @@ setTimeout(function () {
   pageScrollEvent();
 }, 1500 + tipMentDelay * 100 + repeatTime * titleMentStr.length);
 
+/************** skill_page ***************/
+var skillListArea = document.getElementById('skill_list_area');
+var hoverMentBox = document.getElementById('hover_ment_box');
+var hoverMentTitle = document.getElementById('ment_box_name');
+var hoverMent = document.getElementById('ment_box_ment');
+var _data$skill = _data.data.skill,
+  frontend = _data$skill.frontend,
+  tools = _data$skill.tools,
+  vesionControl = _data$skill.vesionControl;
+
+/* 1. list를 호버할때마다 text콘텐츠 및 innerhtml로 변경됨 
+2. array를 기반으로 뽑아내야하는데, array 종류는 3개가 있음
+3. 정리하자면 list를 호버한 시점에서 array 종류가 특정되게 코드를 짜야 함.
+4. list가 생성된 이후 -> 쿼리셀렉터올 -> 호버이벤트 -> 밸류값으로 뽑아오자. */
+
+skillCreate();
+function skillCreate() {
+  var totalList = "";
+  totalList = "\n        <h2 class=\"title title_front_end\">FRONTEND</h2>\n        <li id=\"front_end_list\">\n            ".concat(listCreate(frontend), "\n        </li>\n        <h2 class=\"title title_tools\">TOOLS</h2>\n        <li id=\"tools_list\">\n            ").concat(listCreate(tools), "\n        </li>\n        <h2 class=\"title title_vesion_control\">VESION CONTROL</h2>\n        <li id=\"vesion_control_list\">\n            ").concat(listCreate(vesionControl), "\n        </li>\n    ");
+  skillListArea.innerHTML = totalList;
+  var skillLists = document.querySelectorAll('.skill_list');
+  for (var i = 0; i < skillLists.length; i++) {
+    console.log(skillLists[i]);
+  }
+  /*     skillLists.forEach((list, index) => {
+          list.addEventListener('mouseover', () => {
+              console.log(skillLists[index].value);
+              classAdd(hoverMentBox, 'opacity_on');
+          });
+          list.addEventListener('mouseout', () => {
+              classRemove(hoverMentBox, 'opacity_on');
+          });
+      }) */
+}
+
+function listCreate(arr) {
+  var list = "";
+  var receive = "";
+  for (var i = 0; i < arr.length; i++) {
+    list = "\n            <div class=\"skill_list\" value=\"".concat(arr[i].type, "\">\n                <img src=").concat(arr[i].src, "/ alt=").concat(arr[i].type, "_list_img_").concat(i, ">\n            </div>\n        ");
+    receive += list;
+  }
+  return receive;
+}
+
+/* function mentCreate(nowIndex) {
+    hoverMent.textContent = ``;
+    hoverMent.innerHTML = ``;
+
+    hoverMentTitle.textContent = 
+    hoverMent.innerHTML = 
+} */
+
 /************** jquery ***************/
 function pageScrollEvent() {
   (0, _jquery.default)(function () {
@@ -11410,7 +11476,6 @@ function wheelEvent() {
       if (nowIndex === 0 && !profileMentAni) {
         profileMentAni = true;
         var mentCnt = 0;
-        var prevCnt = 0;
         var profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
         var mentTiping = setInterval(function () {
           (0, _jquery.default)('#ment_box .ment').append(profileMent[mentCnt]);
@@ -11481,7 +11546,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55493" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65162" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
