@@ -11386,7 +11386,7 @@ function skillCreate() {
   skillListArea.innerHTML = totalList;
   var skillLists = document.querySelectorAll('.skill_list');
   skillLists.forEach(function (list, index) {
-    list.addEventListener('mouseenter', function (e) {
+    list.addEventListener('mouseenter', function () {
       mentCreate(skill, index);
       classAdd(hoverMentBox, 'opacity_on');
       hoverMentTitle.style.color = "".concat(skill[index].color[0]);
@@ -11404,7 +11404,7 @@ function listCreate(arr, type) {
   var list = "";
   var receive = "";
   for (var i = 0; i < changeArr.length; i++) {
-    list = "\n            <div class=\"skill_list\" data-type=\"".concat(changeArr[i].type, "\">\n                <img src=").concat(changeArr[i].src, "/ alt=").concat(changeArr[i].type, "_list_img_").concat(i, ">\n            </div>\n        ");
+    list = "\n            <div class=\"skill_list\">\n                <img src=".concat(changeArr[i].src, "/ alt=").concat(changeArr[i].type, "_list_img_").concat(i, ">\n            </div>\n        ");
     receive += list;
   }
   return receive;
@@ -11460,6 +11460,12 @@ function wheelEvent() {
       var pageLength = pages.length;
       var prev = 0;
       var next = 0;
+
+      //인덱스2에서 위로 스크롤했을때 || 인덱스0애서 아래로 스크롤했을때
+      var condition = delta < 0 && nowIndex === 2 || delta > 0 && nowIndex === 0;
+      if (condition && !profileMentAni) {
+        profileMentShow();
+      }
       if (delta < 0 && nowIndex > 0) {
         (0, _jquery.default)('#progress_bar .gage').css({
           width: (nowIndex - 1) * 25 + '%'
@@ -11481,34 +11487,49 @@ function wheelEvent() {
           scrollTop: next
         }, 600);
       }
-      if (nowIndex === 0 && !profileMentAni) {
-        profileMentAni = true;
-        var mentCnt = 0;
-        var profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
-        var mentTiping = setInterval(function () {
-          (0, _jquery.default)('#ment_box .ment').append(profileMent[mentCnt]);
-          mentCnt++;
-          if (mentCnt >= profileMent.length) {
-            clearInterval(mentTiping);
-          }
-        }, 150);
-      }
     });
   }, 100);
 }
 function navigatorEvent() {
+  var prevOffset = 0;
   navigator.on('click', function () {
     var nowIndex = (0, _jquery.default)(this).index();
-    var moveOffset = pages.eq(nowIndex).offset().top;
+    var currentOffset = pages.eq(nowIndex).offset().top;
     navigator.removeClass('tab_active');
     navigator.eq(nowIndex).addClass('tab_active');
+    var condition = (0, _jquery.default)(window).scrollTop();
+    if (!profileMentAni) {
+      profileMentAni = true;
+      if (prevOffset > currentOffset && condition === pages.eq(2).offset().top) {
+        //console.log('2번에서 클릭으로 스크롤을 올리셨습니다.');
+        profileMentShow();
+      } else if (prevOffset < currentOffset && condition === pages.eq(0).offset().top) {
+        //console.log('0번에서 클릭으로 스크롤을 내리셨습니다.');
+        profileMentShow();
+      }
+    }
     (0, _jquery.default)('#progress_bar .gage').css({
       width: nowIndex * 25 + '%'
     });
     (0, _jquery.default)('html, body').stop().animate({
-      scrollTop: moveOffset
+      scrollTop: currentOffset
     }, 600);
+
+    //prev가 current보다 크면 올라간거고 낮으면 내려간거
+    prevOffset = currentOffset;
   });
+}
+function profileMentShow() {
+  profileMentAni = true;
+  var mentCnt = 0;
+  var profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
+  var mentTiping = setInterval(function () {
+    (0, _jquery.default)('#ment_box .ment').append(profileMent[mentCnt]);
+    mentCnt++;
+    if (mentCnt >= profileMent.length) {
+      clearInterval(mentTiping);
+    }
+  }, 150);
 }
 
 /************** js fnc ***************/
@@ -11553,7 +11574,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53752" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55609" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

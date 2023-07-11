@@ -110,7 +110,7 @@ function skillCreate() {
     const skillLists = document.querySelectorAll('.skill_list');
 
     skillLists.forEach((list, index) => {
-        list.addEventListener('mouseenter', (e) => {
+        list.addEventListener('mouseenter', () => {
             
             mentCreate(skill, index);
 
@@ -133,7 +133,7 @@ function listCreate(arr, type) {
 
     for(let i = 0; i < changeArr.length; i++) {
         list = `
-            <div class="skill_list" data-type="${changeArr[i].type}">
+            <div class="skill_list">
                 <img src=${changeArr[i].src}/ alt=${changeArr[i].type}_list_img_${i}>
             </div>
         `
@@ -171,7 +171,7 @@ let dotRepeat = setInterval(() => {
         dotCnt = 0;
     }
 
-}, 700)
+}, 700);
 
 /************** jquery ***************/
 function pageScrollEvent() {
@@ -193,6 +193,7 @@ const navigator = $('#navgation_area > li');
 let profileMentAni = false;
 function wheelEvent() {
     let scrollEv;
+
     clearTimeout(scrollEv);
 
     scrollEv = setTimeout(() => {
@@ -205,6 +206,13 @@ function wheelEvent() {
 
             let prev = 0;
             let next = 0;
+
+            //인덱스2에서 위로 스크롤했을때 || 인덱스0애서 아래로 스크롤했을때
+            const condition = (delta < 0 && nowIndex === 2) || ( delta > 0 && nowIndex === 0); 
+
+            if(condition && !profileMentAni) {
+                profileMentShow();
+            }
 
             if (delta < 0 && nowIndex > 0) {
     
@@ -235,23 +243,6 @@ function wheelEvent() {
                 }, 600);
             }
     
-            if(nowIndex === 0 && !profileMentAni) {
-                profileMentAni = true;
-                
-                let mentCnt = 0;
-    
-                const profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
-    
-                let mentTiping = setInterval(() => {
-                    $('#ment_box .ment').append(profileMent[mentCnt])
-                    
-                    mentCnt++;
-                    
-                    if(mentCnt >= profileMent.length) {
-                        clearInterval(mentTiping);
-                    }
-                }, 150);
-            }
 
         })
     }, 100)
@@ -260,21 +251,61 @@ function wheelEvent() {
 }
 
 function navigatorEvent() {
+    let prevOffset = 0;
     navigator.on('click', function() {
         let nowIndex = $(this).index();
-
-        let moveOffset = pages.eq(nowIndex).offset().top;
+        
+        let currentOffset = pages.eq(nowIndex).offset().top;
 
         navigator.removeClass('tab_active');
         navigator.eq(nowIndex).addClass('tab_active');
+
+        let condition = $(window).scrollTop();
+        if(!profileMentAni) {
+            profileMentAni = true;
+            if(prevOffset > currentOffset && condition ===  pages.eq(2).offset().top) {
+
+                //console.log('2번에서 클릭으로 스크롤을 올리셨습니다.');
+                profileMentShow();
+
+            } else if(prevOffset < currentOffset && condition ===  pages.eq(0).offset().top) {
+
+                //console.log('0번에서 클릭으로 스크롤을 내리셨습니다.');
+                profileMentShow();
+
+            }
+        }
 
         $('#progress_bar .gage').css({
             width: nowIndex * 25 + '%',
         })
         $('html, body').stop().animate({
-            scrollTop: moveOffset,
+            scrollTop: currentOffset,
         }, 600)
+
+        //prev가 current보다 크면 올라간거고 낮으면 내려간거
+        prevOffset = currentOffset;
+
+        
     })
+}
+
+function profileMentShow() {
+    profileMentAni = true;
+                
+    let mentCnt = 0;
+
+    const profileMent = '안녕하세요 늘 낮은 자세로 배움을 추구하는 개발자 지망생 윤서환 입니다!';
+
+    let mentTiping = setInterval(() => {
+        $('#ment_box .ment').append(profileMent[mentCnt])
+        
+        mentCnt++;
+        
+        if(mentCnt >= profileMent.length) {
+            clearInterval(mentTiping);
+        }
+    }, 150);
 }
 
 /************** js fnc ***************/
