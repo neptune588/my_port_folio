@@ -156,6 +156,90 @@ function mentCreate(arr, index) {
     hoverMent.innerHTML = receive;
 }
 
+/************** project_page ***************/
+const {page} = data;
+
+const projectBox = document.getElementById('project_box');
+
+const projectList = document.querySelectorAll('.project_list');
+
+projectList.forEach((li, index) => {
+    li.addEventListener('click', () => {
+        pageCreate(index);
+    })
+})
+
+
+// 메뉴 리스트 데이터 동적 변경 --
+//메뉴 리스트를 클릭시 밸류값 받아와서 텍스트가 변화된다.
+//하지만 디폴트값은 all로주고, all로 생성된 dom을 기준으로 이벤트를 걸어주면 될듯. 
+function pageCreate(nowIndex){
+    let contents = ``;
+
+    contents = `
+        <div class="video_container">
+            <ul class="page_list">
+                ${tabListCreate(nowIndex)}
+            </ul>
+        </div>
+        <div class="info_area">
+            <div class="info_text_area">
+                ${infoTextCreate(nowIndex)}
+            </div>
+        </div>
+        <ul id="project_list" class="project_list_design">
+            
+        </ul>
+    `
+
+    projectBox.innerHTML = contents;
+}
+
+
+/*         console.log(
+            innerList = `
+                <li class="color_change">${value}</li>
+            `
+        ); */
+function tabListCreate(myIndex) {
+    //초기화 안시켜주면 언디파인드 들어감.
+    let innerList = ``;
+    let innerReceive = ``;
+
+    //page[0].menuKind -> ["all","main"...]
+    let nowObject = page[myIndex];
+
+    nowObject.menuKind.forEach((value, i) => {
+        innerList = `
+            <li class="color_change" value="${nowObject.pageInfo[i].type}">${value}</li>
+        `
+        innerReceive += innerList
+    })
+
+    return innerReceive;
+}
+
+
+function infoTextCreate (myIndex) {
+    let innerList = ``;
+    let innerReceive = ``;
+
+    let nowObject = page[myIndex];
+
+    for(let i = 0; i < nowObject.pageInfo.length; i++) {
+        if(nowObject.pageInfo[i].hasOwnProperty('makePeriod')) {
+            innerList = `
+                <h2 class="project_name>${page[myIndex].projectName}</h2>
+            `
+        } else {
+            console.log('all이 아닙니다.');
+        }
+    }
+/*     innerList = `
+        <h2 class="project_name">${nowObject.}</h2>
+    ` */
+}
+
 /************** contact_page ***************/
 const dotArea = document.querySelector('.copy_right > .dot_area');
 const dotStr = "...";

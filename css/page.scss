@@ -12,12 +12,12 @@
     opacity: 1 !important; 
 }
 
+
 /****************************** intro_page *****************************/
 .section_wrpper_design {
     width: 100%;
     height: 500vh;
     overflow: hidden;
-
     .section_container {
         position: relative; 
         color: white;
@@ -103,6 +103,8 @@
             }
         }
     }
+
+    /****************************** profile_page *****************************/
     .profile_page_design {
         background-color: #5f4a6b !important;
         .profile_container {
@@ -137,7 +139,10 @@
         }
 
     }
+
+    /****************************** skill_page *****************************/
     .skill_page_design {
+        background-color: #885866 !important;
         .skill_container {
             margin-top: 5%;
             .skill_list_area_design {
@@ -213,7 +218,126 @@
             }
         }
     }
+    
+    /****************************** project_page *****************************/    
+    .project_page_design {
+        .project_container {
+            margin-top: 5%;
+            .project_box_design {
+                display: flex;
+                margin-top: 20px;
+                .video_container {
+                    @include item_size(480px, 540px);
+                    background-color: gray;
+                    margin-right: 20px;
+                    box-shadow: 0px 1px 7px 0px black;
+                    border: 2px solid white;
+                    .page_list {
+                        width: 100%;
+                        display: flex;
+                        background-color: black;
+                        justify-content: space-evenly;
+                        border-bottom: 1px solid white;
+                        li {
+                            cursor: pointer;
+                            font-size: 1.8rem;
+                            padding: 10px 5px;
+                            transition: all 0.2s;
+                            &:hover {
+                                color: #ffbf00;
+                            }
+                        }
+                    }
+                }
+                .info_area {
+                    width: 540px;
+                    box-shadow: 0px 1px 7px 0px black;
+                    margin-right: 20px;
+                    .info_text_area {
+                        @include item_size(100%, 500px);
+                        padding: 10px 30px;
+                        background-color: rgb(61, 32, 139);
+                        border: 2px solid white;
+                        text-align: left;
+                        .project_name {
+                            margin-top: 10px;
+                            text-align: center;
+                            font-size: 3.2rem;
+                            margin-bottom: 20px;
+                        }
+                        .project_sub_title {
+                            display: inline-block;
+                            font-size: 1.6rem;
+                            margin-bottom: 10px;
+                            padding: 0 5px 5px;
+                            border-bottom: 2px solid white;
+                        }
+                        .project_ment {
+                            font-size: 2rem;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .link_btn_list {
+                        display: flex;
+                        li {
+                            @include item_size(25%, 40px);
+                            line-height: 40px;
+                            cursor: pointer;
+                            font-size: 1.4rem;
+                            background-color: black;
+                            border: 2px solid white;
+                            border-top: none;
+                            border-right: none;
+                            transition: all 0.2s;
+                            &:hover {
+                                color: #ffbf00;
+                            }
+                            &:last-child {
+                                border-right: 2px solid white;
+                            }
+                        }
+                    }
+                }
+                .project_list_design {
+                    @include item_size(120px, 540px);
+                    background-color: black;
+                    border: 2px solid white;
+                    padding: 0 20px;
+                    li {
+                        margin-top: 20px;
+                        user-select: none;
+                        cursor: pointer;
+                        &:hover {
+                            p {
+                                border-bottom: 1px solid white;
+                            }
+                        }
+                        .icon_img {
+                            padding: 10px;
+                            background-color: white;
+                            border-bottom: 1px solid black;
+                            img {
+                                @include item_size(60px, 60px);
+                                object-fit: cover;
+                            }
+                        }
+                        p {
+                            padding-bottom: 2px;
+                            margin-top: 5px;
+                            font-size: 1.8rem;
+                            border-bottom: 1px solid black;
+                        }
+                    }
+                }
+            }
 
+        }
+        .section_bg {
+            transform: rotate(180deg);
+        }
+    }
+
+    /****************************** contact_page *****************************/
     .contact_page_design {
         .contact_container {
             margin-top: 5%;
@@ -333,7 +457,7 @@
         overflow: hidden;
         font-family: $dot_font_dungGeunMo;
         background-color: #582e46;
-        @include item_size(100vw, 100vh);
+        @include item_size(100vw, 100vh !important);
     }
     .sub_title {
         display: inline-block;

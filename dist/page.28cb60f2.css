@@ -67,6 +67,10 @@ h2 {
   width: 100%;
   height: 500vh;
   overflow: hidden;
+  /****************************** profile_page *****************************/
+  /****************************** skill_page *****************************/
+  /****************************** project_page *****************************/
+  /****************************** contact_page *****************************/
 }
 .section_wrpper_design .section_container {
   position: relative;
@@ -189,6 +193,9 @@ h2 {
   width: 200px;
   transform: rotate(0deg);
 }
+.section_wrpper_design .skill_page_design {
+  background-color: #885866 !important;
+}
 .section_wrpper_design .skill_page_design .skill_container {
   margin-top: 5%;
 }
@@ -265,6 +272,122 @@ h2 {
 .section_wrpper_design .skill_page_design .skill_container .tip_ment {
   margin-top: 15px;
   font-size: 2.4rem;
+}
+.section_wrpper_design .project_page_design .project_container {
+  margin-top: 5%;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design {
+  display: flex;
+  margin-top: 20px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container {
+  width: 480px;
+  height: 540px;
+  background-color: gray;
+  margin-right: 20px;
+  box-shadow: 0px 1px 7px 0px black;
+  border: 2px solid white;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list {
+  width: 100%;
+  display: flex;
+  background-color: black;
+  justify-content: space-evenly;
+  border-bottom: 1px solid white;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list li {
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 10px 5px;
+  transition: all 0.2s;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list li:hover {
+  color: #ffbf00;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area {
+  width: 540px;
+  box-shadow: 0px 1px 7px 0px black;
+  margin-right: 20px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area {
+  width: 100%;
+  height: 500px;
+  padding: 10px 30px;
+  background-color: rgb(61, 32, 139);
+  border: 2px solid white;
+  text-align: left;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area .project_name {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area .project_sub_title {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  padding: 0 5px 5px;
+  border-bottom: 2px solid white;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area .project_ment {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list {
+  display: flex;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list li {
+  width: 25%;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  background-color: black;
+  border: 2px solid white;
+  border-top: none;
+  border-right: none;
+  transition: all 0.2s;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list li:hover {
+  color: #ffbf00;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list li:last-child {
+  border-right: 2px solid white;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design {
+  width: 120px;
+  height: 540px;
+  background-color: black;
+  border: 2px solid white;
+  padding: 0 20px;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li {
+  margin-top: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li:hover p {
+  border-bottom: 1px solid white;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li .icon_img {
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li .icon_img img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li p {
+  padding-bottom: 2px;
+  margin-top: 5px;
+  font-size: 1.8rem;
+  border-bottom: 1px solid black;
+}
+.section_wrpper_design .project_page_design .section_bg {
+  transform: rotate(180deg);
 }
 .section_wrpper_design .contact_page_design .contact_container {
   margin-top: 5%;
@@ -389,7 +512,7 @@ h2 {
   font-family: "DungGeunMo";
   background-color: #582e46;
   width: 100vw;
-  height: 100vh;
+  height: 100vh !important;
 }
 .section_wrpper_design .sub_title {
   display: inline-block;

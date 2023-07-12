@@ -133,6 +133,282 @@ const data = {
       color: ["white"],
     },
   ],
+
+  //페이지를 하나의 객체로 생각하고
+  //데이터를 구성해보자.
+  //탭 메뉴는 배열 렝쓰에 맞게 생성이 되게 구현하자.
+  //탭 메뉴를 클릭할시 해당 밸류값을 받아와서 객체 타입과 일치하는지 판단 -> 리스트를 뽑아내자.
+  page: [
+    {
+      projectName: "CALHARTT WIP",
+      menuKind: ["ALL","MAIN","SUB","DETAIL","SIGN IN/UP","SEARCH"],
+      hoverColor: ["FFBF00"],
+      pageInfo: [
+        {
+          type: "ALL",
+          makePeriod: "2023-05-01 ~ 2023-06-12",
+          makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
+          videoSrc: [""]
+        },
+        {
+          type: "MAIN",
+          pageContents: [
+            "박스 무한 슬라이더","LOOK_BOOK_BOX"
+          ],
+          episode: [
+            "자바스크립트 실력을 늘리고 싶어서 바닐라 자바스크립트로 만들어 보자고 계획을 세웠습니다.",
+            "박스 슬라이더 부분은 JQUERY로는 어떻게 구현하는지 배웠지만 JS와 차이점이 있어 관련 강의를 찾아 보고",
+            "공부하여 구현한다고 시간이 소요 됐었지만, 생각한대로 구현이 되어 뿌듯 했습니다."
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "SUB",
+          pageContents: [
+            "다중 중첩 상품 필터","정렬 및 동적 페이지네이션"
+          ],
+          episode: [
+            "Math.ceil 메서드를 이용하여 실시간으로 전달받은 배열의 갯수를 나누어 동적 페이지를 구현 하였으며",
+            "중첩 필터의 경우에는 if문으로 구현 할 경우 말도 안되는 경우의 수가 생긴다고 판단,",
+            "배열, VALUE, DATA-SET, closest메서드, for반복문 등으로 해당 기능을 구현 하였습니다.",
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "DETAIL",
+          pageContents: [
+            "리스트 작성 및 페이지 네이션", "QNA 리스트 작성 및 답변 기능"
+          ],
+          episode: [
+            "리스트 기능에는 작성 갯수에 따른 페이지 생성과 삭제 기능, 별점 부여 기능 등이 있으며",
+            "객체 및 배열을 활용하여 구현 했습니다.",
+            "QNA는 질문글이 올라오면 해당 글을 답변 할 수 있게 답변이 달리면 답변 상태가 변화 됩니다."
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "SIGN IN/UP",
+          pageContents: [
+            "ID/PW찾기 기능", "회원가입 및 로그인 기능"
+          ],
+          episode: [
+            "자바스크립트를 처음으로 사용하여 구현한 페이지입니다.",
+            "회원가입 페이지에서는 각 탭마다 해당되는 조건들을",
+            "반복문, SWITCH CASE, 정규식 등으로 검사 할 수 있게 구현 하였으며",
+            "FINDINDEX 메서드를 활용하여 아이디/비밀번호가 같은 정보에 속해있는지 판단했습니다.",
+            "해당 프로젝트를 제작하면서 자바스크립트에 대한 이해도와 실력이 상승된것 같습니다."
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "SEARCH",
+          pageContents: [
+            "검색 기능",
+          ],
+          episode: [
+            "filter 메서드, include메서드, urlQuery 등을 활용하여 해당 기능을 구현 하였습니다.",
+            "?앞뒤의 값을 키:밸류의 형태로 받아와 filter, includes를 활용하여 해당 기능을 구현 했습니다.",
+            "소소하지만 검색한 키워드에 맞는 상품이 몇개 있는지/ 없는지 표기 하였습니다.",
+          ],
+          videoSrc: [""]
+        },
+      ],
+      link: {
+        proposal: "",
+        github: "",
+        code: "",
+        site: "",
+      }
+    },
+    {
+      projectName: "NETMARBLE",
+      menuKind: ["ALL","MAIN","SUB"],
+      hoverColor: ["yellow"],
+      pageInfo: [
+        {
+          type: "ALL",
+          makePeriod: "2023-05-01 ~ 2023-06-12",
+          makeSkill: ["HTML5","CSS","JQUERY"],
+          videoSrc: [""]
+        },
+        {
+          type: "MAIN",
+          pageContents: [
+            "DATA-SET을 이용한 정렬 기능", "SLICK SLIDER를 활용한 박스 슬라이더", "반응형", "아코디언 메뉴", "JQUERY를 활용한 박스 슬라이더"
+          ],
+          episode: [
+            "프론트엔드 과정을 배우면서 처음으로 진행한 프로젝트로,",
+            "처음 제작하는 프로젝트라, 시행 착오도 많이 겪은 프로젝트 입니다.",
+            "MEDIAQUERY를 활용하여 반응형으로 제작 하였으며, JQUERY를 활용하여 정렬 및 슬라이더 기능등을 구현 하였습니다."
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "SUB",
+          pageContents: [
+            "탭 메뉴","메뉴 더보기 기능"
+          ],
+          episode: [
+            "탭 메뉴 버튼을 통해 해당하는 밸류를 가진 메뉴를 DISPLAY: NONE/BLOCK으로 구현 하였으며",
+            "모바일의 경우 더보기 버튼을 통해 배열의 특정 LENGTH만큼 보이게 구현 하였습니다.,",
+            "모바일, 테블릿, PC버전에서 표기되는 컨텐츠의 갯수가 달라집니다.",
+          ],
+          videoSrc: [""]
+        },
+      ],
+      link: {
+        proposal: "",
+        github: "",
+        code: "",
+        site: "",
+      }
+    },
+    {
+      projectName: "CALHARTT WIP REACT",
+      menuKind: ["ALL","MAIN","SUB","DETAIL","CART","SEARCH"],
+      hoverColor: ["FFBF00"],
+      pageInfo: [
+        {
+          type: "ALL",
+          makePeriod: "2023-05-01 ~ 2023-06-12",
+          makeSkill: ["REACT","SCSS","ROUTER","REDUX TOOL KIT","STYLED-COMPONENTS","SWIPER"],
+          videoSrc: [""]
+        },
+        {
+          type: "MAIN",
+          pageContents: [
+            "박스 무한 슬라이더","LOOK_BOOK_BOX"
+          ],
+          episode: [
+            "처음 리액트를 접했을때는 기존 제작 환경과 많이 달라 당황 했습니다.",
+            "하지만 수업시간에 배운 내용과 복습을 통해 어느정도 이해하게 되었고",
+            "MAP을 적극적으로 활용하여 링크 연결 및 PROPS들을 객체 속성 값에 맞게 동적으로 생성 하였습니다.",
+            "JS로 제작했던 박스 슬라이더는 스와이퍼로 교체 하였으며, HOVER EVENT는 useState를 사용",
+            "즉, 상태 변경을 이용하여 삼항 연산자로 해당 이벤트를 구현 하였습니다."
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "SUB",
+          pageContents: [
+            "서브 메뉴에 따른 리스트 동적 생성","장바구니 담기 기능","상태 변경을 이용한 조건부 렌더링"
+          ],
+          episode: [
+            "HEADER 역시 MAP으로 객체 기반 동적 생성을 하였고, 링크 연결을 객체 속성 값으로 연결",
+            "ROUTER를 이용해 해당 서브 페이지로 라우팅을 해준 뒤 PARAMS를 동적으로 받아와",
+            "Object.keys를 활용해 JSON데이터 파일과 비교, 일치하는 값을 뿌려 주었습니다.",
+            "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며",
+            "자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.",
+            "fetch로 데이터 요청을 해 상태에 담고, 해당 상태가 변하기 전까지는 다른 컴포넌트가 렌더링이 되는 이른바 조건부 렌더링을 했습니다."
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "DETAIL",
+          pageContents: [
+            "JSON 데이터 렌더링", "리뷰 리스트 작성 및 별점/삭제 기능"
+          ],
+          episode: [
+            "30개의 리스트가 있으며 각 리스트 객체에 담겨있는 정보를 토대로",
+            "디테일 페이지에 렌더링을 했습니다.",
+            "또한 별점 기능은 반복문과 useState를 이용한 객체 속성 값 변화로 구현을 하였습니다."
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "CART",
+          pageContents: [
+            "총 갯수 및 가격 표시 기능", "상품 수량 변경 및 삭제 기능"
+          ],
+          episode: [
+            "리덕스 툴킷의 리듀서즈에 저장된 상태 변화 함수, useDispatch, useSelector를 활용하여",
+            "해당 기능들을 구현 하였습니다.",
+          ],
+          videoSrc: [""]
+        },
+        {
+          type: "SEARCH",
+          pageContents: [
+            "검색 기능",
+          ],
+          episode: [
+            "input밸류 값이 바뀔때마다 onChange이벤트를 통해 상태 배열에 value가 저장이 되고",
+            "엔터 혹은 검색 버튼을 눌렸을시 해당 상태의 값이 링크에 전달",
+            "useParams를 이용하여 해당 값을 받아와 filter, includes를 이용해 검색 기능을 구현 했습니다.",
+          ],
+          videoSrc: [""]
+        },
+      ],
+      link: {
+        proposal: "",
+        github: "",
+        code: "",
+        site: "",
+      }
+    },
+  ]
 }
 
 export {data};
+
+/* {
+  menuKind: ["ALL","MAIN","SUB","DETAIL","SIGN IN/UP"],
+  projectName: "CALHARTT: MAIN",
+  makePeriod: "2023-05-01 ~ 2023-06-12",
+  makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
+  setting: ["NODE.JS","PARCEL-BUNDLER"],
+  pageContents: [
+    "박스 무한 슬라이더","LOOK_BOOK_BOX"
+  ],
+  episode: [
+    "자바스크립트 실력을 늘리고 싶어서 바닐라 자바스크립트로 만들어 보자고 계획을 세웠습니다.",
+    "박스 슬라이더 부분은 JQUERY로는 어떻게 구현하는지 배웠지만 JS와 차이점이 있어 관련 강의를 찾아 보고",
+    "공부하여 구현한다고 시간이 소요 됐었지만, 생각한대로 구현이 되어 뿌듯 했습니다."
+  ],
+  videoSrc: []
+},
+{
+  projectName: "CALHARTT: SUB",
+  makePeriod: "2023-05-01 ~ 2023-06-12",
+  makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
+  setting: ["NODE.JS","PARCEL-BUNDLER"],
+  pageContents: [
+    "다중 중첩 상품 필터","정렬 및 동적 페이지네이션"
+  ],
+  episode: [
+    "Math.ceil 메서드를 이용하여 실시간으로 전달받은 배열의 갯수를 나누어 동적 페이지를 구현 하였으며",
+    "중첩 필터의 경우에는 if문으로 구현 할 경우 말도 안되는 경우의 수가 생긴다고 판단,",
+    "배열, VALUE, DATA-SET, closest메서드, for반복문 등으로 해당 기능을 구현 하였습니다.",
+  ],
+  videoSrc: []
+},
+{
+  projectName: "CALHARTT: DETAIL",
+  makePeriod: "2023-05-01 ~ 2023-06-12",
+  makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
+  setting: ["NODE.JS","PARCEL-BUNDLER"],
+  pageContents: [
+    "리스트 작성 및 페이지 네이션", "QNA 리스트 작성 및 답변 기능"
+  ],
+  episode: [
+    "리스트 기능에는 작성 갯수에 따른 페이지 생성과 삭제 기능, 별점 부여 기능 등이 있으며",
+    "객체 및 배열을 활용하여 구현 했습니다.",
+    "QNA는 질문글이 올라오면 해당 글을 답변 할 수 있게 답변이 달리면 답변 상태가 변화 됩니다."
+  ],
+  videoSrc: []
+},
+{
+  projectName: "CALHARTT: SIGN IN/UP",
+  makePeriod: "2023-05-01 ~ 2023-06-12",
+  makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
+  setting: ["NODE.JS","PARCEL-BUNDLER"],
+  pageContents: [
+    "ID/PW찾기 기능", "회원가입 및 로그인 기능"
+  ],
+  episode: [
+    "자바스크립트를 처음으로 사용하여 구현한 페이지입니다.",
+    "객체 및 배열을 활용하여 구현 했습니다.",
+    "QNA는 질문글이 올라오면 해당 글을 답변 할수있게 답변이 달리면 답변 상태가 변화 됩니다."
+  ],
+  videoSrc: []
+} */
