@@ -159,86 +159,191 @@ function mentCreate(arr, index) {
 /************** project_page ***************/
 const {page} = data;
 
-const projectBox = document.getElementById('project_box');
 
-const projectList = document.querySelectorAll('.project_list');
+function totalCreate() {
+    const projectBox = document.getElementById('project_box');
 
-projectList.forEach((li, index) => {
-    li.addEventListener('click', () => {
-        pageCreate(index);
-    })
-})
+    let list = ``;
+    let receive = ``;
 
-
-// 메뉴 리스트 데이터 동적 변경 --
-//메뉴 리스트를 클릭시 밸류값 받아와서 텍스트가 변화된다.
-//하지만 디폴트값은 all로주고, all로 생성된 dom을 기준으로 이벤트를 걸어주면 될듯. 
-function pageCreate(nowIndex){
-    let contents = ``;
-
-    contents = `
+    list = `
         <div class="video_container">
-            <ul class="page_list">
-                ${tabListCreate(nowIndex)}
+            <ul id="page_list_area" class="page_list_area_design">
+                ${tabListCreate(0)}
             </ul>
         </div>
+
         <div class="info_area">
-            <div class="info_text_area">
-                ${infoTextCreate(nowIndex)}
+            <div id="info_text_area" class="info_text_area_design">
+                ${infoTextCreate(0, 0)}
             </div>
         </div>
-        <ul id="project_list" class="project_list_design">
-            
+
+        <ul class="link_btn_list"
+            <li class="color_change">기획서 보기</li>
+            <li class="color_change">사이트 보기</li>
+            <li class="color_change">코드 보기</li>
+            <li class="color_change">GITHUB/README</li>
+        </ul>
+
+        <ul id="project_list_area" class="project_list_design">
+            ${projectListCreate()}
         </ul>
     `
+}
 
-    projectBox.innerHTML = contents;
+function projectListCreate() {
+    let innerList = ``;
+    let receive = ``;
+
+    page.forEach((li) => {
+        innerList = `
+            <li>
+        `
+    })
+
+}
+
+totalClickEvent();
+function totalClickEvent () {
+
+    const infoTextArea = document.getElementById('info_text_area');
+    
+    const projectList = document.querySelectorAll('.project_list');
+
+    const pageListArea = document.getElementById('page_list_area');
+    
+    let list01 = ``;
+    let list02 = ``;
+
+    projectList.forEach((li, index) => {
+        li.addEventListener('click', () => {
+            //li = 각 project
+            //list01에 전달되어야 할것 
+            //메뉴는 menuKind의 갯수만큼 생성되어야 한다. 메뉴에 전달되는 value는 li인덱스에 맞는 object에서.pageInfo 반복문 돌리기.
+
+            //list02에 전달되어야 할것
+            //list02에는 각 object에 속해있는 pageInfo의 0번쨰 객체배열정보(디폴트)가 출력되어야 한다.
+            //그 부분은 불값으로 컨트롤, 불리언이 false면 0번째 출력, true면 다르게 출력 
+
+            //그렇게해서 최종적으로 pageListArea에 list01, infoArea에 list02 전달.
+            //list 생성됐으니, 서브메뉴핸들함수 등록
+            list01 = `
+                ${tabListCreate(index)}
+            `
+            list02 = `
+                ${infoTextCreate(index, 0)}
+            `
+
+            pageListArea.innerHTML = list01;
+            infoTextArea.innerHTML = list02;
+
+            handleSubClick(index, infoTextArea);
+        });
+    });
+    handleSubClick(0, infoTextArea);
 }
 
 
-/*         console.log(
-            innerList = `
-                <li class="color_change">${value}</li>
+function handleSubClick (parentIndex, infoArea) {
+    const pageList = document.querySelectorAll('.page_li');
+    
+    let list = ``;
+    pageList.forEach((li, index) => {
+        li.addEventListener('click', () => {
+            //서브페이지 메뉴를 클릭했을때는, 이미 오브젝트 인덱스가 확정되어있는 상태어야한다.
+
+            list = `
+                ${infoTextCreate(parentIndex, index)}
             `
-        ); */
+
+            infoArea.innerHTML = list;
+
+            //console.log(list);
+            for(let j = 0; j < pageList.length; j++) {
+                classRemove(pageList[j], "project_tab_on");
+            }
+
+            classAdd(li, "project_tab_on");
+        });
+    });
+    
+}
+
 function tabListCreate(myIndex) {
+    //서브메뉴 리스트를 뽑아내는 역할
+
     //초기화 안시켜주면 언디파인드 들어감.
     let innerList = ``;
     let innerReceive = ``;
 
-    //page[0].menuKind -> ["all","main"...]
-    let nowObject = page[myIndex];
-
-    nowObject.menuKind.forEach((value, i) => {
-        innerList = `
-            <li class="color_change" value="${nowObject.pageInfo[i].type}">${value}</li>
-        `
+    let myObject = page[myIndex];
+    myObject.menuKind.forEach((value, i) => {
+        
+        if (i === 0) {
+            innerList = `
+            <li class="page_li color_change project_tab_on">${value}</li>
+            `
+        } else {
+            innerList = `
+                <li class="page_li color_change">${value}</li>
+            `
+        }
         innerReceive += innerList
     })
 
     return innerReceive;
-}
+} 
 
+function infoTextCreate (objectIndex, menuIndex = 0) {
 
-function infoTextCreate (myIndex) {
+    let myObject = page[objectIndex];
+
     let innerList = ``;
-    let innerReceive = ``;
 
-    let nowObject = page[myIndex];
-
-    for(let i = 0; i < nowObject.pageInfo.length; i++) {
-        if(nowObject.pageInfo[i].hasOwnProperty('makePeriod')) {
-            innerList = `
-                <h2 class="project_name>${page[myIndex].projectName}</h2>
-            `
-        } else {
-            console.log('all이 아닙니다.');
-        }
+    console.log(menuIndex);
+    if(menuIndex === 0) {
+        innerList = `
+            <h2 class="project_name">${myObject.projectName}</h2>
+            <h2 class="project_sub_title">제작기간</h2>
+            <p class="project_ment">${myObject.pageInfo[0].makePeriod}</p>
+    
+            <h2 class="project_sub_title">사용기술</h2>
+            <p class="project_ment">${strMaker(myObject.pageInfo[0].makeSkill)}</p>
+    
+            <h2 class="project_sub_title">제작환경</h2>
+            <p class="project_ment">${strMaker(myObject.pageInfo[0].setting)}</p>
+        `;
+    } else {
+        innerList = `
+            <h2 class="project_name">${myObject.projectName}: ${myObject.pageInfo[menuIndex].type}</h2>
+    
+            <h2 class="project_sub_title">주요기능</h2>
+            <p class="project_ment">${myObject.pageInfo[menuIndex].pageContents}</p>
+    
+            <h2 class="project_sub_title">EPISODE</h2>
+            <p class="project_ment">${strMaker(myObject.pageInfo[menuIndex].episode, true)}</p>
+        
+        `
     }
-/*     innerList = `
-        <h2 class="project_name">${nowObject.}</h2>
-    ` */
+
+    return innerList;
 }
+
+function strMaker (nowObjectArr, nowBool = false) {
+    let strReturn = ``;
+
+    nowObjectArr.forEach((str) => {
+        if(!nowBool) {
+            strReturn += str;
+        } else {
+            strReturn += `${str} </br>`;
+        }
+    });
+
+    return strReturn;
+}
+
 
 /************** contact_page ***************/
 const dotArea = document.querySelector('.copy_right > .dot_area');
@@ -408,3 +513,42 @@ function classRemove(el, className) {
 function classRemoveMulti(el, classArr) {
     classArr.forEach(className => el.classList.remove(className));
 }
+
+
+// 메뉴 리스트 데이터 동적 변경 --
+//메뉴 리스트를 클릭시 밸류값 받아와서 텍스트가 변화된다.
+//하지만 디폴트값은 all로주고, all로 생성된 dom을 기준으로 이벤트를 걸어주면 될듯. 
+/* function pageCreate(nowIndex, totalBox){
+
+    //all에 해당하는 페이지를 뽑아내는 역할
+    totalBox.innerHTML = ``;
+    let contents = ``;
+    let nowObject = page[nowIndex];
+    
+    contents = `
+        <div class="video_container">
+            <ul class="page_list_area">
+                ${tabListCreate(nowObject)}
+            </ul>
+        </div>
+        <div class="info_area">
+            <div class="info_text_area">
+                ${defaultTextCreate(nowObject)}
+            </div>
+            <ul class="link_btn_list">
+                <li class="color_change">기획서 보기</li>
+                <li class="color_change">사이트 보기</li>
+                <li class="color_change">코드 보기</li>
+                <li class="color_change">GITHUB/README</li>
+            </ul>
+        </div>
+        <ul id="project_list_area" class="project_list_design">
+
+        </ul>
+    `
+
+    totalBox.innerHTML = contents;
+
+    //서브메뉴 + 프로젝트 리스트 클릭 이벤트 등록 역할
+    totalClickEvent();
+} */

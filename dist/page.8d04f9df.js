@@ -11321,10 +11321,12 @@ var data = {
     projectName: "CALHARTT WIP",
     menuKind: ["ALL", "MAIN", "SUB", "DETAIL", "SIGN IN/UP", "SEARCH"],
     hoverColor: ["FFBF00"],
+    iconSrc: ["./images/calhartt_logo.png"],
     pageInfo: [{
       type: "ALL",
-      makePeriod: "2023-05-01 ~ 2023-06-12",
-      makeSkill: ["HTML5", "SCSS", "VANILLA JAVASCRIPT"],
+      makePeriod: "2023-05-01 ~ 2023-06-28",
+      makeSkill: ["HTML5, ", "SCSS, ", "VANILLA JAVASCRIPT"],
+      setting: ["NODE.JS, ", "PARCEL-BUNDLER"],
       videoSrc: [""]
     }, {
       type: "MAIN",
@@ -11362,10 +11364,12 @@ var data = {
     projectName: "NETMARBLE",
     menuKind: ["ALL", "MAIN", "SUB"],
     hoverColor: ["yellow"],
+    iconSrc: ["./images/netmarble_logo.png"],
     pageInfo: [{
       type: "ALL",
       makePeriod: "2023-05-01 ~ 2023-06-12",
-      makeSkill: ["HTML5", "CSS", "JQUERY"],
+      makeSkill: ["HTML5, ", "CSS, ", "JQUERY"],
+      setting: ["LIVE환경"],
       videoSrc: [""]
     }, {
       type: "MAIN",
@@ -11375,7 +11379,7 @@ var data = {
     }, {
       type: "SUB",
       pageContents: ["탭 메뉴", "메뉴 더보기 기능"],
-      episode: ["탭 메뉴 버튼을 통해 해당하는 밸류를 가진 메뉴를 DISPLAY: NONE/BLOCK으로 구현 하였으며", "모바일의 경우 더보기 버튼을 통해 배열의 특정 LENGTH만큼 보이게 구현 하였습니다.,", "모바일, 테블릿, PC버전에서 표기되는 컨텐츠의 갯수가 달라집니다."],
+      episode: ["탭 메뉴 버튼을 통해 해당하는 밸류를 가진 메뉴를 DISPLAY: NONE/BLOCK으로 구현 하였으며", "모바일의 경우 더보기 버튼을 통해 배열의 특정 LENGTH만큼 보이게 구현 하였습니다.", "모바일, 테블릿, PC버전에서 표기되는 컨텐츠의 갯수가 달라집니다."],
       videoSrc: [""]
     }],
     link: {
@@ -11388,10 +11392,12 @@ var data = {
     projectName: "CALHARTT WIP REACT",
     menuKind: ["ALL", "MAIN", "SUB", "DETAIL", "CART", "SEARCH"],
     hoverColor: ["FFBF00"],
+    iconSrc: ["./images/calhartt_react_logo.png"],
     pageInfo: [{
       type: "ALL",
       makePeriod: "2023-05-01 ~ 2023-06-12",
-      makeSkill: ["REACT", "SCSS", "ROUTER", "REDUX TOOL KIT", "STYLED-COMPONENTS", "SWIPER"],
+      makeSkill: ["REACT, ", "SCSS, ", "ROUTER, ", "REDUX TOOL KIT, ", "STYLED-COMPONENTS, ", "SWIPER, "],
+      setting: ["NODE.JS, ", "REACT"],
       videoSrc: [""]
     }, {
       type: "MAIN",
@@ -11401,7 +11407,7 @@ var data = {
     }, {
       type: "SUB",
       pageContents: ["서브 메뉴에 따른 리스트 동적 생성", "장바구니 담기 기능", "상태 변경을 이용한 조건부 렌더링"],
-      episode: ["HEADER 역시 MAP으로 객체 기반 동적 생성을 하였고, 링크 연결을 객체 속성 값으로 연결", "ROUTER를 이용해 해당 서브 페이지로 라우팅을 해준 뒤 PARAMS를 동적으로 받아와", "Object.keys를 활용해 JSON데이터 파일과 비교, 일치하는 값을 뿌려 주었습니다.", "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며", "자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.", "fetch로 데이터 요청을 해 상태에 담고, 해당 상태가 변하기 전까지는 다른 컴포넌트가 렌더링이 되는 이른바 조건부 렌더링을 했습니다."],
+      episode: ["HEADER 역시 MAP으로 객체 기반 동적 생성을 하였고, 링크 연결을 객체 속성 값으로 연결", "ROUTER를 이용해 해당 서브 페이지로 라우팅을 해준 뒤 PARAMS를 동적으로 받아와 Object.keys를 활용해 JSON데이터 파일과 비교, 일치하는 값을 뿌려 주었습니다.", "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며 자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.", "fetch로 데이터 요청을 해 상태에 담고, 해당 상태가 변하기 전까지는 다른 컴포넌트가 렌더링이 되는 이른바 조건부 렌더링을 했습니다."],
       videoSrc: [""]
     }, {
       type: "DETAIL",
@@ -11597,55 +11603,105 @@ function mentCreate(arr, index) {
 
 /************** project_page ***************/
 var page = _data.data.page;
-var projectBox = document.getElementById('project_box');
-var projectList = document.querySelectorAll('.project_list');
-projectList.forEach(function (li, index) {
-  li.addEventListener('click', function () {
-    pageCreate(index);
-  });
-});
-
-// 메뉴 리스트 데이터 동적 변경 --
-//메뉴 리스트를 클릭시 밸류값 받아와서 텍스트가 변화된다.
-//하지만 디폴트값은 all로주고, all로 생성된 dom을 기준으로 이벤트를 걸어주면 될듯. 
-function pageCreate(nowIndex) {
-  var contents = "";
-  contents = "\n        <div class=\"video_container\">\n            <ul class=\"page_list\">\n                ".concat(tabListCreate(nowIndex), "\n            </ul>\n        </div>\n        <div class=\"info_area\">\n            <div class=\"info_text_area\">\n                ").concat(infoTextCreate(nowIndex), "\n            </div>\n        </div>\n        <ul id=\"project_list\" class=\"project_list_design\">\n            \n        </ul>\n    ");
-  projectBox.innerHTML = contents;
+function totalCreate() {
+  var projectBox = document.getElementById('project_box');
+  var list = "";
+  var receive = "";
+  list = "\n        <div class=\"video_container\">\n            <ul id=\"page_list_area\" class=\"page_list_area_design\">\n                ".concat(tabListCreate(0), "\n            </ul>\n        </div>\n\n        <div class=\"info_area\">\n            <div id=\"info_text_area\" class=\"info_text_area_design\">\n                ").concat(infoTextCreate(0, 0), "\n            </div>\n        </div>\n\n        <ul class=\"link_btn_list\"\n            <li class=\"color_change\">\uAE30\uD68D\uC11C \uBCF4\uAE30</li>\n            <li class=\"color_change\">\uC0AC\uC774\uD2B8 \uBCF4\uAE30</li>\n            <li class=\"color_change\">\uCF54\uB4DC \uBCF4\uAE30</li>\n            <li class=\"color_change\">GITHUB/README</li>\n        </ul>\n\n        <ul id=\"project_list_area\" class=\"project_list_design\">\n            ").concat(projectListCreate(), "\n        </ul>\n    ");
 }
+function projectListCreate() {
+  var innerList = "";
+  var receive = "";
+  page.forEach(function (li) {
+    innerList = "\n            <li>\n        ";
+  });
+}
+totalClickEvent();
+function totalClickEvent() {
+  var infoTextArea = document.getElementById('info_text_area');
+  var projectList = document.querySelectorAll('.project_list');
+  var pageListArea = document.getElementById('page_list_area');
+  var list01 = "";
+  var list02 = "";
+  projectList.forEach(function (li, index) {
+    li.addEventListener('click', function () {
+      //li = 각 project
+      //list01에 전달되어야 할것 
+      //메뉴는 menuKind의 갯수만큼 생성되어야 한다. 메뉴에 전달되는 value는 li인덱스에 맞는 object에서.pageInfo 반복문 돌리기.
 
-/*         console.log(
-            innerList = `
-                <li class="color_change">${value}</li>
-            `
-        ); */
+      //list02에 전달되어야 할것
+      //list02에는 각 object에 속해있는 pageInfo의 0번쨰 객체배열정보(디폴트)가 출력되어야 한다.
+      //그 부분은 불값으로 컨트롤, 불리언이 false면 0번째 출력, true면 다르게 출력 
+
+      //그렇게해서 최종적으로 pageListArea에 list01, infoArea에 list02 전달.
+      //list 생성됐으니, 서브메뉴핸들함수 등록
+      list01 = "\n                ".concat(tabListCreate(index), "\n            ");
+      list02 = "\n                ".concat(infoTextCreate(index, 0), "\n            ");
+      pageListArea.innerHTML = list01;
+      infoTextArea.innerHTML = list02;
+      handleSubClick(index, infoTextArea);
+    });
+  });
+  handleSubClick(0, infoTextArea);
+}
+function handleSubClick(parentIndex, infoArea) {
+  var pageList = document.querySelectorAll('.page_li');
+  var list = "";
+  pageList.forEach(function (li, index) {
+    li.addEventListener('click', function () {
+      //서브페이지 메뉴를 클릭했을때는, 이미 오브젝트 인덱스가 확정되어있는 상태어야한다.
+
+      list = "\n                ".concat(infoTextCreate(parentIndex, index), "\n            ");
+      infoArea.innerHTML = list;
+
+      //console.log(list);
+      for (var j = 0; j < pageList.length; j++) {
+        classRemove(pageList[j], "project_tab_on");
+      }
+      classAdd(li, "project_tab_on");
+    });
+  });
+}
 function tabListCreate(myIndex) {
+  //서브메뉴 리스트를 뽑아내는 역할
+
   //초기화 안시켜주면 언디파인드 들어감.
   var innerList = "";
   var innerReceive = "";
-
-  //page[0].menuKind -> ["all","main"...]
-  var nowObject = page[myIndex];
-  nowObject.menuKind.forEach(function (value, i) {
-    innerList = "\n            <li class=\"color_change\" value=\"".concat(nowObject.pageInfo[i].type, "\">").concat(value, "</li>\n        ");
+  var myObject = page[myIndex];
+  myObject.menuKind.forEach(function (value, i) {
+    if (i === 0) {
+      innerList = "\n            <li class=\"page_li color_change project_tab_on\">".concat(value, "</li>\n            ");
+    } else {
+      innerList = "\n                <li class=\"page_li color_change\">".concat(value, "</li>\n            ");
+    }
     innerReceive += innerList;
   });
   return innerReceive;
 }
-function infoTextCreate(myIndex) {
+function infoTextCreate(objectIndex) {
+  var menuIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var myObject = page[objectIndex];
   var innerList = "";
-  var innerReceive = "";
-  var nowObject = page[myIndex];
-  for (var i = 0; i < nowObject.pageInfo.length; i++) {
-    if (nowObject.pageInfo[i].hasOwnProperty('makePeriod')) {
-      innerList = "\n                <h2 class=\"project_name>".concat(page[myIndex].projectName, "</h2>\n            ");
-    } else {
-      console.log('all이 아닙니다.');
-    }
+  console.log(menuIndex);
+  if (menuIndex === 0) {
+    innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(strMaker(myObject.pageInfo[0].makeSkill), "</p>\n    \n            <h2 class=\"project_sub_title\">\uC81C\uC791\uD658\uACBD</h2>\n            <p class=\"project_ment\">").concat(strMaker(myObject.pageInfo[0].setting), "</p>\n        ");
+  } else {
+    innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, ": ").concat(myObject.pageInfo[menuIndex].type, "</h2>\n    \n            <h2 class=\"project_sub_title\">\uC8FC\uC694\uAE30\uB2A5</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[menuIndex].pageContents, "</p>\n    \n            <h2 class=\"project_sub_title\">EPISODE</h2>\n            <p class=\"project_ment\">").concat(strMaker(myObject.pageInfo[menuIndex].episode, true), "</p>\n        \n        ");
   }
-  /*     innerList = `
-          <h2 class="project_name">${nowObject.}</h2>
-      ` */
+  return innerList;
+}
+function strMaker(nowObjectArr) {
+  var nowBool = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var strReturn = "";
+  nowObjectArr.forEach(function (str) {
+    if (!nowBool) {
+      strReturn += str;
+    } else {
+      strReturn += "".concat(str, " </br>");
+    }
+  });
+  return strReturn;
 }
 
 /************** contact_page ***************/
@@ -11777,6 +11833,44 @@ function classRemoveMulti(el, classArr) {
     return el.classList.remove(className);
   });
 }
+
+// 메뉴 리스트 데이터 동적 변경 --
+//메뉴 리스트를 클릭시 밸류값 받아와서 텍스트가 변화된다.
+//하지만 디폴트값은 all로주고, all로 생성된 dom을 기준으로 이벤트를 걸어주면 될듯. 
+/* function pageCreate(nowIndex, totalBox){
+
+    //all에 해당하는 페이지를 뽑아내는 역할
+    totalBox.innerHTML = ``;
+    let contents = ``;
+    let nowObject = page[nowIndex];
+    
+    contents = `
+        <div class="video_container">
+            <ul class="page_list_area">
+                ${tabListCreate(nowObject)}
+            </ul>
+        </div>
+        <div class="info_area">
+            <div class="info_text_area">
+                ${defaultTextCreate(nowObject)}
+            </div>
+            <ul class="link_btn_list">
+                <li class="color_change">기획서 보기</li>
+                <li class="color_change">사이트 보기</li>
+                <li class="color_change">코드 보기</li>
+                <li class="color_change">GITHUB/README</li>
+            </ul>
+        </div>
+        <ul id="project_list_area" class="project_list_design">
+
+        </ul>
+    `
+
+    totalBox.innerHTML = contents;
+
+    //서브메뉴 + 프로젝트 리스트 클릭 이벤트 등록 역할
+    totalClickEvent();
+} */
 },{"jquery":"node_modules/jquery/dist/jquery.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js","./data.js":"js/data.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -11802,7 +11896,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64079" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64903" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

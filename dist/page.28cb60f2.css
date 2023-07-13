@@ -288,28 +288,32 @@ h2 {
   box-shadow: 0px 1px 7px 0px black;
   border: 2px solid white;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list {
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design {
   width: 100%;
   display: flex;
   background-color: black;
   justify-content: space-evenly;
   border-bottom: 1px solid white;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list li {
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li {
+  color: gray;
   cursor: pointer;
   font-size: 1.8rem;
   padding: 10px 5px;
   transition: all 0.2s;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list li:hover {
-  color: #ffbf00;
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li.project_tab_on {
+  color: white;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li:hover {
+  color: white;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area {
   width: 540px;
   box-shadow: 0px 1px 7px 0px black;
   margin-right: 20px;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area {
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design {
   width: 100%;
   height: 500px;
   padding: 10px 30px;
@@ -317,21 +321,22 @@ h2 {
   border: 2px solid white;
   text-align: left;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area .project_name {
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design .project_name {
   margin-top: 10px;
   text-align: center;
   font-size: 3.2rem;
   margin-bottom: 20px;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area .project_sub_title {
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design .project_sub_title {
   display: inline-block;
   font-size: 1.6rem;
   margin-bottom: 10px;
   padding: 0 5px 5px;
   border-bottom: 2px solid white;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area .project_ment {
-  font-size: 2rem;
+.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design .project_ment {
+  line-height: 25px;
+  font-size: 1.6rem;
   margin-bottom: 20px;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list {

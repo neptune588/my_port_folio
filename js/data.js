@@ -143,12 +143,15 @@ const data = {
       projectName: "CALHARTT WIP",
       menuKind: ["ALL","MAIN","SUB","DETAIL","SIGN IN/UP","SEARCH"],
       hoverColor: ["FFBF00"],
+      iconSrc: ["./images/calhartt_logo.png"],
       pageInfo: [
         {
           type: "ALL",
-          makePeriod: "2023-05-01 ~ 2023-06-12",
-          makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
+          makePeriod: "2023-05-01 ~ 2023-06-28",
+          makeSkill: ["HTML5, ","SCSS, ","VANILLA JAVASCRIPT"],
+          setting: ["NODE.JS, ","PARCEL-BUNDLER"],
           videoSrc: [""]
+          
         },
         {
           type: "MAIN",
@@ -224,11 +227,13 @@ const data = {
       projectName: "NETMARBLE",
       menuKind: ["ALL","MAIN","SUB"],
       hoverColor: ["yellow"],
+      iconSrc: ["./images/netmarble_logo.png"],
       pageInfo: [
         {
           type: "ALL",
           makePeriod: "2023-05-01 ~ 2023-06-12",
-          makeSkill: ["HTML5","CSS","JQUERY"],
+          makeSkill: ["HTML5, ","CSS, ","JQUERY"],
+          setting: ["LIVE환경"],
           videoSrc: [""]
         },
         {
@@ -250,7 +255,7 @@ const data = {
           ],
           episode: [
             "탭 메뉴 버튼을 통해 해당하는 밸류를 가진 메뉴를 DISPLAY: NONE/BLOCK으로 구현 하였으며",
-            "모바일의 경우 더보기 버튼을 통해 배열의 특정 LENGTH만큼 보이게 구현 하였습니다.,",
+            "모바일의 경우 더보기 버튼을 통해 배열의 특정 LENGTH만큼 보이게 구현 하였습니다.",
             "모바일, 테블릿, PC버전에서 표기되는 컨텐츠의 갯수가 달라집니다.",
           ],
           videoSrc: [""]
@@ -267,11 +272,13 @@ const data = {
       projectName: "CALHARTT WIP REACT",
       menuKind: ["ALL","MAIN","SUB","DETAIL","CART","SEARCH"],
       hoverColor: ["FFBF00"],
+      iconSrc: ["./images/calhartt_react_logo.png"],
       pageInfo: [
         {
           type: "ALL",
           makePeriod: "2023-05-01 ~ 2023-06-12",
-          makeSkill: ["REACT","SCSS","ROUTER","REDUX TOOL KIT","STYLED-COMPONENTS","SWIPER"],
+          makeSkill: ["REACT, ","SCSS, ","ROUTER, ","REDUX TOOL KIT, ","STYLED-COMPONENTS, ","SWIPER, "],
+          setting: ["NODE.JS, ","REACT"],
           videoSrc: [""]
         },
         {
@@ -295,10 +302,8 @@ const data = {
           ],
           episode: [
             "HEADER 역시 MAP으로 객체 기반 동적 생성을 하였고, 링크 연결을 객체 속성 값으로 연결",
-            "ROUTER를 이용해 해당 서브 페이지로 라우팅을 해준 뒤 PARAMS를 동적으로 받아와",
-            "Object.keys를 활용해 JSON데이터 파일과 비교, 일치하는 값을 뿌려 주었습니다.",
-            "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며",
-            "자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.",
+            "ROUTER를 이용해 해당 서브 페이지로 라우팅을 해준 뒤 PARAMS를 동적으로 받아와 Object.keys를 활용해 JSON데이터 파일과 비교, 일치하는 값을 뿌려 주었습니다.",
+            "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며 자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.",
             "fetch로 데이터 요청을 해 상태에 담고, 해당 상태가 변하기 전까지는 다른 컴포넌트가 렌더링이 되는 이른바 조건부 렌더링을 했습니다."
           ],
           videoSrc: [""]
