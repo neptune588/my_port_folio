@@ -150,7 +150,7 @@ const data = {
           makePeriod: "2023-05-01 ~ 2023-06-28",
           makeSkill: ["HTML5, ","SCSS, ","VANILLA JAVASCRIPT"],
           setting: ["NODE.JS, ","PARCEL-BUNDLER"],
-          videoSrc: [""]
+          thunmnailSrc: ["./images/calhartt_thumnail.jpg"]
           
         },
         {
@@ -163,7 +163,7 @@ const data = {
             "박스 슬라이더 부분은 JQUERY로는 어떻게 구현하는지 배웠지만 JS와 차이점이 있어 관련 강의를 찾아 보고",
             "공부하여 구현한다고 시간이 소요 됐었지만, 생각한대로 구현이 되어 뿌듯 했습니다."
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt/calhartt_main_video.mp4"]
         },
         {
           type: "SUB",
@@ -175,7 +175,7 @@ const data = {
             "중첩 필터의 경우에는 if문으로 구현 할 경우 말도 안되는 경우의 수가 생긴다고 판단,",
             "배열, VALUE, DATA-SET, closest메서드, for반복문 등으로 해당 기능을 구현 하였습니다.",
           ],
-          videoSrc: [""]
+          videoSrc: [".//videos/calhartt/calhartt_sub_video.mp4"]
         },
         {
           type: "DETAIL",
@@ -187,7 +187,7 @@ const data = {
             "객체 및 배열을 활용하여 구현 했습니다.",
             "QNA는 질문글이 올라오면 해당 글을 답변 할 수 있게 답변이 달리면 답변 상태가 변화 됩니다."
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt/calhartt_detail_video.mp4"]
         },
         {
           type: "SIGN IN/UP",
@@ -201,7 +201,7 @@ const data = {
             "FINDINDEX 메서드를 활용하여 아이디/비밀번호가 같은 정보에 속해있는지 판단했습니다.",
             "해당 프로젝트를 제작하면서 자바스크립트에 대한 이해도와 실력이 상승된것 같습니다."
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt/calhartt_sign_in_n_up_video.mp4"]
         },
         {
           type: "SEARCH",
@@ -213,15 +213,28 @@ const data = {
             "?앞뒤의 값을 키:밸류의 형태로 받아와 filter, includes를 활용하여 해당 기능을 구현 했습니다.",
             "소소하지만 검색한 키워드에 맞는 상품이 몇개 있는지/ 없는지 표기 하였습니다.",
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt/calhartt_search_video.mp4"]
         },
       ],
-      link: {
-        proposal: "",
-        github: "",
-        code: "",
-        site: "",
-      }
+      link: [
+        {
+          url: "#!",
+          ment: "코드 보기"
+        },
+        {
+          url: "#!",
+          ment: "사이트 보기"
+        },
+        {
+          url: "https://github.com/neptune588/team_project_calhart",
+          ment: "GITHUB/README"
+        },
+        {
+          url: "#!",
+          ment: "기획서 보기"
+        }
+      ]
+
     },
     {
       projectName: "NETMARBLE",
@@ -231,10 +244,10 @@ const data = {
       pageInfo: [
         {
           type: "ALL",
-          makePeriod: "2023-05-01 ~ 2023-06-12",
+          makePeriod: "2023-03-28 ~ 2023-04-28",
           makeSkill: ["HTML5, ","CSS, ","JQUERY"],
           setting: ["LIVE환경"],
-          videoSrc: [""]
+          thunmnailSrc: ["./images/netmarble_thumnail.jpg"]
         },
         {
           type: "MAIN",
@@ -243,10 +256,10 @@ const data = {
           ],
           episode: [
             "프론트엔드 과정을 배우면서 처음으로 진행한 프로젝트로,",
-            "처음 제작하는 프로젝트라, 시행 착오도 많이 겪은 프로젝트 입니다.",
+            "처음 제작했던 프로젝트라, 시행 착오를 정말 많이 겪은 프로젝트 입니다.",
             "MEDIAQUERY를 활용하여 반응형으로 제작 하였으며, JQUERY를 활용하여 정렬 및 슬라이더 기능등을 구현 하였습니다."
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/netmarble/netmarble_main_video.mp4"]
         },
         {
           type: "SUB",
@@ -255,18 +268,29 @@ const data = {
           ],
           episode: [
             "탭 메뉴 버튼을 통해 해당하는 밸류를 가진 메뉴를 DISPLAY: NONE/BLOCK으로 구현 하였으며",
-            "모바일의 경우 더보기 버튼을 통해 배열의 특정 LENGTH만큼 보이게 구현 하였습니다.",
             "모바일, 테블릿, PC버전에서 표기되는 컨텐츠의 갯수가 달라집니다.",
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/netmarble/netmarble_sub_video.mp4"]
         },
       ],
-      link: {
-        proposal: "",
-        github: "",
-        code: "",
-        site: "",
-      }
+      link: [
+        {
+          url: "#!",
+          ment: "코드 보기"
+        },
+        {
+          url: "https://neptune588.github.io/personal-project-netmable-/",
+          ment: "사이트 보기"
+        },
+        {
+          url: "https://github.com/neptune588/personal-project-netmable-",
+          ment: "GITHUB/README"
+        },
+        {
+          url: "#!",
+          ment: "기획서 보기"
+        }
+      ]
     },
     {
       projectName: "CALHARTT WIP REACT",
@@ -276,10 +300,10 @@ const data = {
       pageInfo: [
         {
           type: "ALL",
-          makePeriod: "2023-05-01 ~ 2023-06-12",
+          makePeriod: "2023-06-20 ~ 2023-07-04",
           makeSkill: ["REACT, ","SCSS, ","ROUTER, ","REDUX TOOL KIT, ","STYLED-COMPONENTS, ","SWIPER, "],
           setting: ["NODE.JS, ","REACT"],
-          videoSrc: [""]
+          thunmnailSrc: ["./images/calhartt_react_thumnail.jpg"]
         },
         {
           type: "MAIN",
@@ -293,7 +317,7 @@ const data = {
             "JS로 제작했던 박스 슬라이더는 스와이퍼로 교체 하였으며, HOVER EVENT는 useState를 사용",
             "즉, 상태 변경을 이용하여 삼항 연산자로 해당 이벤트를 구현 하였습니다."
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_main_video.mp4"]
         },
         {
           type: "SUB",
@@ -306,7 +330,7 @@ const data = {
             "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며 자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.",
             "fetch로 데이터 요청을 해 상태에 담고, 해당 상태가 변하기 전까지는 다른 컴포넌트가 렌더링이 되는 이른바 조건부 렌더링을 했습니다."
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_sub_video.mp4"]
         },
         {
           type: "DETAIL",
@@ -318,7 +342,7 @@ const data = {
             "디테일 페이지에 렌더링을 했습니다.",
             "또한 별점 기능은 반복문과 useState를 이용한 객체 속성 값 변화로 구현을 하였습니다."
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_detail_video.mp4"]
         },
         {
           type: "CART",
@@ -329,7 +353,7 @@ const data = {
             "리덕스 툴킷의 리듀서즈에 저장된 상태 변화 함수, useDispatch, useSelector를 활용하여",
             "해당 기능들을 구현 하였습니다.",
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_cart_video.mp4"]
         },
         {
           type: "SEARCH",
@@ -341,15 +365,27 @@ const data = {
             "엔터 혹은 검색 버튼을 눌렸을시 해당 상태의 값이 링크에 전달",
             "useParams를 이용하여 해당 값을 받아와 filter, includes를 이용해 검색 기능을 구현 했습니다.",
           ],
-          videoSrc: [""]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"]
         },
       ],
-      link: {
-        proposal: "",
-        github: "",
-        code: "",
-        site: "",
-      }
+      link: [
+        {
+          url: "#!",
+          ment: "코드 보기"
+        },
+        {
+          url: "#!",
+          ment: "사이트 보기"
+        },
+        {
+          url: "https://github.com/neptune588/calhartt_React_Ver",
+          ment: "GITHUB/README"
+        },
+        {
+          url: "#!",
+          ment: "기획서 보기"
+        }
+      ]
     },
   ]
 }

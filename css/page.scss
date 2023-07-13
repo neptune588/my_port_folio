@@ -228,21 +228,23 @@
                 margin-top: 20px;
                 .video_container {
                     @include item_size(480px, 540px);
+                    overflow: hidden;
                     background-color: gray;
                     margin-right: 20px;
                     box-shadow: 0px 1px 7px 0px black;
                     border: 2px solid white;
                     .page_list_area_design {
-                        width: 100%;
                         display: flex;
+                        @include item_size(100%, 40px);
                         background-color: black;
                         justify-content: space-evenly;
                         border-bottom: 1px solid white;
                         li {
                             color: gray;
+                            line-height: 40px;
                             cursor: pointer;
                             font-size: 1.8rem;
-                            padding: 10px 5px;
+
                             transition: all 0.2s;
                             &.project_tab_on {
                                 color: white;
@@ -250,6 +252,12 @@
                             &:hover {
                                 color: white;
                             }
+                        }
+                    }
+                    .thumnail_n_video_box {
+                        img, video {
+                            @include item_size(100%, 500px);
+                            object-fit: cover;
                         }
                     }
                 }
@@ -282,11 +290,10 @@
                             margin-bottom: 20px;
                         }
                     }
-                    .link_btn_list {
+                    .link_btn_list_design {
                         display: flex;
                         li {
                             @include item_size(25%, 40px);
-                            line-height: 40px;
                             cursor: pointer;
                             font-size: 1.4rem;
                             background-color: black;
@@ -294,6 +301,10 @@
                             border-top: none;
                             border-right: none;
                             transition: all 0.2s;
+                            a {
+                                line-height: 40px;
+                                display: block;
+                            }
                             &:hover {
                                 color: #ffbf00;
                             }

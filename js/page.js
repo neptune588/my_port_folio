@@ -159,52 +159,41 @@ function mentCreate(arr, index) {
 /************** project_page ***************/
 const {page} = data;
 
-
+totalCreate();
 function totalCreate() {
     const projectBox = document.getElementById('project_box');
 
     let list = ``;
-    let receive = ``;
 
     list = `
         <div class="video_container">
             <ul id="page_list_area" class="page_list_area_design">
                 ${tabListCreate(0)}
             </ul>
+            <div class="thumnail_n_video_box">
+                ${thumnailVideoCreate(0, 0)}
+            </div>
         </div>
 
         <div class="info_area">
             <div id="info_text_area" class="info_text_area_design">
                 ${infoTextCreate(0, 0)}
             </div>
+            <ul id="link_btn_list" class="link_btn_list_design">
+                ${linkBtnCreate(0)}
+            </ul>
         </div>
-
-        <ul class="link_btn_list"
-            <li class="color_change">기획서 보기</li>
-            <li class="color_change">사이트 보기</li>
-            <li class="color_change">코드 보기</li>
-            <li class="color_change">GITHUB/README</li>
-        </ul>
 
         <ul id="project_list_area" class="project_list_design">
             ${projectListCreate()}
         </ul>
     `
+
+    projectBox.innerHTML = list;
+
+    totalClickEvent();
 }
 
-function projectListCreate() {
-    let innerList = ``;
-    let receive = ``;
-
-    page.forEach((li) => {
-        innerList = `
-            <li>
-        `
-    })
-
-}
-
-totalClickEvent();
 function totalClickEvent () {
 
     const infoTextArea = document.getElementById('info_text_area');
@@ -212,6 +201,10 @@ function totalClickEvent () {
     const projectList = document.querySelectorAll('.project_list');
 
     const pageListArea = document.getElementById('page_list_area');
+
+    const thumNVideoBox = document.querySelector('.thumnail_n_video_box');
+
+    const linkBtnArea = document.getElementById('link_btn_list');
     
     let list01 = ``;
     let list02 = ``;
@@ -238,14 +231,18 @@ function totalClickEvent () {
             pageListArea.innerHTML = list01;
             infoTextArea.innerHTML = list02;
 
-            handleSubClick(index, infoTextArea);
+            thumNVideoBox.innerHTML = thumnailVideoCreate(index, 0);
+
+            linkBtnArea.innerHTML = linkBtnCreate(index);
+
+            handleSubClick(index, thumNVideoBox, infoTextArea);
         });
     });
-    handleSubClick(0, infoTextArea);
+    handleSubClick(0, thumNVideoBox, infoTextArea);
 }
 
 
-function handleSubClick (parentIndex, infoArea) {
+function handleSubClick (parentIndex, thumArea, infoArea) {
     const pageList = document.querySelectorAll('.page_li');
     
     let list = ``;
@@ -258,6 +255,7 @@ function handleSubClick (parentIndex, infoArea) {
             `
 
             infoArea.innerHTML = list;
+            thumArea.innerHTML = thumnailVideoCreate(parentIndex, index);
 
             //console.log(list);
             for(let j = 0; j < pageList.length; j++) {
@@ -268,6 +266,63 @@ function handleSubClick (parentIndex, infoArea) {
         });
     });
     
+}
+
+function projectListCreate() {
+    let innerList = ``;
+    let receive = ``;
+
+    page.forEach((object) => {
+        innerList = `
+            <li class="project_list">
+                <div class="icon_img">
+                    <img src=${object.iconSrc} alt="${object.projectName}_icon"/>
+                </div>
+                <p class="icon_name">${object.projectName}</p>
+            </li>
+        `
+
+        receive += innerList;
+    })
+
+    return receive;
+}
+
+function thumnailVideoCreate(parentIndex, myIndex) {
+
+    let content = ``;
+
+    let myObject = page[parentIndex];
+
+    console.log(myObject.pageInfo[myIndex]);
+    if(myIndex === 0) {
+        content = `
+            <img src="${myObject.pageInfo[myIndex].thunmnailSrc}" />
+        `;
+    } else {
+        content = `
+            <video controls>
+                <source src="${myObject.pageInfo[myIndex].videoSrc}" type="video/mp4" />
+            </video>
+        `;
+    }
+    
+    return content;
+}
+
+function linkBtnCreate(myIndex) {
+    let innerList = ``;
+    let receive = ``;
+
+    console.log(myIndex);
+    page[myIndex].link.forEach((object) => {
+        innerList = `
+            <li class="color_change"><a href="${object.url}" target="_blank">${object.ment}</a></li>
+        `
+
+        receive += innerList;
+    })
+    return receive;
 }
 
 function tabListCreate(myIndex) {
@@ -282,7 +337,7 @@ function tabListCreate(myIndex) {
         
         if (i === 0) {
             innerList = `
-            <li class="page_li color_change project_tab_on">${value}</li>
+                <li class="page_li color_change project_tab_on">${value}</li>
             `
         } else {
             innerList = `
@@ -301,7 +356,6 @@ function infoTextCreate (objectIndex, menuIndex = 0) {
 
     let innerList = ``;
 
-    console.log(menuIndex);
     if(menuIndex === 0) {
         innerList = `
             <h2 class="project_name">${myObject.projectName}</h2>
