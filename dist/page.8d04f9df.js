@@ -11327,6 +11327,7 @@ var data = {
       makePeriod: "2023-05-01 ~ 2023-06-28",
       makeSkill: ["HTML5, ", "SCSS, ", "VANILLA JAVASCRIPT"],
       setting: ["NODE.JS, ", "PARCEL-BUNDLER"],
+      people: ["기획: 4인, 제작: 1인(개별)"],
       thunmnailSrc: ["./images/calhartt_thumnail.jpg"]
     }, {
       type: "MAIN",
@@ -11337,7 +11338,7 @@ var data = {
       type: "SUB",
       pageContents: ["다중 중첩 상품 필터", "정렬 및 동적 페이지네이션"],
       episode: ["Math.ceil 메서드를 이용하여 실시간으로 전달받은 배열의 갯수를 나누어 동적 페이지를 구현 하였으며", "중첩 필터의 경우에는 if문으로 구현 할 경우 말도 안되는 경우의 수가 생긴다고 판단,", "배열, VALUE, DATA-SET, closest메서드, for반복문 등으로 해당 기능을 구현 하였습니다."],
-      videoSrc: [".//videos/calhartt/calhartt_sub_video.mp4"]
+      videoSrc: ["./videos/calhartt/calhartt_sub_video.mp4"]
     }, {
       type: "DETAIL",
       pageContents: ["리스트 작성 및 페이지 네이션", "QNA 리스트 작성 및 답변 기능"],
@@ -11377,6 +11378,7 @@ var data = {
       makePeriod: "2023-03-28 ~ 2023-04-28",
       makeSkill: ["HTML5, ", "CSS, ", "JQUERY"],
       setting: ["LIVE환경"],
+      people: ["기획: 1인, 제작: 1인"],
       thunmnailSrc: ["./images/netmarble_thumnail.jpg"]
     }, {
       type: "MAIN",
@@ -11412,6 +11414,7 @@ var data = {
       makePeriod: "2023-06-20 ~ 2023-07-04",
       makeSkill: ["REACT, ", "SCSS, ", "ROUTER, ", "REDUX TOOL KIT, ", "STYLED-COMPONENTS, ", "SWIPER, "],
       setting: ["NODE.JS, ", "REACT"],
+      people: ["기획: 1인, 제작: 1인"],
       thunmnailSrc: ["./images/calhartt_react_thumnail.jpg"]
     }, {
       type: "MAIN",
@@ -11454,68 +11457,6 @@ var data = {
     }]
   }]
 };
-
-/* {
-  menuKind: ["ALL","MAIN","SUB","DETAIL","SIGN IN/UP"],
-  projectName: "CALHARTT: MAIN",
-  makePeriod: "2023-05-01 ~ 2023-06-12",
-  makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
-  setting: ["NODE.JS","PARCEL-BUNDLER"],
-  pageContents: [
-    "박스 무한 슬라이더","LOOK_BOOK_BOX"
-  ],
-  episode: [
-    "자바스크립트 실력을 늘리고 싶어서 바닐라 자바스크립트로 만들어 보자고 계획을 세웠습니다.",
-    "박스 슬라이더 부분은 JQUERY로는 어떻게 구현하는지 배웠지만 JS와 차이점이 있어 관련 강의를 찾아 보고",
-    "공부하여 구현한다고 시간이 소요 됐었지만, 생각한대로 구현이 되어 뿌듯 했습니다."
-  ],
-  videoSrc: []
-},
-{
-  projectName: "CALHARTT: SUB",
-  makePeriod: "2023-05-01 ~ 2023-06-12",
-  makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
-  setting: ["NODE.JS","PARCEL-BUNDLER"],
-  pageContents: [
-    "다중 중첩 상품 필터","정렬 및 동적 페이지네이션"
-  ],
-  episode: [
-    "Math.ceil 메서드를 이용하여 실시간으로 전달받은 배열의 갯수를 나누어 동적 페이지를 구현 하였으며",
-    "중첩 필터의 경우에는 if문으로 구현 할 경우 말도 안되는 경우의 수가 생긴다고 판단,",
-    "배열, VALUE, DATA-SET, closest메서드, for반복문 등으로 해당 기능을 구현 하였습니다.",
-  ],
-  videoSrc: []
-},
-{
-  projectName: "CALHARTT: DETAIL",
-  makePeriod: "2023-05-01 ~ 2023-06-12",
-  makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
-  setting: ["NODE.JS","PARCEL-BUNDLER"],
-  pageContents: [
-    "리스트 작성 및 페이지 네이션", "QNA 리스트 작성 및 답변 기능"
-  ],
-  episode: [
-    "리스트 기능에는 작성 갯수에 따른 페이지 생성과 삭제 기능, 별점 부여 기능 등이 있으며",
-    "객체 및 배열을 활용하여 구현 했습니다.",
-    "QNA는 질문글이 올라오면 해당 글을 답변 할 수 있게 답변이 달리면 답변 상태가 변화 됩니다."
-  ],
-  videoSrc: []
-},
-{
-  projectName: "CALHARTT: SIGN IN/UP",
-  makePeriod: "2023-05-01 ~ 2023-06-12",
-  makeSkill: ["HTML5","SCSS","VANILLA JAVASCRIPT"],
-  setting: ["NODE.JS","PARCEL-BUNDLER"],
-  pageContents: [
-    "ID/PW찾기 기능", "회원가입 및 로그인 기능"
-  ],
-  episode: [
-    "자바스크립트를 처음으로 사용하여 구현한 페이지입니다.",
-    "객체 및 배열을 활용하여 구현 했습니다.",
-    "QNA는 질문글이 올라오면 해당 글을 답변 할수있게 답변이 달리면 답변 상태가 변화 됩니다."
-  ],
-  videoSrc: []
-} */
 exports.data = data;
 },{}],"js/page.js":[function(require,module,exports) {
 "use strict";
@@ -11659,6 +11600,10 @@ function totalClickEvent() {
       thumNVideoBox.innerHTML = thumnailVideoCreate(index, 0);
       linkBtnArea.innerHTML = linkBtnCreate(index);
       handleSubClick(index, thumNVideoBox, infoTextArea);
+      projectList.forEach(function (innerLi) {
+        return classRemove(innerLi, 'project_on');
+      });
+      classAdd(li, 'project_on');
     });
   });
   handleSubClick(0, thumNVideoBox, infoTextArea);
@@ -11685,8 +11630,8 @@ function handleSubClick(parentIndex, thumArea, infoArea) {
 function projectListCreate() {
   var innerList = "";
   var receive = "";
-  page.forEach(function (object) {
-    innerList = "\n            <li class=\"project_list\">\n                <div class=\"icon_img\">\n                    <img src=".concat(object.iconSrc, " alt=\"").concat(object.projectName, "_icon\"/>\n                </div>\n                <p class=\"icon_name\">").concat(object.projectName, "</p>\n            </li>\n        ");
+  page.forEach(function (object, index) {
+    innerList = "\n            <li class=\"".concat(index === 0 ? "project_list project_on" : "project_list", "\">\n                <div class=\"icon_img\">\n                    <img src=").concat(object.iconSrc, " alt=\"").concat(object.projectName, "_icon\"/>\n                </div>\n                <p class=\"icon_name\">").concat(object.projectName, "</p>\n            </li>\n        ");
     receive += innerList;
   });
   return receive;
@@ -11734,7 +11679,7 @@ function infoTextCreate(objectIndex) {
   var myObject = page[objectIndex];
   var innerList = "";
   if (menuIndex === 0) {
-    innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(strMaker(myObject.pageInfo[0].makeSkill), "</p>\n    \n            <h2 class=\"project_sub_title\">\uC81C\uC791\uD658\uACBD</h2>\n            <p class=\"project_ment\">").concat(strMaker(myObject.pageInfo[0].setting), "</p>\n        ");
+    innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, "</h2>\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uAE30\uAC04</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].makePeriod, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC0AC\uC6A9\uAE30\uC220</h2>\n            <p class=\"project_ment\">").concat(strMaker(myObject.pageInfo[0].makeSkill), "</p>\n\n            <h2 class=\"project_sub_title\">\uC81C\uC791\uC778\uC6D0</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[0].people, "</p>\n    \n            <h2 class=\"project_sub_title\">\uC81C\uC791\uD658\uACBD</h2>\n            <p class=\"project_ment\">").concat(strMaker(myObject.pageInfo[0].setting), "</p>\n        ");
   } else {
     innerList = "\n            <h2 class=\"project_name\">".concat(myObject.projectName, ": ").concat(myObject.pageInfo[menuIndex].type, "</h2>\n    \n            <h2 class=\"project_sub_title\">\uC8FC\uC694\uAE30\uB2A5</h2>\n            <p class=\"project_ment\">").concat(myObject.pageInfo[menuIndex].pageContents, "</p>\n    \n            <h2 class=\"project_sub_title\">EPISODE</h2>\n            <p class=\"project_ment\">").concat(strMaker(myObject.pageInfo[menuIndex].episode, true), "</p>\n        \n        ");
   }
@@ -11945,7 +11890,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63165" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50440" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

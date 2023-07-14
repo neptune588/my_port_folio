@@ -282,12 +282,8 @@ h2 {
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container {
   width: 480px;
-  height: 540px;
-  overflow: hidden;
-  background-color: gray;
+  height: 560px;
   margin-right: 20px;
-  box-shadow: 0px 1px 7px 0px black;
-  border: 2px solid white;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design {
   display: flex;
@@ -295,14 +291,17 @@ h2 {
   height: 40px;
   background-color: black;
   justify-content: space-evenly;
-  border-bottom: 1px solid white;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  box-shadow: 0px 1px 7px 0px black;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li {
+  position: relative;
   color: gray;
-  line-height: 40px;
-  cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 2rem;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li.project_tab_on {
   color: white;
@@ -310,23 +309,32 @@ h2 {
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li:hover {
   color: white;
 }
+.section_wrpper_design .project_page_design .project_container .project_box_design .video_container .thumnail_n_video_box {
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 0px 1px 7px 0px black;
+  width: 100%;
+  height: 500px;
+}
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .thumnail_n_video_box img, .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .thumnail_n_video_box video {
   width: 100%;
   height: 500px;
   object-fit: cover;
+  vertical-align: bottom;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area {
   width: 540px;
-  box-shadow: 0px 1px 7px 0px black;
   margin-right: 20px;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design {
   width: 100%;
   height: 500px;
   padding: 10px 30px;
-  background-color: rgb(61, 32, 139);
+  margin-bottom: 20px;
   border: 2px solid white;
+  background-color: rgb(61, 32, 139);
   text-align: left;
+  box-shadow: 0px 1px 7px 0px black;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design .project_name {
   margin-top: 10px;
@@ -348,6 +356,7 @@ h2 {
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design {
   display: flex;
+  box-shadow: 0px 1px 7px 0px black;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design li {
   width: 25%;
@@ -356,13 +365,13 @@ h2 {
   font-size: 1.4rem;
   background-color: black;
   border: 2px solid white;
-  border-top: none;
   border-right: none;
   transition: all 0.2s;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design li a {
-  line-height: 40px;
   display: block;
+  transform: translateY(-2px);
+  line-height: 40px;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design li:hover {
   color: #ffbf00;
@@ -372,15 +381,30 @@ h2 {
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design {
   width: 120px;
-  height: 540px;
+  height: 560px;
+  padding: 0 15px;
   background-color: black;
   border: 2px solid white;
-  padding: 0 20px;
+  box-shadow: 0px 1px 7px 0px black;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li {
+  position: relative;
   margin-top: 20px;
   user-select: none;
   cursor: pointer;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li:hover::after {
+  background-color: rgba(0, 0, 0, 0);
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li:hover p {
   border-bottom: 1px solid white;
@@ -400,6 +424,12 @@ h2 {
   margin-top: 5px;
   font-size: 1.8rem;
   border-bottom: 1px solid black;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li.project_on::after {
+  display: none;
+}
+.section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design li.project_on p {
+  border-bottom: 1px solid white;
 }
 .section_wrpper_design .project_page_design .section_bg {
   transform: rotate(180deg);

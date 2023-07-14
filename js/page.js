@@ -236,6 +236,9 @@ function totalClickEvent () {
             linkBtnArea.innerHTML = linkBtnCreate(index);
 
             handleSubClick(index, thumNVideoBox, infoTextArea);
+
+            projectList.forEach(innerLi => classRemove(innerLi, 'project_on'));
+            classAdd(li, 'project_on');
         });
     });
     handleSubClick(0, thumNVideoBox, infoTextArea);
@@ -272,9 +275,9 @@ function projectListCreate() {
     let innerList = ``;
     let receive = ``;
 
-    page.forEach((object) => {
+    page.forEach((object, index) => {
         innerList = `
-            <li class="project_list">
+            <li class="${index === 0 ? "project_list project_on" : "project_list"}">
                 <div class="icon_img">
                     <img src=${object.iconSrc} alt="${object.projectName}_icon"/>
                 </div>
@@ -364,6 +367,9 @@ function infoTextCreate (objectIndex, menuIndex = 0) {
     
             <h2 class="project_sub_title">사용기술</h2>
             <p class="project_ment">${strMaker(myObject.pageInfo[0].makeSkill)}</p>
+
+            <h2 class="project_sub_title">제작인원</h2>
+            <p class="project_ment">${myObject.pageInfo[0].people}</p>
     
             <h2 class="project_sub_title">제작환경</h2>
             <p class="project_ment">${strMaker(myObject.pageInfo[0].setting)}</p>
