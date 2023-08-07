@@ -35,6 +35,10 @@ h2 {
   font-weight: normal;
 }
 
+.link_hidden {
+  display: none;
+}
+
 /****************************** common_control_class *****************************/
 .none_on {
   display: none !important;

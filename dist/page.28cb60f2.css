@@ -35,6 +35,10 @@ h2 {
   font-weight: normal;
 }
 
+.link_hidden {
+  display: none;
+}
+
 /****************************** common_control_class *****************************/
 .none_on {
   display: none !important;
@@ -62,6 +66,10 @@ h2 {
   opacity: 1 !important;
 }
 
+.code_tab_on {
+  color: white !important;
+}
+
 /****************************** intro_page *****************************/
 .section_wrpper_design {
   width: 100%;
@@ -71,9 +79,31 @@ h2 {
   /****************************** skill_page *****************************/
   /****************************** project_page *****************************/
   /****************************** contact_page *****************************/
+  /*     .info_area{
+          width: 380px;
+          margin-bottom: 40px;
+          .info {
+              font-size: 3rem;
+              margin-bottom: 25px;
+              text-shadow: 1px 1px 1px black;
+          }
+          p {
+              text-align: left;
+              font-size: 2rem;
+              margin-bottom: 10px;
+              &:last-child {
+                  margin-bottom: 0;
+              }
+          }
+      } */
 }
 .section_wrpper_design .section_container {
-  position: relative;
+  position: absolute;
+  width: 1180px;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   width: 1180px;
   margin: 0 auto;
@@ -82,13 +112,13 @@ h2 {
   z-index: 100;
 }
 .section_wrpper_design .intro_page_design .intro_container {
-  margin-top: 20%;
   user-select: none;
   text-align: center;
   z-index: 9999;
 }
 .section_wrpper_design .intro_page_design .intro_container .title_ment_area {
   position: relative;
+  margin-top: 20%;
   display: inline-block;
   font-size: 80px;
   font-weight: 700;
@@ -105,7 +135,7 @@ h2 {
 .section_wrpper_design .intro_page_design .intro_container .start_ment_design {
   display: none;
   opacity: 0;
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 5rem;
   animation: start_color_ani 1s 0.2s both infinite;
 }
@@ -114,7 +144,7 @@ h2 {
   overflow: hidden;
   width: 0;
   left: 50%;
-  bottom: -230px;
+  bottom: 10px;
   transform: translateX(-50%);
   transition: all 4s;
 }
@@ -163,12 +193,9 @@ h2 {
 .section_wrpper_design .profile_page_design {
   background-color: #5f4a6b !important;
 }
-.section_wrpper_design .profile_page_design .profile_container {
-  margin-top: 5%;
-}
 .section_wrpper_design .profile_page_design .profile_container .profile_box {
   display: flex;
-  margin-top: 40px;
+  margin-top: 20px;
   justify-content: space-around;
   font-family: "DungGeunMo";
 }
@@ -193,11 +220,25 @@ h2 {
   width: 200px;
   transform: rotate(0deg);
 }
+.section_wrpper_design .profile_page_design .profile_container .profile_box .profile_right .info_area {
+  width: 380px;
+  margin-bottom: 20px;
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_box .profile_right .info_area .info {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 1px black;
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_box .profile_right .info_area p {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.section_wrpper_design .profile_page_design .profile_container .profile_box .profile_right .info_area p:last-child {
+  margin-bottom: 0;
+}
 .section_wrpper_design .skill_page_design {
   background-color: #885866 !important;
-}
-.section_wrpper_design .skill_page_design .skill_container {
-  margin-top: 5%;
 }
 .section_wrpper_design .skill_page_design .skill_container .skill_list_area_design .title {
   text-align: left;
@@ -273,34 +314,28 @@ h2 {
   margin-top: 15px;
   font-size: 2.4rem;
 }
-.section_wrpper_design .project_page_design .project_container {
-  margin-top: 5%;
-}
 .section_wrpper_design .project_page_design .project_container .project_box_design {
   display: flex;
   margin-top: 20px;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container {
   width: 480px;
-  height: 560px;
   margin-right: 20px;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design {
   display: flex;
-  width: 100%;
-  height: 40px;
-  background-color: black;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 20px;
-  border: 2px solid white;
-  box-shadow: 0px 1px 7px 0px black;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li {
   position: relative;
-  color: gray;
+  background-color: rgb(0, 0, 0);
+  color: rgb(154, 154, 154);
   font-size: 2rem;
   transition: all 0.2s;
+  padding: 5px 10px;
+  border: 2px solid white;
   cursor: pointer;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .page_list_area_design li.project_tab_on {
@@ -314,21 +349,21 @@ h2 {
   border: 2px solid white;
   box-shadow: 0px 1px 7px 0px black;
   width: 100%;
-  height: 500px;
+  height: 460px;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .thumnail_n_video_box img, .section_wrpper_design .project_page_design .project_container .project_box_design .video_container .thumnail_n_video_box video {
   width: 100%;
-  height: 500px;
+  height: 460px;
   object-fit: cover;
   vertical-align: bottom;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area {
   width: 540px;
   margin-right: 20px;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .info_text_area_design {
   width: 100%;
-  height: 500px;
+  height: 460px;
   padding: 10px 30px;
   margin-bottom: 20px;
   border: 2px solid white;
@@ -336,29 +371,29 @@ h2 {
   text-align: left;
   box-shadow: 0px 1px 7px 0px black;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design .project_name {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .info_text_area_design .project_name {
   margin-top: 10px;
   text-align: center;
   font-size: 3.2rem;
   margin-bottom: 20px;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design .project_sub_title {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .info_text_area_design .project_sub_title {
   display: inline-block;
   font-size: 1.6rem;
   margin-bottom: 10px;
   padding: 0 5px 5px;
   border-bottom: 2px solid white;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .info_text_area_design .project_ment {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .info_text_area_design .project_ment {
   line-height: 25px;
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design {
   display: flex;
   box-shadow: 0px 1px 7px 0px black;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design li {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design li {
   width: 25%;
   height: 40px;
   cursor: pointer;
@@ -368,20 +403,20 @@ h2 {
   border-right: none;
   transition: all 0.2s;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design li a {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design li a {
   display: block;
   transform: translateY(-2px);
   line-height: 40px;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design li:hover {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design li:hover {
   color: #ffbf00;
 }
-.section_wrpper_design .project_page_design .project_container .project_box_design .info_area .link_btn_list_design li:last-child {
+.section_wrpper_design .project_page_design .project_container .project_box_design .proeject_info_area .link_btn_list_design li:last-child {
   border-right: 2px solid white;
 }
 .section_wrpper_design .project_page_design .project_container .project_box_design .project_list_design {
   width: 120px;
-  height: 560px;
+  height: 520px;
   padding: 0 15px;
   background-color: black;
   border: 2px solid white;
@@ -433,9 +468,6 @@ h2 {
 }
 .section_wrpper_design .project_page_design .section_bg {
   transform: rotate(180deg);
-}
-.section_wrpper_design .contact_page_design .contact_container {
-  margin-top: 5%;
 }
 .section_wrpper_design .contact_page_design .contact_container .contact_box {
   display: flex;
@@ -565,29 +597,88 @@ h2 {
   font-size: 4.6rem;
   border-bottom: 4px solid white;
 }
-.section_wrpper_design .info_area {
-  width: 380px;
-  margin-bottom: 40px;
-}
-.section_wrpper_design .info_area .info {
-  font-size: 3rem;
-  margin-bottom: 25px;
-  text-shadow: 1px 1px 1px black;
-}
-.section_wrpper_design .info_area p {
-  text-align: left;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-.section_wrpper_design .info_area p:last-child {
-  margin-bottom: 0;
-}
 .section_wrpper_design .section_bg {
   position: absolute;
   width: 100%;
   left: 0;
   bottom: 0;
   z-index: 10;
+}
+
+.code_modal_ex {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: black;
+  z-index: 99999999;
+}
+.code_modal_ex .code_container {
+  position: absolute;
+  width: 1180px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.code_modal_ex .code_container .code_list_design {
+  display: flex;
+  justify-content: center;
+}
+.code_modal_ex .code_container .code_list_design li {
+  font-size: 2rem;
+  transition: all 0.1s;
+  color: gray;
+  box-shadow: 0px 0px 11px 0px red;
+  margin-right: 20px;
+  font-family: "DungGeunMo";
+  padding: 5px 20px;
+  border: 3px solid white;
+  background-color: black;
+  cursor: pointer;
+}
+.code_modal_ex .code_container .code_list_design li:hover {
+  color: white;
+}
+.code_modal_ex .code_container .notice {
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+.code_modal_ex .code_container .close_btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+.code_modal_ex .code_container .close_btn i {
+  color: white;
+  font-size: 4rem;
+}
+.code_modal_ex .code_container .code_view_design {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80vh;
+}
+.code_modal_ex .code_container .code_view_design .design_box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+.code_modal_ex .code_container .code_view_design .design_box h2 {
+  color: white;
+  font-size: 2.6rem;
+  font-family: "DungGeunMo";
+}
+.code_modal_ex .code_container .code_view_design .design_box h2 .design_color {
+  color: #ffbf00;
 }
 
 /*# sourceMappingURL=/page.28cb60f2.css.map */

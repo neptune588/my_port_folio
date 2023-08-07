@@ -159,6 +159,11 @@ function mentCreate(arr, index) {
 /************** project_page ***************/
 const {page} = data;
 
+const modalCloseBtn = document.getElementById('modal_close');
+const codeModal = document.querySelector('.code_modal_ex');
+const codeListArea = document.getElementById('code_list_area');
+const codeViewBox = document.getElementById('code_view');
+
 totalCreate();
 function totalCreate() {
     const projectBox = document.getElementById('project_box');
@@ -175,7 +180,7 @@ function totalCreate() {
             </div>
         </div>
 
-        <div class="info_area">
+        <div class="proeject_info_area info_area">
             <div id="info_text_area" class="info_text_area_design">
                 ${infoTextCreate(0, 0)}
             </div>
@@ -239,9 +244,14 @@ function totalClickEvent () {
 
             projectList.forEach(innerLi => classRemove(innerLi, 'project_on'));
             classAdd(li, 'project_on');
+
+            linkBtnClick(index);
         });
     });
     handleSubClick(0, thumNVideoBox, infoTextArea);
+    linkBtnClick(0);
+
+    codeListCreate(page[0], 1);
 }
 
 
@@ -297,7 +307,6 @@ function thumnailVideoCreate(parentIndex, myIndex) {
 
     let myObject = page[parentIndex];
 
-    console.log(myObject.pageInfo[myIndex]);
     if(myIndex === 0) {
         content = `
             <img src="${myObject.pageInfo[myIndex].thunmnailSrc}" />
@@ -320,7 +329,7 @@ function linkBtnCreate(myIndex) {
     console.log(myIndex);
     page[myIndex].link.forEach((object) => {
         innerList = `
-            <li class="color_change"><a href="${object.url}" target="_blank">${object.ment}</a></li>
+            <li class="${object.className}"><a href="${object.url}" ${object.blank ? "target=_blank" : ""}>${object.ment}</a></li>
         `
 
         receive += innerList;
@@ -338,15 +347,8 @@ function tabListCreate(myIndex) {
     let myObject = page[myIndex];
     myObject.menuKind.forEach((value, i) => {
         
-        if (i === 0) {
-            innerList = `
-                <li class="page_li color_change project_tab_on">${value}</li>
-            `
-        } else {
-            innerList = `
-                <li class="page_li color_change">${value}</li>
-            `
-        }
+        innerList = `<li class="${i === 0 ? "page_li color_change project_tab_on" : "page_li color_change"}">${value}</li>`
+
         innerReceive += innerList
     })
 
@@ -404,7 +406,84 @@ function strMaker (nowObjectArr, nowBool = false) {
     return strReturn;
 }
 
+/********************** modai_ev ******************/
+const sectionWrapper = document.getElementById('section_wrapper');
+const pagseWithOnlyCalc = document.querySelectorAll('.page');
+const navigatorWithOnlyCalc = document.querySelectorAll('#navgation_area > li');
 
+
+modalCloseBtn.addEventListener('click', () => {
+    classRemove(codeModal, 'block_on');
+    classRemove(sectionWrapper, 'container_overflow');
+
+    navigatorWithOnlyCalc.forEach((tabs, index) => {
+        if(tabs.classList.contains('tab_active')) {
+            window.scrollTo({
+                top: pagseWithOnlyCalc[index].offsetTop,
+            });
+        }
+    })
+})
+
+function linkBtnClick(myIndex) {
+    const codeViewBtn = document.querySelector('.code_view_btn');
+
+    codeViewBtn.addEventListener('click', () => {
+        classAdd(codeModal, 'block_on');
+        classAdd(sectionWrapper, 'container_overflow');
+
+        codeBtnCreate(myIndex);
+    })
+}
+
+function codeBtnCreate(myIndex) {
+    let list = ``;
+    page[myIndex].menuKind.forEach((value, idx) => {
+        if(idx === 0) {
+            return null;
+        } else {
+            list += `<li class="${idx === 1 ? "code_list code_tab_on":"code_list"}">${value}</li>`
+        }
+    })
+    codeListArea.innerHTML = list;
+
+    const codeBtn = document.querySelectorAll('#code_list_area > li');
+
+    codeBtnClick(codeBtn, myIndex);
+}
+
+function codeBtnClick(btnList, myIndex) {
+    const myObj = page[myIndex];
+    btnList.forEach(btn => {
+        btn.addEventListener('click', () => {
+            for(let j  = 0; j < btnList.length; j++) {
+                classRemove(btnList[j], 'code_tab_on');
+            }
+            classAdd(btn, 'code_tab_on');
+
+            let curIdx = myObj.pageInfo.findIndex(obj => obj.type === btn.textContent);
+            codeListCreate(myObj, curIdx);
+        });
+        
+    })
+}
+
+function codeListCreate(parentObj, parentIdx) {
+    let list = ``;
+    const myObj = parentObj.pageInfo[parentIdx];
+
+    myObj.codeInfo.forEach(obj => {
+        list += `
+            <div class="design_box">
+                <h2><span style="color:${obj.themeColor}">${obj.codeName}</span> ${obj.codeType}
+                </h2>
+                <iframe src="${obj.src}" style="${parentObj.iframeStyle}" sandbox="${parentObj.sandBoxValue}"}></iframe>
+            </div>
+        `
+    });
+
+    codeViewBox.innerHTML = list;
+}
 /************** contact_page ***************/
 const dotArea = document.querySelector('.copy_right > .dot_area');
 const dotStr = "...";

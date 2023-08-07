@@ -144,6 +144,8 @@ const data = {
       menuKind: ["ALL","MAIN","SUB","DETAIL","SIGN IN/UP","SEARCH"],
       hoverColor: ["FFBF00"],
       iconSrc: ["./images/calhartt_logo.png"],
+      iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
+      sandBoxValue: ["allow-scripts allow-same-origin"],
       pageInfo: [
         {
           type: "ALL",
@@ -152,7 +154,6 @@ const data = {
           setting: ["NODE.JS, ","PARCEL-BUNDLER"],
           people: ["기획: 4인, 제작: 1인(개별)"],
           thunmnailSrc: ["./images/calhartt_thumnail.jpg"],
-          
         },
         {
           type: "MAIN",
@@ -164,7 +165,45 @@ const data = {
             "박스 슬라이더 부분은 JQUERY로는 어떻게 구현하는지 배웠지만 JS와 차이점이 있어 관련 강의를 찾아 보고",
             "공부하여 구현한다고 시간이 소요 됐었지만, 생각한대로 구현이 되어 뿌듯 했습니다."
           ],
-          videoSrc: ["./videos/calhartt/calhartt_main_video.mp4"]
+          videoSrc: ["./videos/calhartt/calhartt_main_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/BaX0V8KgtWIXVYQRBk46"],
+            },
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/Zzr34LvCZEXDD1QUGRjZ"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/nRrd1Zrd2cwOZhgrnvdy"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/FcQ0NIuNKGxpcX3AOKQM"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/fLtUcwV98Amxf28abvfB"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/41EtNHj91WjcB55DkOgX"],
+            }
+          ],
         },
         {
           type: "SUB",
@@ -172,11 +211,50 @@ const data = {
             "다중 중첩 상품 필터","정렬 및 동적 페이지네이션"
           ],
           episode: [
-            "Math.ceil 메서드를 이용하여 실시간으로 전달받은 배열의 갯수를 나누어 동적 페이지를 구현 하였으며",
+            "Math.ceil 메서드를 이용하여 배열의 갯수를 나누어 동적 페이지를 구현 하였으며",
             "중첩 필터의 경우에는 if문으로 구현 할 경우 말도 안되는 경우의 수가 생긴다고 판단,",
             "배열, VALUE, DATA-SET, closest메서드, for반복문 등으로 해당 기능을 구현 하였습니다.",
+            "또한 페이지네이션 기능을 완벽하게 구현 하였습니다.(앞,뒤,맨앞,맨뒤 등)"
           ],
-          videoSrc: ["./videos/calhartt/calhartt_sub_video.mp4"]
+          videoSrc: ["./videos/calhartt/calhartt_sub_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/AX5x1be0aMyXYrvjYJXA"],
+            },
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/OtLInQNKN5nM5d6iCjqp"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/4hLN2zcm4xQChebhuimK"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/DQkDO7gURIlwDmdcgZEj"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/x0Y0oPw23TuWQsHO2w3e"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/buiptdmp58lxpAHKa8oO"],
+            }
+          ],
         },
         {
           type: "DETAIL",
@@ -188,7 +266,45 @@ const data = {
             "객체 및 배열을 활용하여 구현 했습니다.",
             "QNA는 질문글이 올라오면 해당 글을 답변 할 수 있게 답변이 달리면 답변 상태가 변화 됩니다."
           ],
-          videoSrc: ["./videos/calhartt/calhartt_detail_video.mp4"]
+          videoSrc: ["./videos/calhartt/calhartt_detail_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/jFzcTNIPQYJ7N3mri8nP"],
+            },
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/08KJyllSqjyLwW4HRlP7"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/wJYmqDr2by0PlHJ71tAy"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/kuYo2BWfxBsZ4ut2Vevx"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/YO71UlwD61bkbpvAzOSK"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/mqnXwEU8VfgSelk2Bhn1"],
+            }
+          ],
         },
         {
           type: "SIGN IN/UP",
@@ -202,7 +318,81 @@ const data = {
             "FINDINDEX 메서드를 활용하여 아이디/비밀번호가 같은 정보에 속해있는지 판단했습니다.",
             "해당 프로젝트를 제작하면서 자바스크립트에 대한 이해도와 실력이 상승된것 같습니다."
           ],
-          videoSrc: ["./videos/calhartt/calhartt_sign_in_n_up_video.mp4"]
+          videoSrc: ["./videos/calhartt/calhartt_sign_in_n_up_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "SIGN IN",
+              src: ["https://carbon.now.sh/embed/VZpNSAsLbG21zfHmBvGX"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "SIGN IN",
+              src: ["https://carbon.now.sh/embed/jmMwapGSnnaTIBqoo0Kl"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "SIGN IN",
+              src: ["https://carbon.now.sh/embed/jceMQ3rLJbpXqwHC60db"],
+            },
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "SIGN UP: RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/4y1wGquVIYn10Knbpxik"],
+            },
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "SIGN UP: RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/oqxRXpFgw1Gyx80syRha"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "SIGN UP: RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/CgAKfw2pmkXYoCzHQeyW"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "SIGN UP: RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/TdvmdQiqetvmJPs6Wd27"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "SIGN UP: RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/X92NxlLl5t54sbuG4Wwm"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "SIGN UP: RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/gFH4896AiXex9kBfpAiM"],
+            },
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "USER DATA RESEARCH",
+              src: ["https://carbon.now.sh/embed/2g6KGhyVUPWPmJO4MVV7"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "USER DATA RESEARCH",
+              src: ["https://carbon.now.sh/embed/gbVLRuz7tsHK0L5ukrBe"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "USER DATA RESEARCH",
+              src: ["https://carbon.now.sh/embed/7xWSCXH55K8g3E1snu5c"],
+            },
+          ],
         },
         {
           type: "SEARCH",
@@ -212,27 +402,73 @@ const data = {
           episode: [
             "filter 메서드, include메서드, urlQuery 등을 활용하여 해당 기능을 구현 하였습니다.",
             "?앞뒤의 값을 키:밸류의 형태로 받아와 filter, includes를 활용하여 해당 기능을 구현 했습니다.",
-            "소소하지만 검색한 키워드에 맞는 상품이 몇개 있는지/ 없는지 표기 하였습니다.",
+            "그리고 검색한 키워드에 맞는 상품이 몇 개 있는지/ 없는지 표기 하였습니다.",
           ],
-          videoSrc: ["./videos/calhartt/calhartt_search_video.mp4"]
+          videoSrc: ["./videos/calhartt/calhartt_search_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/LWQTAEZ8Ve4hBRGUAbJo"],
+            },
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/0gzmoRe3VIJ77KS89P4n"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/SKmjCYyEwTjwPl4rQd9Y"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/x90r9TsIALiat8aLDKBl"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "RENEWAL/BEFORE",
+              src: ["https://carbon.now.sh/embed/tqdwG6hDlmoPZohhrmXr"],
+            },
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/y2JC9I3t9id2s5bqz3Xt"],
+            }
+          ],
         },
       ],
       link: [
         {
           url: "#!",
-          ment: "코드 보기"
+          ment: "코드 보기",
+          className: "code_view_btn",
+          blank: false,
         },
         {
-          url: "#!",
-          ment: "사이트 보기"
+          url: "https://neptune588.github.io/team_project_calhart/",
+          ment: "사이트 보기",
+          className: "site_view_btn",
+          blank: true,
         },
         {
           url: "https://github.com/neptune588/team_project_calhart",
-          ment: "GITHUB/README"
+          ment: "GITHUB/README",
+          className: "read_me_btn",
+          blank: true,
         },
         {
           url: "#!",
-          ment: "기획서 보기"
+          ment: "기획서 보기",
+          className: "plan_view_btn",
+          blank: true,
         }
       ]
 
@@ -278,19 +514,27 @@ const data = {
       link: [
         {
           url: "#!",
-          ment: "코드 보기"
+          ment: "코드 보기",
+          className: "code_view_btn",
+          blank: false,
         },
         {
           url: "https://neptune588.github.io/personal-project-netmable-/",
-          ment: "사이트 보기"
+          ment: "사이트 보기",
+          className: "site_view_btn",
+          blank: true,
         },
         {
           url: "https://github.com/neptune588/personal-project-netmable-",
-          ment: "GITHUB/README"
+          ment: "GITHUB/README",
+          className: "read_me_btn",
+          blank: true,
         },
         {
           url: "#!",
-          ment: "기획서 보기"
+          ment: "기획서 보기",
+          className: "plan_view_btn",
+          blank: true,
         }
       ]
     },
@@ -373,24 +617,32 @@ const data = {
       ],
       link: [
         {
-          url: "#!",
-          ment: "코드 보기"
+          url: "#!z",
+          ment: "코드 보기",
+          className: "code_view_btn",
+          blank: false,
         },
         {
           url: "#!",
-          ment: "사이트 보기"
+          ment: "사이트 보기",
+          className: "site_view_btn",
+          blank: true,
         },
         {
           url: "https://github.com/neptune588/calhartt_React_Ver",
-          ment: "GITHUB/README"
+          ment: "GITHUB/README",
+          className: "read_me_btn",
+          blank: true,
         },
         {
           url: "#!",
-          ment: "기획서 보기"
+          ment: "기획서 보기",
+          className: "plan_view_btn",
+          blank: true,
         }
       ]
     },
-  ]
+  ],
 }
 
 export {data};

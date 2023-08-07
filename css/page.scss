@@ -11,7 +11,9 @@
 .opacity_on {
     opacity: 1 !important; 
 }
-
+.code_tab_on {
+    color: white !important;
+}
 
 /****************************** intro_page *****************************/
 .section_wrpper_design {
@@ -19,7 +21,10 @@
     height: 500vh;
     overflow: hidden;
     .section_container {
-        position: relative; 
+        position: absolute;
+        width: 1180px; height: 80%;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%); 
         color: white;
         @include box_array;
         user-select: none;
@@ -28,12 +33,12 @@
     }
     .intro_page_design {
         .intro_container {
-            margin-top: 20%;
             user-select: none;
             text-align: center;
             z-index: 9999;
             .title_ment_area {
                 position: relative;
+                margin-top: 20%;
                 display: inline-block;
                 @include title_size;
                 .tiping_bar {
@@ -47,7 +52,7 @@
             .start_ment_design {
                 display: none;
                 opacity: 0;
-                margin-top: 30px;
+                margin-top: 20px;
                 font-size: 5rem;
                 animation: start_color_ani 1s 0.2s both infinite;
             }
@@ -55,7 +60,7 @@
                 position: absolute;
                 overflow: hidden;
                 width: 0;
-                left: 50%; bottom: -230px;
+                left: 50%; bottom: 10px;
                 transform: translateX(-50%);
                 transition: all 4s;
                 .width_ment {
@@ -108,10 +113,9 @@
     .profile_page_design {
         background-color: #5f4a6b !important;
         .profile_container {
-            margin-top: 5%;
             .profile_box {
                 display: flex;
-                margin-top: 40px;
+                margin-top: 20px;
                 justify-content: space-around;
                 font-family: $dot_font_dungGeunMo;
                 .profile_left {
@@ -135,6 +139,25 @@
                         transform: rotate(0deg);
                     }
                 }
+                .profile_right {
+                    .info_area{
+                        width: 380px;
+                        margin-bottom: 20px;
+                        .info {
+                            font-size: 3rem;
+                            margin-bottom: 15px;
+                            text-shadow: 1px 1px 1px black;
+                        }
+                        p {
+                            text-align: left;
+                            font-size: 2rem;
+                            margin-bottom: 15px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -144,7 +167,6 @@
     .skill_page_design {
         background-color: #885866 !important;
         .skill_container {
-            margin-top: 5%;
             .skill_list_area_design {
                 .title {
                     text-align: left;
@@ -222,27 +244,25 @@
     /****************************** project_page *****************************/    
     .project_page_design {
         .project_container {
-            margin-top: 5%;
             .project_box_design {
                 display: flex;
                 margin-top: 20px;
                 .video_container {
-                    @include item_size(480px, 560px);
+                    width: 480px;
                     margin-right: 20px;
                     .page_list_area_design {
                         display: flex;
-                        @include item_size(100%, 40px);
-                        background-color: black;
                         justify-content: space-evenly;
                         align-items: center;
                         margin-bottom: 20px;
-                        border: 2px solid white;
-                        box-shadow: 0px 1px 7px 0px black;
                         li {
                             position: relative;
-                            color: gray;
+                            background-color: rgb(0, 0, 0);
+                            color: rgb(154, 154, 154);
                             font-size: 2rem;
                             transition: all 0.2s;
+                            padding: 5px 10px;
+                            border: 2px solid white;
                             cursor: pointer;
                             &.project_tab_on {
                                 color: white;
@@ -256,19 +276,19 @@
                         overflow: hidden;
                         border: 2px solid white;
                         box-shadow: 0px 1px 7px 0px black;
-                        @include item_size(100%, 500px);
+                        @include item_size(100%, 460px);
                         img, video {
-                            @include item_size(100%, 500px);
+                            @include item_size(100%, 460px);
                             object-fit: cover;
                             vertical-align: bottom;
                         }
                     }
                 }
-                .info_area {
+                .proeject_info_area {
                     width: 540px;
                     margin-right: 20px;
                     .info_text_area_design {
-                        @include item_size(100%, 500px);
+                        @include item_size(100%, 460px);
                         padding: 10px 30px;
                         margin-bottom: 20px;
                         border: 2px solid white;
@@ -320,7 +340,7 @@
                     }
                 }
                 .project_list_design {
-                    @include item_size(120px, 560px);
+                    @include item_size(120px, 520px);
                     padding: 0 15px;
                     background-color: black;
                     border: 2px solid white;
@@ -373,17 +393,16 @@
                 }
                 
             }
-
         }
         .section_bg {
             transform: rotate(180deg);
         }
     }
 
+
     /****************************** contact_page *****************************/
     .contact_page_design {
         .contact_container {
-            margin-top: 5%;
             .contact_box {
                 display: flex;
                 margin-top: 30px;
@@ -508,7 +527,7 @@
         font-size: 4.6rem;
         border-bottom: 4px solid white;
     }
-    .info_area{
+/*     .info_area{
         width: 380px;
         margin-bottom: 40px;
         .info {
@@ -524,11 +543,80 @@
                 margin-bottom: 0;
             }
         }
-    }
+    } */
     .section_bg {
         position: absolute;
         width: 100%;
         left:0; bottom: 0;
         z-index: 10;
+    }
+}
+.code_modal_ex {
+    position: fixed;
+    display: none;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    overflow-y: scroll;
+    background-color: black;
+    z-index: 99999999;
+    .code_container {
+        position: absolute;
+        width: 1180px;
+        top: 50%; left: 50%; 
+        transform: translate(-50%, -50%);
+        .code_list_design {
+            display: flex;
+            justify-content: center;
+            li {
+                font-size: 2rem;
+                transition: all 0.1s;
+                color: gray;
+                box-shadow: 0px 0px 11px 0px red;
+                margin-right: 20px;
+                font-family: $dot_font_dungGeunMo;
+                padding: 5px 20px;
+                border: 3px solid white;
+                background-color: black;
+                cursor: pointer;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+        .notice {
+            margin: 20px 0;
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            font-size: 2.2rem;
+        }
+        .close_btn {
+            position: absolute;
+            top:0px; right: 0px;
+            cursor: pointer;
+            i {
+                color: white;
+                font-size: 4rem;
+            }
+        }
+        .code_view_design {
+            display: flex;
+            flex-wrap: wrap;
+            @include item_size(100%, 80vh);
+            .design_box {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                h2 {
+                    color: white;
+                    font-size: 2.6rem;
+                    font-family: $dot_font_dungGeunMo;
+                    .design_color {
+                        color: #ffbf00;
+                    }
+                }
+                @include item_size(100%, 100%);
+            }
+        }
     }
 }
