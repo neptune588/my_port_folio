@@ -240,25 +240,34 @@ function totalClickEvent () {
 
             linkBtnArea.innerHTML = linkBtnCreate(index);
 
-            handleSubClick(index, thumNVideoBox, infoTextArea);
-
+            
             projectList.forEach(innerLi => classRemove(innerLi, 'project_on'));
             classAdd(li, 'project_on');
-
-            linkBtnClick(index);
+            
+            linkBtnClick();
+            
+            codeBtnCreate(index);
+            const codeBtn = document.querySelectorAll('#code_list_area > li');
+            codeBtnClick(codeBtn, index);
+            codeListCreate(page[index], 1);
+            handleSubClick(index, thumNVideoBox, infoTextArea, codeBtn);
         });
     });
-    handleSubClick(0, thumNVideoBox, infoTextArea);
-    linkBtnClick(0);
-
+    linkBtnClick();
+    
+    codeBtnCreate(0);
+    const codeBtn = document.querySelectorAll('#code_list_area > li');
+    codeBtnClick(codeBtn, 0);
     codeListCreate(page[0], 1);
+    handleSubClick(0, thumNVideoBox, infoTextArea, codeBtn);
 }
 
 
-function handleSubClick (parentIndex, thumArea, infoArea) {
+function handleSubClick (parentIndex, thumArea, infoArea, codeBtnEl) {
     const pageList = document.querySelectorAll('.page_li');
-    
+
     let list = ``;
+
     pageList.forEach((li, index) => {
         li.addEventListener('click', () => {
             //서브페이지 메뉴를 클릭했을때는, 이미 오브젝트 인덱스가 확정되어있는 상태어야한다.
@@ -270,15 +279,21 @@ function handleSubClick (parentIndex, thumArea, infoArea) {
             infoArea.innerHTML = list;
             thumArea.innerHTML = thumnailVideoCreate(parentIndex, index);
 
-            //console.log(list);
+            let curIdx = idxSearch(page[parentIndex].pageInfo, "type", li.textContent);
+            codeListCreate(page[parentIndex], curIdx);
+            
+            for(let j = 0; j < codeBtnEl.length; j++) {
+                classRemove(codeBtnEl[j], "code_tab_on");
+            }
             for(let j = 0; j < pageList.length; j++) {
                 classRemove(pageList[j], "project_tab_on");
             }
 
+            let classIdx = index === 0 || index === 1 ? classIdx = 0 : classIdx = index - 1;
+            classAdd(codeBtnEl[classIdx], "code_tab_on");
             classAdd(li, "project_tab_on");
         });
     });
-    
 }
 
 function projectListCreate() {
@@ -347,7 +362,7 @@ function tabListCreate(myIndex) {
     let myObject = page[myIndex];
     myObject.menuKind.forEach((value, i) => {
         
-        innerList = `<li class="${i === 0 ? "page_li color_change project_tab_on" : "page_li color_change"}">${value}</li>`
+        innerList = `<li class="${i === 0 ? "page_li project_tab_on" : "page_li code_view_change"}">${value}</li>`
 
         innerReceive += innerList
     })
@@ -425,14 +440,12 @@ modalCloseBtn.addEventListener('click', () => {
     })
 })
 
-function linkBtnClick(myIndex) {
+function linkBtnClick() {
     const codeViewBtn = document.querySelector('.code_view_btn');
 
     codeViewBtn.addEventListener('click', () => {
         classAdd(codeModal, 'block_on');
         classAdd(sectionWrapper, 'container_overflow');
-
-        codeBtnCreate(myIndex);
     })
 }
 
@@ -447,9 +460,9 @@ function codeBtnCreate(myIndex) {
     })
     codeListArea.innerHTML = list;
 
-    const codeBtn = document.querySelectorAll('#code_list_area > li');
+/*     const codeBtn = document.querySelectorAll('#code_list_area > li');
 
-    codeBtnClick(codeBtn, myIndex);
+    codeBtnClick(codeBtn, myIndex); */
 }
 
 function codeBtnClick(btnList, myIndex) {
@@ -461,7 +474,7 @@ function codeBtnClick(btnList, myIndex) {
             }
             classAdd(btn, 'code_tab_on');
 
-            let curIdx = myObj.pageInfo.findIndex(obj => obj.type === btn.textContent);
+            let curIdx = idxSearch(myObj.pageInfo, "type", btn.textContent);
             codeListCreate(myObj, curIdx);
         });
         
@@ -470,20 +483,31 @@ function codeBtnClick(btnList, myIndex) {
 
 function codeListCreate(parentObj, parentIdx) {
     let list = ``;
-    const myObj = parentObj.pageInfo[parentIdx];
+    const myObj = parentObj.pageInfo;
 
-    myObj.codeInfo.forEach(obj => {
+    myObj[parentIdx].codeInfo.forEach(obj => {
         list += `
             <div class="design_box">
                 <h2><span style="color:${obj.themeColor}">${obj.codeName}</span> ${obj.codeType}
                 </h2>
-                <iframe src="${obj.src}" style="${parentObj.iframeStyle}" sandbox="${parentObj.sandBoxValue}"}></iframe>
+                <iframe src="${obj.src}" style="${parentObj.iframeStyle}" sandbox="${parentObj.sandBoxValue}" loading="lazy"}></iframe>
             </div>
         `
     });
 
     codeViewBox.innerHTML = list;
 }
+
+function idxSearch(arr, paramKey, compareValue) {
+    let result = arr.findIndex(data => data[paramKey] === compareValue);
+
+    if(result === 0) {
+        result = 1;
+    }
+
+    return result;
+}
+
 /************** contact_page ***************/
 const dotArea = document.querySelector('.copy_right > .dot_area');
 const dotStr = "...";

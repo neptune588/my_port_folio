@@ -11339,32 +11339,32 @@ var data = {
       codeInfo: [{
         codeName: "HTML",
         themeColor: "orange",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "MAIN: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/BaX0V8KgtWIXVYQRBk46"]
       }, {
         codeName: "HTML",
         themeColor: "orange",
-        codeType: "RENEWAL/AFTER",
+        codeType: "MAIN: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/Zzr34LvCZEXDD1QUGRjZ"]
       }, {
         codeName: "CSS",
         themeColor: "skyblue",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "MAIN: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/nRrd1Zrd2cwOZhgrnvdy"]
       }, {
         codeName: "CSS",
         themeColor: "skyblue",
-        codeType: "RENEWAL/AFTER",
+        codeType: "MAIN: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/FcQ0NIuNKGxpcX3AOKQM"]
       }, {
         codeName: "JAVASCRIPT",
         themeColor: "yellow",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "MAIN: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/fLtUcwV98Amxf28abvfB"]
       }, {
         codeName: "JAVASCRIPT",
         themeColor: "yellow",
-        codeType: "RENEWAL/AFTER",
+        codeType: "MAIN: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/41EtNHj91WjcB55DkOgX"]
       }]
     }, {
@@ -11375,33 +11375,33 @@ var data = {
       codeInfo: [{
         codeName: "HTML",
         themeColor: "orange",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "SUB: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/AX5x1be0aMyXYrvjYJXA"]
       }, {
         codeName: "HTML",
         themeColor: "orange",
-        codeType: "RENEWAL/AFTER",
+        codeType: "SUB: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/OtLInQNKN5nM5d6iCjqp"]
       }, {
         codeName: "CSS",
         themeColor: "skyblue",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "SUB: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/4hLN2zcm4xQChebhuimK"]
       }, {
         codeName: "CSS",
         themeColor: "skyblue",
-        codeType: "RENEWAL/AFTER",
+        codeType: "SUB: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/DQkDO7gURIlwDmdcgZEj"]
       }, {
         codeName: "JAVASCRIPT",
         themeColor: "yellow",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "SUB: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/x0Y0oPw23TuWQsHO2w3e"]
       }, {
         codeName: "JAVASCRIPT",
         themeColor: "yellow",
-        codeType: "RENEWAL/AFTER",
-        src: ["https://carbon.now.sh/embed/buiptdmp58lxpAHKa8oO"]
+        codeType: "SUB: RENEWAL/AFTER",
+        src: ["https://carbon.now.sh/embed/dd24Aox8bm09ZIqMf9U3"]
       }]
     }, {
       type: "DETAIL",
@@ -11411,32 +11411,32 @@ var data = {
       codeInfo: [{
         codeName: "HTML",
         themeColor: "orange",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "DETAIL: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/jFzcTNIPQYJ7N3mri8nP"]
       }, {
         codeName: "HTML",
         themeColor: "orange",
-        codeType: "RENEWAL/AFTER",
+        codeType: "DETAIL: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/08KJyllSqjyLwW4HRlP7"]
       }, {
         codeName: "CSS",
         themeColor: "skyblue",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "DETAIL: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/wJYmqDr2by0PlHJ71tAy"]
       }, {
         codeName: "CSS",
         themeColor: "skyblue",
-        codeType: "RENEWAL/AFTER",
+        codeType: "DETAIL: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/kuYo2BWfxBsZ4ut2Vevx"]
       }, {
         codeName: "JAVASCRIPT",
         themeColor: "yellow",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "DETAIL: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/YO71UlwD61bkbpvAzOSK"]
       }, {
         codeName: "JAVASCRIPT",
         themeColor: "yellow",
-        codeType: "RENEWAL/AFTER",
+        codeType: "DETAIL: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/mqnXwEU8VfgSelk2Bhn1"]
       }]
     }, {
@@ -11513,32 +11513,32 @@ var data = {
       codeInfo: [{
         codeName: "HTML",
         themeColor: "orange",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "SEARCH: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/LWQTAEZ8Ve4hBRGUAbJo"]
       }, {
         codeName: "HTML",
         themeColor: "orange",
-        codeType: "RENEWAL/AFTER",
+        codeType: "SEARCH: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/0gzmoRe3VIJ77KS89P4n"]
       }, {
         codeName: "CSS",
         themeColor: "skyblue",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "SEARCH: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/SKmjCYyEwTjwPl4rQd9Y"]
       }, {
         codeName: "CSS",
         themeColor: "skyblue",
-        codeType: "RENEWAL/AFTER",
+        codeType: "SEARCH: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/x90r9TsIALiat8aLDKBl"]
       }, {
         codeName: "JAVASCRIPT",
         themeColor: "yellow",
-        codeType: "RENEWAL/BEFORE",
+        codeType: "SEARCH: RENEWAL/BEFORE",
         src: ["https://carbon.now.sh/embed/tqdwG6hDlmoPZohhrmXr"]
       }, {
         codeName: "JAVASCRIPT",
         themeColor: "yellow",
-        codeType: "RENEWAL/AFTER",
+        codeType: "SEARCH: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/y2JC9I3t9id2s5bqz3Xt"]
       }]
     }],
@@ -11568,6 +11568,8 @@ var data = {
     menuKind: ["ALL", "MAIN", "SUB"],
     hoverColor: ["yellow"],
     iconSrc: ["./images/netmarble_logo.png"],
+    iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
+    sandBoxValue: ["allow-scripts allow-same-origin"],
     pageInfo: [{
       type: "ALL",
       makePeriod: "2023-03-28 ~ 2023-04-28",
@@ -11579,12 +11581,44 @@ var data = {
       type: "MAIN",
       pageContents: ["DATA-SET을 이용한 정렬 기능", "SLICK SLIDER를 활용한 박스 슬라이더", "반응형", "아코디언 메뉴", "JQUERY를 활용한 박스 슬라이더"],
       episode: ["프론트엔드 과정을 배우면서 처음으로 진행한 프로젝트로,", "처음 제작했던 프로젝트라, 시행 착오를 정말 많이 겪은 프로젝트 입니다.", "MEDIAQUERY를 활용하여 반응형으로 제작 하였으며, JQUERY를 활용하여 정렬 및 슬라이더 기능등을 구현 하였습니다."],
-      videoSrc: ["./videos/netmarble/netmarble_main_video.mp4"]
+      videoSrc: ["./videos/netmarble/netmarble_main_video.mp4"],
+      codeInfo: [{
+        codeName: "HTML",
+        themeColor: "orange",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/JVZ48cUW6YZzoDyWKmWf"]
+      }, {
+        codeName: "CSS",
+        themeColor: "skyblue",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/Gf0jnNopaxfOj0fY7Z0b"]
+      }, {
+        codeName: "JAVASCRIPT/JQUERY",
+        themeColor: "yellow",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/sPaRNvqP4oTjkISc0Egy"]
+      }]
     }, {
       type: "SUB",
       pageContents: ["탭 메뉴", "메뉴 더보기 기능"],
       episode: ["탭 메뉴 버튼을 통해 해당하는 밸류를 가진 메뉴를 DISPLAY: NONE/BLOCK으로 구현 하였으며", "모바일, 테블릿, PC버전에서 표기되는 컨텐츠의 갯수가 달라집니다."],
-      videoSrc: ["./videos/netmarble/netmarble_sub_video.mp4"]
+      videoSrc: ["./videos/netmarble/netmarble_sub_video.mp4"],
+      codeInfo: [{
+        codeName: "HTML",
+        themeColor: "orange",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/jrf3ALtlQPW0x6RF1Veh"]
+      }, {
+        codeName: "CSS",
+        themeColor: "skyblue",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/RCXuHIRrgbMptbkapnRs"]
+      }, {
+        codeName: "JAVASCRIPT/JQUERY",
+        themeColor: "yellow",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/uxapjEUv6HBJgw1Zvv1F"]
+      }]
     }],
     link: [{
       url: "#!",
@@ -11623,27 +11657,122 @@ var data = {
       type: "MAIN",
       pageContents: ["박스 무한 슬라이더", "LOOK_BOOK_BOX"],
       episode: ["처음 리액트를 접했을때는 기존 제작 환경과 많이 달라 당황 했습니다.", "하지만 수업시간에 배운 내용과 복습을 통해 어느정도 이해하게 되었고", "MAP을 적극적으로 활용하여 링크 연결 및 PROPS들을 객체 속성 값에 맞게 동적으로 생성 하였습니다.", "JS로 제작했던 박스 슬라이더는 스와이퍼로 교체 하였으며, HOVER EVENT는 useState를 사용", "즉, 상태 변경을 이용하여 삼항 연산자로 해당 이벤트를 구현 하였습니다."],
-      videoSrc: ["./videos/calhartt_react/calhartt_react_main_video.mp4"]
+      videoSrc: ["./videos/calhartt_react/calhartt_react_main_video.mp4"],
+      codeInfo: [{
+        codeName: "VisualMain.JS",
+        themeColor: "yellow",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/zzjglhvSa1HFTrBn77uB"]
+      }, {
+        codeName: "VisualMain.CSS",
+        themeColor: "skyblue",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/Y7mVQkrifFd4U5jwhpGb"]
+      }, {
+        codeName: "ProductList.JS",
+        themeColor: "yellow",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/GpFIW2wJDOEJhjRGugYR"]
+      }, {
+        codeName: "ProductList.CSS",
+        themeColor: "skyblue",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/sR1nH63nDB7QHbf0Uz0z"]
+      }, {
+        codeName: "IssueContents.JS",
+        themeColor: "yellow",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/ylT1rZIdEZke13Zihr1o"]
+      }, {
+        codeName: "IssueContents.CSS",
+        themeColor: "skyblue",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/ym8G53rzM4KvH50NNDRd"]
+      }, {
+        codeName: "MdsPick.JS",
+        themeColor: "yellow",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/iQcTtk8luclBGVOZG2W3"]
+      }, {
+        codeName: "MdsPick.CSS",
+        themeColor: "skyblue",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/93k5oINYcQn73xry05Oq"]
+      }, {
+        codeName: "InstaGram.JS",
+        themeColor: "yellow",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/MMEcRV2FWuVdh4ZYgNVX"]
+      }, {
+        codeName: "InstaGram.CSS",
+        themeColor: "skyblue",
+        codeType: "MAIN",
+        src: ["https://carbon.now.sh/embed/fwPdcrAB25NikZbzYFfK"]
+      }]
     }, {
       type: "SUB",
       pageContents: ["서브 메뉴에 따른 리스트 동적 생성", "장바구니 담기 기능", "상태 변경을 이용한 조건부 렌더링"],
       episode: ["HEADER 역시 MAP으로 객체 기반 동적 생성을 하였고, 링크 연결을 객체 속성 값으로 연결", "ROUTER를 이용해 해당 서브 페이지로 라우팅을 해준 뒤 PARAMS를 동적으로 받아와 Object.keys를 활용해 JSON데이터 파일과 비교, 일치하는 값을 뿌려 주었습니다.", "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며 자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.", "fetch로 데이터 요청을 해 상태에 담고, 해당 상태가 변하기 전까지는 다른 컴포넌트가 렌더링이 되는 이른바 조건부 렌더링을 했습니다."],
-      videoSrc: ["./videos/calhartt_react/calhartt_react_sub_video.mp4"]
+      videoSrc: ["./videos/calhartt_react/calhartt_react_sub_video.mp4"],
+      codeInfo: [{
+        codeName: "SubList.JS",
+        themeColor: "yellow",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/jK8kaQgJM2Eme1a3ZreK"]
+      }, {
+        codeName: "SubList.CSS",
+        themeColor: "skyblue",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/2jx3HXyZvtc5vDewyZBA"]
+      }]
     }, {
       type: "DETAIL",
       pageContents: ["JSON 데이터 렌더링", "리뷰 리스트 작성 및 별점/삭제 기능"],
       episode: ["30개의 리스트가 있으며 각 리스트 객체에 담겨있는 정보를 토대로", "디테일 페이지에 렌더링을 했습니다.", "또한 별점 기능은 반복문과 useState를 이용한 객체 속성 값 변화로 구현을 하였습니다."],
-      videoSrc: ["./videos/calhartt_react/calhartt_react_detail_video.mp4"]
+      videoSrc: ["./videos/calhartt_react/calhartt_react_detail_video.mp4"],
+      codeInfo: [{
+        codeName: "DetailList.JS",
+        themeColor: "yellow",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/zCOGdGfw3tNUMZlPWtAm"]
+      }, {
+        codeName: "DetailList.CSS",
+        themeColor: "skyblue",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/7FjE4SnFPSuCJlYu7xRN"]
+      }]
     }, {
       type: "CART",
       pageContents: ["총 갯수 및 가격 표시 기능", "상품 수량 변경 및 삭제 기능"],
       episode: ["리덕스 툴킷의 리듀서즈에 저장된 상태 변화 함수, useDispatch, useSelector를 활용하여", "해당 기능들을 구현 하였습니다."],
-      videoSrc: ["./videos/calhartt_react/calhartt_react_cart_video.mp4"]
+      videoSrc: ["./videos/calhartt_react/calhartt_react_cart_video.mp4"],
+      codeInfo: [{
+        codeName: "Cart.JS",
+        themeColor: "yellow",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/Cj3OiP1vel5QhU6SCINQ"]
+      }, {
+        codeName: "Cart.CSS",
+        themeColor: "skyblue",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/CiphEidNSJZZl1sp1JiY"]
+      }]
     }, {
       type: "SEARCH",
       pageContents: ["검색 기능"],
       episode: ["input밸류 값이 바뀔때마다 onChange이벤트를 통해 상태 배열에 value가 저장이 되고", "엔터 혹은 검색 버튼을 눌렸을시 해당 상태의 값이 링크에 전달", "useParams를 이용하여 해당 값을 받아와 filter, includes를 이용해 검색 기능을 구현 했습니다."],
-      videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"]
+      videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"],
+      codeInfo: [{
+        codeName: "Search.JS",
+        themeColor: "yellow",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/oOeeVsWhuA4MCfhAwyjT"]
+      }, {
+        codeName: "Search.CSS",
+        themeColor: "skyblue",
+        codeType: "SUB",
+        src: ["https://carbon.now.sh/embed/ldC6pgntnVph5n6wTO16"]
+      }]
     }],
     link: [{
       url: "#!z",
@@ -11651,7 +11780,7 @@ var data = {
       className: "code_view_btn",
       blank: false
     }, {
-      url: "#!",
+      url: "https://neptune588.github.io/calhartt_React_Ver/",
       ment: "사이트 보기",
       className: "site_view_btn",
       blank: true
@@ -11814,19 +11943,26 @@ function totalClickEvent() {
       infoTextArea.innerHTML = list02;
       thumNVideoBox.innerHTML = thumnailVideoCreate(index, 0);
       linkBtnArea.innerHTML = linkBtnCreate(index);
-      handleSubClick(index, thumNVideoBox, infoTextArea);
       projectList.forEach(function (innerLi) {
         return classRemove(innerLi, 'project_on');
       });
       classAdd(li, 'project_on');
-      linkBtnClick(index);
+      linkBtnClick();
+      codeBtnCreate(index);
+      var codeBtn = document.querySelectorAll('#code_list_area > li');
+      codeBtnClick(codeBtn, index);
+      codeListCreate(page[index], 1);
+      handleSubClick(index, thumNVideoBox, infoTextArea, codeBtn);
     });
   });
-  handleSubClick(0, thumNVideoBox, infoTextArea);
-  linkBtnClick(0);
+  linkBtnClick();
+  codeBtnCreate(0);
+  var codeBtn = document.querySelectorAll('#code_list_area > li');
+  codeBtnClick(codeBtn, 0);
   codeListCreate(page[0], 1);
+  handleSubClick(0, thumNVideoBox, infoTextArea, codeBtn);
 }
-function handleSubClick(parentIndex, thumArea, infoArea) {
+function handleSubClick(parentIndex, thumArea, infoArea, codeBtnEl) {
   var pageList = document.querySelectorAll('.page_li');
   var list = "";
   pageList.forEach(function (li, index) {
@@ -11836,11 +11972,16 @@ function handleSubClick(parentIndex, thumArea, infoArea) {
       list = "\n                ".concat(infoTextCreate(parentIndex, index), "\n            ");
       infoArea.innerHTML = list;
       thumArea.innerHTML = thumnailVideoCreate(parentIndex, index);
-
-      //console.log(list);
-      for (var j = 0; j < pageList.length; j++) {
-        classRemove(pageList[j], "project_tab_on");
+      var curIdx = idxSearch(page[parentIndex].pageInfo, "type", li.textContent);
+      codeListCreate(page[parentIndex], curIdx);
+      for (var j = 0; j < codeBtnEl.length; j++) {
+        classRemove(codeBtnEl[j], "code_tab_on");
       }
+      for (var _j = 0; _j < pageList.length; _j++) {
+        classRemove(pageList[_j], "project_tab_on");
+      }
+      var classIdx = index === 0 || index === 1 ? classIdx = 0 : classIdx = index - 1;
+      classAdd(codeBtnEl[classIdx], "code_tab_on");
       classAdd(li, "project_tab_on");
     });
   });
@@ -11882,7 +12023,7 @@ function tabListCreate(myIndex) {
   var innerReceive = "";
   var myObject = page[myIndex];
   myObject.menuKind.forEach(function (value, i) {
-    innerList = "<li class=\"".concat(i === 0 ? "page_li color_change project_tab_on" : "page_li color_change", "\">").concat(value, "</li>");
+    innerList = "<li class=\"".concat(i === 0 ? "page_li project_tab_on" : "page_li code_view_change", "\">").concat(value, "</li>");
     innerReceive += innerList;
   });
   return innerReceive;
@@ -11926,12 +12067,11 @@ modalCloseBtn.addEventListener('click', function () {
     }
   });
 });
-function linkBtnClick(myIndex) {
+function linkBtnClick() {
   var codeViewBtn = document.querySelector('.code_view_btn');
   codeViewBtn.addEventListener('click', function () {
     classAdd(codeModal, 'block_on');
     classAdd(sectionWrapper, 'container_overflow');
-    codeBtnCreate(myIndex);
   });
 }
 function codeBtnCreate(myIndex) {
@@ -11944,9 +12084,12 @@ function codeBtnCreate(myIndex) {
     }
   });
   codeListArea.innerHTML = list;
-  var codeBtn = document.querySelectorAll('#code_list_area > li');
-  codeBtnClick(codeBtn, myIndex);
+
+  /*     const codeBtn = document.querySelectorAll('#code_list_area > li');
+  
+      codeBtnClick(codeBtn, myIndex); */
 }
+
 function codeBtnClick(btnList, myIndex) {
   var myObj = page[myIndex];
   btnList.forEach(function (btn) {
@@ -11955,21 +12098,29 @@ function codeBtnClick(btnList, myIndex) {
         classRemove(btnList[j], 'code_tab_on');
       }
       classAdd(btn, 'code_tab_on');
-      var curIdx = myObj.pageInfo.findIndex(function (obj) {
-        return obj.type === btn.textContent;
-      });
+      var curIdx = idxSearch(myObj.pageInfo, "type", btn.textContent);
       codeListCreate(myObj, curIdx);
     });
   });
 }
 function codeListCreate(parentObj, parentIdx) {
   var list = "";
-  var myObj = parentObj.pageInfo[parentIdx];
-  myObj.codeInfo.forEach(function (obj) {
-    list += "\n            <div class=\"design_box\">\n                <h2><span style=\"color:".concat(obj.themeColor, "\">").concat(obj.codeName, "</span> ").concat(obj.codeType, "\n                </h2>\n                <iframe src=\"").concat(obj.src, "\" style=\"").concat(parentObj.iframeStyle, "\" sandbox=\"").concat(parentObj.sandBoxValue, "\"}></iframe>\n            </div>\n        ");
+  var myObj = parentObj.pageInfo;
+  myObj[parentIdx].codeInfo.forEach(function (obj) {
+    list += "\n            <div class=\"design_box\">\n                <h2><span style=\"color:".concat(obj.themeColor, "\">").concat(obj.codeName, "</span> ").concat(obj.codeType, "\n                </h2>\n                <iframe src=\"").concat(obj.src, "\" style=\"").concat(parentObj.iframeStyle, "\" sandbox=\"").concat(parentObj.sandBoxValue, "\" loading=\"lazy\"}></iframe>\n            </div>\n        ");
   });
   codeViewBox.innerHTML = list;
 }
+function idxSearch(arr, paramKey, compareValue) {
+  var result = arr.findIndex(function (data) {
+    return data[paramKey] === compareValue;
+  });
+  if (result === 0) {
+    result = 1;
+  }
+  return result;
+}
+
 /************** contact_page ***************/
 var dotArea = document.querySelector('.copy_right > .dot_area');
 var dotStr = "...";
@@ -12162,7 +12313,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53130" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52137" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

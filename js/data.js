@@ -170,37 +170,37 @@ const data = {
             {
               codeName: "HTML",
               themeColor: "orange",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "MAIN: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/BaX0V8KgtWIXVYQRBk46"],
             },
             {
               codeName: "HTML",
               themeColor: "orange",
-              codeType: "RENEWAL/AFTER",
+              codeType: "MAIN: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/Zzr34LvCZEXDD1QUGRjZ"],
             },
             {
               codeName: "CSS",
               themeColor: "skyblue",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "MAIN: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/nRrd1Zrd2cwOZhgrnvdy"],
             },
             {
               codeName: "CSS",
               themeColor: "skyblue",
-              codeType: "RENEWAL/AFTER",
+              codeType: "MAIN: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/FcQ0NIuNKGxpcX3AOKQM"],
             },
             {
               codeName: "JAVASCRIPT",
               themeColor: "yellow",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "MAIN: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/fLtUcwV98Amxf28abvfB"],
             },
             {
               codeName: "JAVASCRIPT",
               themeColor: "yellow",
-              codeType: "RENEWAL/AFTER",
+              codeType: "MAIN: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/41EtNHj91WjcB55DkOgX"],
             }
           ],
@@ -221,38 +221,38 @@ const data = {
             {
               codeName: "HTML",
               themeColor: "orange",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "SUB: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/AX5x1be0aMyXYrvjYJXA"],
             },
             {
               codeName: "HTML",
               themeColor: "orange",
-              codeType: "RENEWAL/AFTER",
+              codeType: "SUB: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/OtLInQNKN5nM5d6iCjqp"],
             },
             {
               codeName: "CSS",
               themeColor: "skyblue",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "SUB: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/4hLN2zcm4xQChebhuimK"],
             },
             {
               codeName: "CSS",
               themeColor: "skyblue",
-              codeType: "RENEWAL/AFTER",
+              codeType: "SUB: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/DQkDO7gURIlwDmdcgZEj"],
             },
             {
               codeName: "JAVASCRIPT",
               themeColor: "yellow",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "SUB: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/x0Y0oPw23TuWQsHO2w3e"],
             },
             {
               codeName: "JAVASCRIPT",
               themeColor: "yellow",
-              codeType: "RENEWAL/AFTER",
-              src: ["https://carbon.now.sh/embed/buiptdmp58lxpAHKa8oO"],
+              codeType: "SUB: RENEWAL/AFTER",
+              src: ["https://carbon.now.sh/embed/dd24Aox8bm09ZIqMf9U3"],
             }
           ],
         },
@@ -271,37 +271,37 @@ const data = {
             {
               codeName: "HTML",
               themeColor: "orange",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "DETAIL: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/jFzcTNIPQYJ7N3mri8nP"],
             },
             {
               codeName: "HTML",
               themeColor: "orange",
-              codeType: "RENEWAL/AFTER",
+              codeType: "DETAIL: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/08KJyllSqjyLwW4HRlP7"],
             },
             {
               codeName: "CSS",
               themeColor: "skyblue",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "DETAIL: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/wJYmqDr2by0PlHJ71tAy"],
             },
             {
               codeName: "CSS",
               themeColor: "skyblue",
-              codeType: "RENEWAL/AFTER",
+              codeType: "DETAIL: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/kuYo2BWfxBsZ4ut2Vevx"],
             },
             {
               codeName: "JAVASCRIPT",
               themeColor: "yellow",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "DETAIL: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/YO71UlwD61bkbpvAzOSK"],
             },
             {
               codeName: "JAVASCRIPT",
               themeColor: "yellow",
-              codeType: "RENEWAL/AFTER",
+              codeType: "DETAIL: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/mqnXwEU8VfgSelk2Bhn1"],
             }
           ],
@@ -409,37 +409,37 @@ const data = {
             {
               codeName: "HTML",
               themeColor: "orange",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "SEARCH: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/LWQTAEZ8Ve4hBRGUAbJo"],
             },
             {
               codeName: "HTML",
               themeColor: "orange",
-              codeType: "RENEWAL/AFTER",
+              codeType: "SEARCH: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/0gzmoRe3VIJ77KS89P4n"],
             },
             {
               codeName: "CSS",
               themeColor: "skyblue",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "SEARCH: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/SKmjCYyEwTjwPl4rQd9Y"],
             },
             {
               codeName: "CSS",
               themeColor: "skyblue",
-              codeType: "RENEWAL/AFTER",
+              codeType: "SEARCH: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/x90r9TsIALiat8aLDKBl"],
             },
             {
               codeName: "JAVASCRIPT",
               themeColor: "yellow",
-              codeType: "RENEWAL/BEFORE",
+              codeType: "SEARCH: RENEWAL/BEFORE",
               src: ["https://carbon.now.sh/embed/tqdwG6hDlmoPZohhrmXr"],
             },
             {
               codeName: "JAVASCRIPT",
               themeColor: "yellow",
-              codeType: "RENEWAL/AFTER",
+              codeType: "SEARCH: RENEWAL/AFTER",
               src: ["https://carbon.now.sh/embed/y2JC9I3t9id2s5bqz3Xt"],
             }
           ],
@@ -478,6 +478,8 @@ const data = {
       menuKind: ["ALL","MAIN","SUB"],
       hoverColor: ["yellow"],
       iconSrc: ["./images/netmarble_logo.png"],
+      iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
+      sandBoxValue: ["allow-scripts allow-same-origin"],
       pageInfo: [
         {
           type: "ALL",
@@ -497,7 +499,27 @@ const data = {
             "처음 제작했던 프로젝트라, 시행 착오를 정말 많이 겪은 프로젝트 입니다.",
             "MEDIAQUERY를 활용하여 반응형으로 제작 하였으며, JQUERY를 활용하여 정렬 및 슬라이더 기능등을 구현 하였습니다."
           ],
-          videoSrc: ["./videos/netmarble/netmarble_main_video.mp4"]
+          videoSrc: ["./videos/netmarble/netmarble_main_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/JVZ48cUW6YZzoDyWKmWf"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/Gf0jnNopaxfOj0fY7Z0b"],
+            },
+            {
+              codeName: "JAVASCRIPT/JQUERY",
+              themeColor: "yellow",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/sPaRNvqP4oTjkISc0Egy"],
+            }
+          ],
         },
         {
           type: "SUB",
@@ -508,7 +530,27 @@ const data = {
             "탭 메뉴 버튼을 통해 해당하는 밸류를 가진 메뉴를 DISPLAY: NONE/BLOCK으로 구현 하였으며",
             "모바일, 테블릿, PC버전에서 표기되는 컨텐츠의 갯수가 달라집니다.",
           ],
-          videoSrc: ["./videos/netmarble/netmarble_sub_video.mp4"]
+          videoSrc: ["./videos/netmarble/netmarble_sub_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "HTML",
+              themeColor: "orange",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/jrf3ALtlQPW0x6RF1Veh"],
+            },
+            {
+              codeName: "CSS",
+              themeColor: "skyblue",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/RCXuHIRrgbMptbkapnRs"],
+            },
+            {
+              codeName: "JAVASCRIPT/JQUERY",
+              themeColor: "yellow",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/uxapjEUv6HBJgw1Zvv1F"],
+            }
+          ],
         },
       ],
       link: [
@@ -564,7 +606,69 @@ const data = {
             "JS로 제작했던 박스 슬라이더는 스와이퍼로 교체 하였으며, HOVER EVENT는 useState를 사용",
             "즉, 상태 변경을 이용하여 삼항 연산자로 해당 이벤트를 구현 하였습니다."
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_main_video.mp4"]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_main_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "VisualMain.JS",
+              themeColor: "yellow",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/zzjglhvSa1HFTrBn77uB"],
+            },
+            {
+              codeName: "VisualMain.CSS",
+              themeColor: "skyblue",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/Y7mVQkrifFd4U5jwhpGb"],
+            },
+            {
+              codeName: "ProductList.JS",
+              themeColor: "yellow",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/GpFIW2wJDOEJhjRGugYR"],
+            },
+            {
+              codeName: "ProductList.CSS",
+              themeColor: "skyblue",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/sR1nH63nDB7QHbf0Uz0z"],
+            },
+            {
+              codeName: "IssueContents.JS",
+              themeColor: "yellow",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/ylT1rZIdEZke13Zihr1o"],
+            },
+            {
+              codeName: "IssueContents.CSS",
+              themeColor: "skyblue",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/ym8G53rzM4KvH50NNDRd"],
+            },
+            {
+              codeName: "MdsPick.JS",
+              themeColor: "yellow",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/iQcTtk8luclBGVOZG2W3"],
+            },
+            {
+              codeName: "MdsPick.CSS",
+              themeColor: "skyblue",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/93k5oINYcQn73xry05Oq"],
+            },
+            {
+              codeName: "InstaGram.JS",
+              themeColor: "yellow",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/MMEcRV2FWuVdh4ZYgNVX"],
+            },
+            {
+              codeName: "InstaGram.CSS",
+              themeColor: "skyblue",
+              codeType: "MAIN",
+              src: ["https://carbon.now.sh/embed/fwPdcrAB25NikZbzYFfK"],
+            },
+          ], 
         },
         {
           type: "SUB",
@@ -577,7 +681,21 @@ const data = {
             "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며 자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.",
             "fetch로 데이터 요청을 해 상태에 담고, 해당 상태가 변하기 전까지는 다른 컴포넌트가 렌더링이 되는 이른바 조건부 렌더링을 했습니다."
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_sub_video.mp4"]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_sub_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "SubList.JS",
+              themeColor: "yellow",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/jK8kaQgJM2Eme1a3ZreK"],
+            },
+            {
+              codeName: "SubList.CSS",
+              themeColor: "skyblue",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/2jx3HXyZvtc5vDewyZBA"],
+            },
+          ], 
         },
         {
           type: "DETAIL",
@@ -589,7 +707,21 @@ const data = {
             "디테일 페이지에 렌더링을 했습니다.",
             "또한 별점 기능은 반복문과 useState를 이용한 객체 속성 값 변화로 구현을 하였습니다."
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_detail_video.mp4"]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_detail_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "DetailList.JS",
+              themeColor: "yellow",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/zCOGdGfw3tNUMZlPWtAm"],
+            },
+            {
+              codeName: "DetailList.CSS",
+              themeColor: "skyblue",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/7FjE4SnFPSuCJlYu7xRN"],
+            },
+          ], 
         },
         {
           type: "CART",
@@ -600,7 +732,21 @@ const data = {
             "리덕스 툴킷의 리듀서즈에 저장된 상태 변화 함수, useDispatch, useSelector를 활용하여",
             "해당 기능들을 구현 하였습니다.",
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_cart_video.mp4"]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_cart_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "Cart.JS",
+              themeColor: "yellow",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/Cj3OiP1vel5QhU6SCINQ"],
+            },
+            {
+              codeName: "Cart.CSS",
+              themeColor: "skyblue",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/CiphEidNSJZZl1sp1JiY"],
+            },
+          ], 
         },
         {
           type: "SEARCH",
@@ -612,7 +758,21 @@ const data = {
             "엔터 혹은 검색 버튼을 눌렸을시 해당 상태의 값이 링크에 전달",
             "useParams를 이용하여 해당 값을 받아와 filter, includes를 이용해 검색 기능을 구현 했습니다.",
           ],
-          videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"]
+          videoSrc: ["./videos/calhartt_react/calhartt_react_search_video.mp4"],
+          codeInfo: [
+            {
+              codeName: "Search.JS",
+              themeColor: "yellow",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/oOeeVsWhuA4MCfhAwyjT"],
+            },
+            {
+              codeName: "Search.CSS",
+              themeColor: "skyblue",
+              codeType: "SUB",
+              src: ["https://carbon.now.sh/embed/ldC6pgntnVph5n6wTO16"],
+            },
+          ], 
         },
       ],
       link: [
@@ -623,7 +783,7 @@ const data = {
           blank: false,
         },
         {
-          url: "#!",
+          url: "https://neptune588.github.io/calhartt_React_Ver/",
           ment: "사이트 보기",
           className: "site_view_btn",
           blank: true,
