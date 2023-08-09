@@ -13,7 +13,7 @@
   "main": "page.html",
   "scripts": {
     "dev": "parcel page.html",
-    "build": "parcel build page.html",
+    "build": "parcel build page.html --public-url ./ --no-content-hash",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
