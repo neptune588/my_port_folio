@@ -623,11 +623,20 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.code_modal_ex .code_container .code_list_design {
+.code_modal_ex .code_container .code_list_area {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
-.code_modal_ex .code_container .code_list_design li {
+.code_modal_ex .code_container .code_list_area .code_list_design {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+.code_modal_ex .code_container .code_list_area .code_list_design:last-child {
+  margin-right: 0;
+}
+.code_modal_ex .code_container .code_list_area .code_list_design li {
   font-size: 2rem;
   transition: all 0.1s;
   color: gray;
@@ -639,7 +648,7 @@ h2 {
   background-color: black;
   cursor: pointer;
 }
-.code_modal_ex .code_container .code_list_design li:hover {
+.code_modal_ex .code_container .code_list_area .code_list_design li:hover {
   color: white;
 }
 .code_modal_ex .code_container .notice {
@@ -652,7 +661,7 @@ h2 {
 .code_modal_ex .code_container .close_btn {
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: -20px;
   cursor: pointer;
 }
 .code_modal_ex .code_container .close_btn i {

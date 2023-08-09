@@ -42,18 +42,18 @@ setTimeout(() => {
 
         if (cnt >= titleMentStr.length) {
             clearInterval(tiping);
-            classAdd(tipingBar, 'tiping_ani');
+            classPlus(tipingBar, 'tiping_ani');
         }
     }, repeatTime);
 
 }, 1250);
 
 setTimeout(() => {
-    classAdd(startMent, 'block_on');
+    classPlus(startMent, 'block_on');
 }, 1350 + (repeatTime * titleMentStr.length));
 
 setTimeout(() => {
-    classAdd(tipMent, 'width_600');
+    classPlus(tipMent, 'width_600');
 }, 1400 + (repeatTime * titleMentStr.length));
 
 setTimeout(() => {
@@ -114,13 +114,13 @@ function skillCreate() {
             
             mentCreate(skill, index);
 
-            classAdd(hoverMentBox, 'opacity_on');
+            classPlus(hoverMentBox, 'opacity_on');
 
             hoverMentTitle.style.color = `${skill[index].color[0]}`;
             hoverMentTitle.style.borderBottom = `1px solid ${skill[index].color[0]}`;
         });
         list.addEventListener('mouseleave', () => {
-            classRemove(hoverMentBox, 'opacity_on');
+            classDelete(hoverMentBox, 'opacity_on');
         });
     })
 }
@@ -162,6 +162,7 @@ const {page} = data;
 const modalCloseBtn = document.getElementById('modal_close');
 const codeModal = document.querySelector('.code_modal_ex');
 const codeListArea = document.getElementById('code_list_area');
+const etcCodeList = document.getElementById('etc_code_list');
 const codeViewBox = document.getElementById('code_view');
 
 totalCreate();
@@ -241,13 +242,13 @@ function totalClickEvent () {
             linkBtnArea.innerHTML = linkBtnCreate(index);
 
             
-            projectList.forEach(innerLi => classRemove(innerLi, 'project_on'));
-            classAdd(li, 'project_on');
+            projectList.forEach(innerLi => classDelete(innerLi, 'project_on'));
+            classPlus(li, 'project_on');
             
             linkBtnClick();
             
             codeBtnCreate(index);
-            const codeBtn = document.querySelectorAll('#code_list_area > li');
+            const codeBtn = document.querySelectorAll('.code_list_design li');
             codeBtnClick(codeBtn, index);
             codeListCreate(page[index], 1);
             handleSubClick(index, thumNVideoBox, infoTextArea, codeBtn);
@@ -256,7 +257,7 @@ function totalClickEvent () {
     linkBtnClick();
     
     codeBtnCreate(0);
-    const codeBtn = document.querySelectorAll('#code_list_area > li');
+    const codeBtn = document.querySelectorAll('.code_list_design li');
     codeBtnClick(codeBtn, 0);
     codeListCreate(page[0], 1);
     handleSubClick(0, thumNVideoBox, infoTextArea, codeBtn);
@@ -283,15 +284,15 @@ function handleSubClick (parentIndex, thumArea, infoArea, codeBtnEl) {
             codeListCreate(page[parentIndex], curIdx);
             
             for(let j = 0; j < codeBtnEl.length; j++) {
-                classRemove(codeBtnEl[j], "code_tab_on");
+                classDelete(codeBtnEl[j], "code_tab_on");
             }
             for(let j = 0; j < pageList.length; j++) {
-                classRemove(pageList[j], "project_tab_on");
+                classDelete(pageList[j], "project_tab_on");
             }
 
-            let classIdx = index === 0 || index === 1 ? classIdx = 0 : classIdx = index - 1;
-            classAdd(codeBtnEl[classIdx], "code_tab_on");
-            classAdd(li, "project_tab_on");
+            let classIdx = index === 0 ? classIdx = 0 : classIdx = index - 1;
+            classPlus(codeBtnEl[classIdx], "code_tab_on");
+            classPlus(li, "project_tab_on");
         });
     });
 }
@@ -341,7 +342,6 @@ function linkBtnCreate(myIndex) {
     let innerList = ``;
     let receive = ``;
 
-    console.log(myIndex);
     page[myIndex].link.forEach((object) => {
         innerList = `
             <li class="${object.className}"><a href="${object.url}" ${object.blank ? "target=_blank" : ""}>${object.ment}</a></li>
@@ -428,8 +428,8 @@ const navigatorWithOnlyCalc = document.querySelectorAll('#navgation_area > li');
 
 
 modalCloseBtn.addEventListener('click', () => {
-    classRemove(codeModal, 'block_on');
-    classRemove(sectionWrapper, 'container_overflow');
+    classDelete(codeModal, 'block_on');
+    classDelete(sectionWrapper, 'container_overflow');
 
     navigatorWithOnlyCalc.forEach((tabs, index) => {
         if(tabs.classList.contains('tab_active')) {
@@ -444,25 +444,30 @@ function linkBtnClick() {
     const codeViewBtn = document.querySelector('.code_view_btn');
 
     codeViewBtn.addEventListener('click', () => {
-        classAdd(codeModal, 'block_on');
-        classAdd(sectionWrapper, 'container_overflow');
+        classPlus(codeModal, 'block_on');
+        classPlus(sectionWrapper, 'container_overflow');
     })
 }
 
 function codeBtnCreate(myIndex) {
-    let list = ``;
+    let list01 = ``;
+    let list02 = ``;
+
     page[myIndex].menuKind.forEach((value, idx) => {
         if(idx === 0) {
             return null;
         } else {
-            list += `<li class="${idx === 1 ? "code_list code_tab_on":"code_list"}">${value}</li>`
+            list01 += `<li class="${idx === 1 ? "code_list code_tab_on":"code_list"}">${value}</li>`
         }
     })
-    codeListArea.innerHTML = list;
+    codeListArea.innerHTML = list01;
 
-/*     const codeBtn = document.querySelectorAll('#code_list_area > li');
-
-    codeBtnClick(codeBtn, myIndex); */
+    if(page[myIndex].etcKind) {
+        page[myIndex].etcKind.forEach(value => list02 += `<li class="code_list">${value}</li>`);
+        etcCodeList.innerHTML = list02;
+    } else {
+        etcCodeList.innerHTML = ``;
+    }
 }
 
 function codeBtnClick(btnList, myIndex) {
@@ -470,9 +475,9 @@ function codeBtnClick(btnList, myIndex) {
     btnList.forEach(btn => {
         btn.addEventListener('click', () => {
             for(let j  = 0; j < btnList.length; j++) {
-                classRemove(btnList[j], 'code_tab_on');
+                classDelete(btnList[j], 'code_tab_on');
             }
-            classAdd(btn, 'code_tab_on');
+            classPlus(btn, 'code_tab_on');
 
             let curIdx = idxSearch(myObj.pageInfo, "type", btn.textContent);
             codeListCreate(myObj, curIdx);
@@ -661,20 +666,12 @@ function profileMentShow() {
 }
 
 /************** js fnc ***************/
-function classAdd(el, className) {
+function classPlus(el, className) {
     el.classList.add(className);
 }
 
-function classAddMulti(el, classArr) {
-    classArr.forEach(className => el.classList.add(className));
-}
-
-function classRemove(el, className) {
+function classDelete(el, className) {
     el.classList.remove(className);
-}
-
-function classRemoveMulti(el, classArr) {
-    classArr.forEach(className => el.classList.remove(className));
 }
 
 

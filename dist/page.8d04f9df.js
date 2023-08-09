@@ -11320,6 +11320,7 @@ var data = {
   page: [{
     projectName: "CALHARTT WIP",
     menuKind: ["ALL", "MAIN", "SUB", "DETAIL", "SIGN IN/UP", "SEARCH"],
+    etcKind: ["DATA"],
     hoverColor: ["FFBF00"],
     iconSrc: ["./images/calhartt_logo.png"],
     iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
@@ -11541,6 +11542,14 @@ var data = {
         codeType: "SEARCH: RENEWAL/AFTER",
         src: ["https://carbon.now.sh/embed/y2JC9I3t9id2s5bqz3Xt"]
       }]
+    }, {
+      type: "DATA",
+      codeInfo: [{
+        codeName: "JAVASCRIPT",
+        themeColor: "yellow",
+        codeType: "DATA",
+        src: ["https://carbon.now.sh/embed/petTWnYY4sWRsk8X9ooJ"]
+      }]
     }],
     link: [{
       url: "#!",
@@ -11644,8 +11653,11 @@ var data = {
   }, {
     projectName: "CALHARTT WIP REACT",
     menuKind: ["ALL", "MAIN", "SUB", "DETAIL", "CART", "SEARCH"],
+    etcKind: ["HEADER", "FOOTER", "STORE", "ROUTER", "DATA"],
     hoverColor: ["FFBF00"],
     iconSrc: ["./images/calhartt_react_logo.png"],
+    iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
+    sandBoxValue: ["allow-scripts allow-same-origin"],
     pageInfo: [{
       type: "ALL",
       makePeriod: "2023-06-20 ~ 2023-07-04",
@@ -11773,9 +11785,59 @@ var data = {
         codeType: "SUB",
         src: ["https://carbon.now.sh/embed/ldC6pgntnVph5n6wTO16"]
       }]
+    }, {
+      type: "HEADER",
+      codeInfo: [{
+        codeName: "Header.JS",
+        themeColor: "yellow",
+        codeType: "COMMON",
+        src: ["https://carbon.now.sh/embed/yBFRGtrwHoj9IT7228i2"]
+      }, {
+        codeName: "Header.CSS",
+        themeColor: "skyblue",
+        codeType: "COMMON",
+        src: ["https://carbon.now.sh/embed/V5oRhYPKdoDFbAEJEICz"]
+      }]
+    }, {
+      type: "FOOTER",
+      codeInfo: [{
+        codeName: "Footer.JS",
+        themeColor: "yellow",
+        codeType: "COMMON",
+        src: ["https://carbon.now.sh/embed/3jGMAFHV7mYRksT5VM1o"]
+      }, {
+        codeName: "Footer.CSS",
+        themeColor: "skyblue",
+        codeType: "COMMON",
+        src: ["https://carbon.now.sh/embed/sosg5Q2MV2g2qWyv9Hle"]
+      }]
+    }, {
+      type: "STORE",
+      codeInfo: [{
+        codeName: "Store.JS",
+        themeColor: "yellow",
+        codeType: "COMMON",
+        src: ["https://carbon.now.sh/embed/K1N5pm7jsZgLYzQhxoNA"]
+      }]
+    }, {
+      type: "ROUTER",
+      codeInfo: [{
+        codeName: "ROUTER",
+        themeColor: "greenyellow",
+        codeType: "COMMON",
+        src: ["https://carbon.now.sh/embed/gT4HvmdgbLjW6cVIewEX"]
+      }]
+    }, {
+      type: "DATA",
+      codeInfo: [{
+        codeName: "JSON",
+        themeColor: "yellow",
+        codeType: "DATA",
+        src: ["https://carbon.now.sh/embed/TfSEU5fGefE9WJSN422k"]
+      }]
     }],
     link: [{
-      url: "#!z",
+      url: "#!",
       ment: "코드 보기",
       className: "code_view_btn",
       blank: false
@@ -11835,15 +11897,15 @@ setTimeout(function () {
     cnt++;
     if (cnt >= titleMentStr.length) {
       clearInterval(tiping);
-      classAdd(tipingBar, 'tiping_ani');
+      classPlus(tipingBar, 'tiping_ani');
     }
   }, repeatTime);
 }, 1250);
 setTimeout(function () {
-  classAdd(startMent, 'block_on');
+  classPlus(startMent, 'block_on');
 }, 1350 + repeatTime * titleMentStr.length);
 setTimeout(function () {
-  classAdd(tipMent, 'width_600');
+  classPlus(tipMent, 'width_600');
 }, 1400 + repeatTime * titleMentStr.length);
 setTimeout(function () {
   aniComplete = true;
@@ -11871,12 +11933,12 @@ function skillCreate() {
   skillLists.forEach(function (list, index) {
     list.addEventListener('mouseenter', function () {
       mentCreate(skill, index);
-      classAdd(hoverMentBox, 'opacity_on');
+      classPlus(hoverMentBox, 'opacity_on');
       hoverMentTitle.style.color = "".concat(skill[index].color[0]);
       hoverMentTitle.style.borderBottom = "1px solid ".concat(skill[index].color[0]);
     });
     list.addEventListener('mouseleave', function () {
-      classRemove(hoverMentBox, 'opacity_on');
+      classDelete(hoverMentBox, 'opacity_on');
     });
   });
 }
@@ -11908,6 +11970,7 @@ var page = _data.data.page;
 var modalCloseBtn = document.getElementById('modal_close');
 var codeModal = document.querySelector('.code_modal_ex');
 var codeListArea = document.getElementById('code_list_area');
+var etcCodeList = document.getElementById('etc_code_list');
 var codeViewBox = document.getElementById('code_view');
 totalCreate();
 function totalCreate() {
@@ -11944,12 +12007,12 @@ function totalClickEvent() {
       thumNVideoBox.innerHTML = thumnailVideoCreate(index, 0);
       linkBtnArea.innerHTML = linkBtnCreate(index);
       projectList.forEach(function (innerLi) {
-        return classRemove(innerLi, 'project_on');
+        return classDelete(innerLi, 'project_on');
       });
-      classAdd(li, 'project_on');
+      classPlus(li, 'project_on');
       linkBtnClick();
       codeBtnCreate(index);
-      var codeBtn = document.querySelectorAll('#code_list_area > li');
+      var codeBtn = document.querySelectorAll('.code_list_design li');
       codeBtnClick(codeBtn, index);
       codeListCreate(page[index], 1);
       handleSubClick(index, thumNVideoBox, infoTextArea, codeBtn);
@@ -11957,7 +12020,7 @@ function totalClickEvent() {
   });
   linkBtnClick();
   codeBtnCreate(0);
-  var codeBtn = document.querySelectorAll('#code_list_area > li');
+  var codeBtn = document.querySelectorAll('.code_list_design li');
   codeBtnClick(codeBtn, 0);
   codeListCreate(page[0], 1);
   handleSubClick(0, thumNVideoBox, infoTextArea, codeBtn);
@@ -11975,14 +12038,14 @@ function handleSubClick(parentIndex, thumArea, infoArea, codeBtnEl) {
       var curIdx = idxSearch(page[parentIndex].pageInfo, "type", li.textContent);
       codeListCreate(page[parentIndex], curIdx);
       for (var j = 0; j < codeBtnEl.length; j++) {
-        classRemove(codeBtnEl[j], "code_tab_on");
+        classDelete(codeBtnEl[j], "code_tab_on");
       }
       for (var _j = 0; _j < pageList.length; _j++) {
-        classRemove(pageList[_j], "project_tab_on");
+        classDelete(pageList[_j], "project_tab_on");
       }
-      var classIdx = index === 0 || index === 1 ? classIdx = 0 : classIdx = index - 1;
-      classAdd(codeBtnEl[classIdx], "code_tab_on");
-      classAdd(li, "project_tab_on");
+      var classIdx = index === 0 ? classIdx = 0 : classIdx = index - 1;
+      classPlus(codeBtnEl[classIdx], "code_tab_on");
+      classPlus(li, "project_tab_on");
     });
   });
 }
@@ -12008,7 +12071,6 @@ function thumnailVideoCreate(parentIndex, myIndex) {
 function linkBtnCreate(myIndex) {
   var innerList = "";
   var receive = "";
-  console.log(myIndex);
   page[myIndex].link.forEach(function (object) {
     innerList = "\n            <li class=\"".concat(object.className, "\"><a href=\"").concat(object.url, "\" ").concat(object.blank ? "target=_blank" : "", ">").concat(object.ment, "</a></li>\n        ");
     receive += innerList;
@@ -12057,8 +12119,8 @@ var sectionWrapper = document.getElementById('section_wrapper');
 var pagseWithOnlyCalc = document.querySelectorAll('.page');
 var navigatorWithOnlyCalc = document.querySelectorAll('#navgation_area > li');
 modalCloseBtn.addEventListener('click', function () {
-  classRemove(codeModal, 'block_on');
-  classRemove(sectionWrapper, 'container_overflow');
+  classDelete(codeModal, 'block_on');
+  classDelete(sectionWrapper, 'container_overflow');
   navigatorWithOnlyCalc.forEach(function (tabs, index) {
     if (tabs.classList.contains('tab_active')) {
       window.scrollTo({
@@ -12070,34 +12132,38 @@ modalCloseBtn.addEventListener('click', function () {
 function linkBtnClick() {
   var codeViewBtn = document.querySelector('.code_view_btn');
   codeViewBtn.addEventListener('click', function () {
-    classAdd(codeModal, 'block_on');
-    classAdd(sectionWrapper, 'container_overflow');
+    classPlus(codeModal, 'block_on');
+    classPlus(sectionWrapper, 'container_overflow');
   });
 }
 function codeBtnCreate(myIndex) {
-  var list = "";
+  var list01 = "";
+  var list02 = "";
   page[myIndex].menuKind.forEach(function (value, idx) {
     if (idx === 0) {
       return null;
     } else {
-      list += "<li class=\"".concat(idx === 1 ? "code_list code_tab_on" : "code_list", "\">").concat(value, "</li>");
+      list01 += "<li class=\"".concat(idx === 1 ? "code_list code_tab_on" : "code_list", "\">").concat(value, "</li>");
     }
   });
-  codeListArea.innerHTML = list;
-
-  /*     const codeBtn = document.querySelectorAll('#code_list_area > li');
-  
-      codeBtnClick(codeBtn, myIndex); */
+  codeListArea.innerHTML = list01;
+  if (page[myIndex].etcKind) {
+    page[myIndex].etcKind.forEach(function (value) {
+      return list02 += "<li class=\"code_list\">".concat(value, "</li>");
+    });
+    etcCodeList.innerHTML = list02;
+  } else {
+    etcCodeList.innerHTML = "";
+  }
 }
-
 function codeBtnClick(btnList, myIndex) {
   var myObj = page[myIndex];
   btnList.forEach(function (btn) {
     btn.addEventListener('click', function () {
       for (var j = 0; j < btnList.length; j++) {
-        classRemove(btnList[j], 'code_tab_on');
+        classDelete(btnList[j], 'code_tab_on');
       }
-      classAdd(btn, 'code_tab_on');
+      classPlus(btn, 'code_tab_on');
       var curIdx = idxSearch(myObj.pageInfo, "type", btn.textContent);
       codeListCreate(myObj, curIdx);
     });
@@ -12234,21 +12300,11 @@ function profileMentShow() {
 }
 
 /************** js fnc ***************/
-function classAdd(el, className) {
+function classPlus(el, className) {
   el.classList.add(className);
 }
-function classAddMulti(el, classArr) {
-  classArr.forEach(function (className) {
-    return el.classList.add(className);
-  });
-}
-function classRemove(el, className) {
+function classDelete(el, className) {
   el.classList.remove(className);
-}
-function classRemoveMulti(el, classArr) {
-  classArr.forEach(function (className) {
-    return el.classList.remove(className);
-  });
 }
 
 // 메뉴 리스트 데이터 동적 변경 --
@@ -12313,7 +12369,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58821" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59303" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -142,6 +142,7 @@ const data = {
     {
       projectName: "CALHARTT WIP",
       menuKind: ["ALL","MAIN","SUB","DETAIL","SIGN IN/UP","SEARCH"],
+      etcKind: ["DATA"],
       hoverColor: ["FFBF00"],
       iconSrc: ["./images/calhartt_logo.png"],
       iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
@@ -444,6 +445,17 @@ const data = {
             }
           ],
         },
+        {
+          type: "DATA",
+          codeInfo: [
+            {
+              codeName: "JAVASCRIPT",
+              themeColor: "yellow",
+              codeType: "DATA",
+              src: ["https://carbon.now.sh/embed/petTWnYY4sWRsk8X9ooJ"],
+            },
+          ], 
+        },
       ],
       link: [
         {
@@ -583,8 +595,11 @@ const data = {
     {
       projectName: "CALHARTT WIP REACT",
       menuKind: ["ALL","MAIN","SUB","DETAIL","CART","SEARCH"],
+      etcKind: ["HEADER","FOOTER","STORE","ROUTER","DATA"],
       hoverColor: ["FFBF00"],
       iconSrc: ["./images/calhartt_react_logo.png"],
+      iframeStyle: ["width: 100%; height: 100%; border:0; transform: scale(1); overflow:hidden;"],
+      sandBoxValue: ["allow-scripts allow-same-origin"],
       pageInfo: [
         {
           type: "ALL",
@@ -774,10 +789,77 @@ const data = {
             },
           ], 
         },
+        {
+          type: "HEADER",
+          codeInfo: [
+            {
+              codeName: "Header.JS",
+              themeColor: "yellow",
+              codeType: "COMMON",
+              src: ["https://carbon.now.sh/embed/yBFRGtrwHoj9IT7228i2"],
+            },
+            {
+              codeName: "Header.CSS",
+              themeColor: "skyblue",
+              codeType: "COMMON",
+              src: ["https://carbon.now.sh/embed/V5oRhYPKdoDFbAEJEICz"],
+            },
+          ], 
+        },
+        {
+          type: "FOOTER",
+          codeInfo: [
+            {
+              codeName: "Footer.JS",
+              themeColor: "yellow",
+              codeType: "COMMON",
+              src: ["https://carbon.now.sh/embed/3jGMAFHV7mYRksT5VM1o"],
+            },
+            {
+              codeName: "Footer.CSS",
+              themeColor: "skyblue",
+              codeType: "COMMON",
+              src: ["https://carbon.now.sh/embed/sosg5Q2MV2g2qWyv9Hle"],
+            },
+          ], 
+        },
+        {
+          type: "STORE",
+          codeInfo: [
+            {
+              codeName: "Store.JS",
+              themeColor: "yellow",
+              codeType: "COMMON",
+              src: ["https://carbon.now.sh/embed/K1N5pm7jsZgLYzQhxoNA"],
+            },
+          ], 
+        },
+        {
+          type: "ROUTER",
+          codeInfo: [
+            {
+              codeName: "ROUTER",
+              themeColor: "greenyellow",
+              codeType: "COMMON",
+              src: ["https://carbon.now.sh/embed/gT4HvmdgbLjW6cVIewEX"],
+            },
+          ], 
+        },
+        {
+          type: "DATA",
+          codeInfo: [
+            {
+              codeName: "JSON",
+              themeColor: "yellow",
+              codeType: "DATA",
+              src: ["https://carbon.now.sh/embed/TfSEU5fGefE9WJSN422k"],
+            },
+          ], 
+        },
       ],
       link: [
         {
-          url: "#!z",
+          url: "#!",
           ment: "코드 보기",
           className: "code_view_btn",
           blank: false,
