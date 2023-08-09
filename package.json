@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "jquery": "^3.7.0",
     "jquery-mousewheel": "^3.1.13",
     "parcel-bundler": "^1.12.5",
@@ -7,12 +8,15 @@
     "sass": "^1.63.6",
     "swiper": "^10.0.4"
   },
+  "homepage": "https://neptune588.github.io/my_port_folio",
   "name": "my-portfolio",
   "version": "1.0.0",
   "main": "page.html",
   "scripts": {
     "dev": "parcel page.html",
     "build": "parcel build page.html --public-url ./ --no-content-hash",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +25,5 @@
   "devDependencies": {
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4"
-  },
+  }
 }
