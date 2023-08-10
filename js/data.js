@@ -477,9 +477,15 @@ const data = {
           blank: true,
         },
         {
-          url: "#!",
+          url: "https://www.figma.com/file/LJuRDXEWygryIhmNkQsmpv/%EC%B9%BC%ED%95%98%ED%8A%B8?type=design&node-id=0-1&mode=design&t=j365Y8F5Z8ShZjeD-0",
           ment: "기획서 보기",
           className: "plan_view_btn",
+          blank: true,
+        },
+        {
+          url: "https://miro.com/app/board/uXjVMV6eaxg=/",
+          ment: "브레인 스토밍",
+          className: "blain_stoming",
           blank: true,
         }
       ]
@@ -585,7 +591,7 @@ const data = {
           blank: true,
         },
         {
-          url: "#!",
+          url: "https://www.figma.com/file/mXo226OW9oJm2ijESrqfLG/%EB%84%B7%EB%A7%88%EB%B8%94?type=design&node-id=0-1&mode=design&t=l3U2pxlw4Eg4FA7G-0",
           ment: "기획서 보기",
           className: "plan_view_btn",
           blank: true,
@@ -693,7 +699,6 @@ const data = {
           episode: [
             "HEADER 역시 MAP으로 객체 기반 동적 생성을 하였고, 링크 연결을 객체 속성 값으로 연결",
             "ROUTER를 이용해 해당 서브 페이지로 라우팅을 해준 뒤 PARAMS를 동적으로 받아와 Object.keys를 활용해 JSON데이터 파일과 비교, 일치하는 값을 뿌려 주었습니다.",
-            "장바구니 같은 경우는 담기 버튼을 누르면 장바구니에 해당 상품이 담기게 되며 자식 컴포넌트에 상태 PROPS를 전달, 해당 상태를 기반으로 장바구니 담기 애니가 나오게 했습니다.",
             "fetch로 데이터 요청을 해 상태에 담고, 해당 상태가 변하기 전까지는 다른 컴포넌트가 렌더링이 되는 이른바 조건부 렌더링을 했습니다."
           ],
           videoSrc: ["./videos/calhartt_react/calhartt_react_sub_video.mp4"],
@@ -877,9 +882,15 @@ const data = {
           blank: true,
         },
         {
-          url: "#!",
+          url: "https://www.figma.com/file/LJuRDXEWygryIhmNkQsmpv/%EC%B9%BC%ED%95%98%ED%8A%B8?type=design&node-id=0-1&mode=design&t=j365Y8F5Z8ShZjeD-0",
           ment: "기획서 보기",
           className: "plan_view_btn",
+          blank: true,
+        },
+        {
+          url: "https://miro.com/app/board/uXjVMV6eaxg=/",
+          ment: "브레인 스토밍",
+          className: "blain_stoming",
           blank: true,
         }
       ]
